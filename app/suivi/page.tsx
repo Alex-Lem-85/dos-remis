@@ -138,17 +138,16 @@ export default function Suivi() {
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div className="text-center text-white">
       <div className="flex items-center justify-center gap-4 mb-4">
-        {/* Icon on the left */}
+        {/* Icône à gauche */}
         <Music className="h-8 w-8 text-white" />
         <h2 className="text-3xl font-bold">Harmonie retrouvée</h2>
-        {/* Icon on the right */}
+        {/* Icône à droite */}
         <Music className="h-8 w-8 text-white" />
       </div>
       <p className="text-xl">
         Dos-remis est le chef d'orchestre de votre prise en charge, mais vous faites partie de l'orchestre. 
         Ce sont vos exercices physiques et l'adaptation de votre mode de vie qui permettront d'éviter les récidives 
-        et l'apparition de douleurs chroniques. Nous vous aiderons aussi à trouver d'autres professeurs de musique pour vous accompagner
-      </p>
+        et l'apparition de douleurs chroniques. Nous vous aiderons aussi à trouver d'autres professeurs de musique pour vous accompagner.
       </p>
     </div>
   </div>
