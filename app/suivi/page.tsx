@@ -257,7 +257,7 @@ export default function Suivi() {
               <Button 
                 asChild 
                 size="lg" 
-                className=bg-transparent text-primary hover:text-primary/90 border border-primary shadow-lg"
+                className="bg-transparent text-primary hover:text-primary/90 border border-primary shadow-lg"
               >
                 <a 
                   href="https://www.ameli.fr/sites/default/files/Documents/Parcours-soins-patient-je-souffre-lombalgie.pdf" 
