@@ -12,6 +12,7 @@ import {
   Fingerprint,
   Heart,
   Microscope,
+  Music,
   Scale,
   Shield,
   Smile,
