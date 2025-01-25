@@ -16,7 +16,7 @@ import {
   Smile,
   Sparkles,
   Stethoscope,
-  radiation,
+  Radiation,
   StretchVertical as Stretch,
   Target,
   UserCog,
@@ -66,7 +66,7 @@ const preventionSteps = [
 
 const additionalSupport = [
   {
-    icon: radiation,
+    icon: Radiation,
     title: "Imagerie",
     description: "IRM ou scanner"
   },
