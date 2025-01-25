@@ -107,7 +107,7 @@ const additionalSupport = [
     icon: Building,
     title: "Médecine du travail",
     description: "Visite de pré reprise, adaptation du poste, reconversion"
-  }
+  },
   {
     icon: BedDouble,
     title: "Sommeil",
