@@ -5,7 +5,6 @@ import {
   Activity,
   Biceps-flexed,
   BookOpen,
-  Brain,
   Brain-circuit,
   Cigarette-off,
   Dumbbell,
