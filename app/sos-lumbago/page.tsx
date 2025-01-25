@@ -163,10 +163,10 @@ export default function SOSLumbago() {
                     </div>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Brain className="h-8 w-8 text-primary mt-1" />
+                    <Brain className="h-16 w-16 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">Technique sûre</p>
-                      <p className="text-gray-600">Infiltration dans le muscle guidée par échographie pour une précision parfaite. Nous injectons un produit anesthésisant (Ropivacaine). Le muscle endormi va pouvoir se  décontracter. Ce n'est ni une infiltration de cortisone ni une péridurale.</p>
+                      <p className="text-gray-600">Infiltration musculaire guidée par échographie pour une précision parfaite. Nous injectons un produit anesthésisant (Ropivacaine). Le muscle endormi va pouvoir se  décontracter. Ce n'est ni une infiltration de cortisone ni une péridurale.</p>
                     </div>
                   </li>
                 </ul>
@@ -188,7 +188,7 @@ export default function SOSLumbago() {
                     <Stethoscope className="h-8 w-8 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">Réévaluation à 3-4 semaines plus tard</p>
-                      <p className="text-gray-600">En consultation au cabinet Anesthau 7</p>
+                      <p className="text-gray-600">Elle est importante pour évaluer le risque de chronicisation des douleurs et vous orienter vers les bons professionnels (RDV au cabinet Anesthau 7)</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-2">
