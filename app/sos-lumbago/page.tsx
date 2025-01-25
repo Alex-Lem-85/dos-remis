@@ -163,7 +163,7 @@ export default function SOSLumbago() {
                     </div>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Brain className="h-24 w-24 text-primary mt-1" />
+                    <Brain className="h-28 w-28 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">Technique sûre</p>
                       <p className="text-gray-600">Infiltration musculaire guidée par échographie pour une précision parfaite. Nous injectons un produit anesthésisant (Ropivacaine). Le muscle endormi va pouvoir se  décontracter. Ce n'est ni une infiltration de cortisone ni une péridurale.</p>
@@ -179,13 +179,13 @@ export default function SOSLumbago() {
               <CardContent>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-2">
-                    <Activity className="h-20 w-20 text-primary mt-1" />
+                    <Activity className="h-18 w-18 text-primary mt-1" />
                     <div>
                       <p className="text-gray-600">Profitez de l'anesthésie du muscle pour faire des étirements et reprendre le jour même une activité physique et professionnelle adaptées à votre douleur.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Stethoscope className="h-20 w-20 text-primary mt-1" />
+                    <Stethoscope className="h-18 w-18 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">Réévaluation à 3-4 semaines plus tard</p>
                       <p className="text-gray-600">Elle est importante pour évaluer le risque de chronicisation des douleurs et vous orienter vers les bons professionnels (RDV au cabinet Anesthau 7)</p>
@@ -199,7 +199,7 @@ export default function SOSLumbago() {
                     </div>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Info className="h-20 w-20 text-primary mt-1" />
+                    <Info className="h-18 w-18 text-primary mt-1" />
                     <div>
                       <p className="text-gray-600">En cas d'arrêt de travail, il n'est pas nécessaire d'attendre la disparition des symptômes pour reprendre. La reprise précoce améliore le pronostic.</p>
                     </div>
