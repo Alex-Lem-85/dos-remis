@@ -141,8 +141,6 @@ export default function SOSLumbago() {
         Une approche rapide et efficace pour soulager votre douleur
       </p>
     </div>
-  </div>
-</section>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card>
               <CardHeader>
