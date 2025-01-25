@@ -49,7 +49,7 @@ const preventionSteps = [
   {
     icon: Stretch,
     title: "Étirements musculaires",
-    description: "Assouplissement régulier pour maintenir la souplesse du dos"
+    description: "Assouplissements réguliers pour maintenir la souplesse du dos"
   },
   {
     icon: Dumbbell,
@@ -59,7 +59,7 @@ const preventionSteps = [
   {
     icon: BookOpen,
     title: "Éducation posturale",
-    description: "Apprentissage des bonnes postures quotidiennes : position assise, port de charges, mouvements, poste de travail..."
+    description: "Apprentissage des bonnes postures quotidiennes : position assise, port de charges, se baisser, poste de travail..."
   }
 ];
 
@@ -77,7 +77,7 @@ const additionalSupport = [
   {
     icon: Stethoscope,
     title: "Médecins spécialistes",
-    description: "Rhumatologues, médecins physiques et réadaptation, neurochirurgiens"
+    description: "Rhumatologue, médecin physique et réadaptation, neurochirurgien"
   },
   {
     icon: Brain,
@@ -127,11 +127,11 @@ export default function Suivi() {
       <section className="py-12 bg-primary">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
-            <h2 className="text-2xl font-bold mb-4">Harmonie retrouvée</h2>
+            <h2 className="text-3xl font-bold mb-4">Harmonie retrouvée</h2>
             <p className="text-xl">
               Dos-remis est le chef d'orchestre de votre prise en charge, mais vous faites partie de l'orchestre. 
               Ce sont vos exercices physiques et l'adaptation de votre mode de vie qui permettront d'éviter les récidives 
-              et l'apparition de douleurs chroniques. Nous vous aiderons aussi à trouver d'autres professeurs de musique pour vous accompagner.
+              et l'apparition de douleurs chroniques. Nous vous aiderons aussi à trouver d'autres professeurs de musique pour vous accompagner
             </p>
           </div>
         </div>
@@ -204,37 +204,40 @@ export default function Suivi() {
         </div>
       </section>
 
-      {/* Notre approche en deux temps */}
-      <section className="py-16 bg-primary">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center text-white">
-            <h2 className="text-3xl font-bold mb-6">Notre approche en deux temps</h2>
-            <p className="text-xl mb-12">
-              SOS lumbago est un traitement symptomatique
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card className="bg-white/5 border-white/10">
-                <CardHeader>
-                  <Activity className="h-12 w-12 text-white mb-2 mx-auto" />
-                  <CardTitle className="text-white text-xl">1. Traitement symptomatique</CardTitle>
-                </CardHeader>
-                <CardContent className="text-white/90">
-                  <p>SOS lumbago intervient rapidement pour soulager votre douleur aiguë</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-white/5 border-white/10">
-                <CardHeader>
-                  <Brain className="h-12 w-12 text-white mb-2 mx-auto" />
-                  <CardTitle className="text-white text-xl">2. Analyse approfondie</CardTitle>
-                </CardHeader>
-                <CardContent className="text-white/90">
-                  <p>Examen détaillé des causes sous-jacentes pour prévenir les récidives</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
+{/* Notre approche en deux temps */}
+<section className="py-16 bg-gradient-to-r from-primary/10 to-primary/5">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="text-center">
+      <h2 className="text-3xl font-bold text-gray-900 mb-6">Notre approche en deux temps</h2>
+      <p className="text-lg text-gray-600 mb-12">
+        SOS lumbago est seulement un traitement symptomatique
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Traitement symptomatique */}
+        <Card className="bg-white shadow-md border border-gray-200">
+          <CardHeader>
+            <Activity className="h-12 w-12 text-primary mb-2 mx-auto" />
+            <CardTitle className="text-gray-900 text-xl">1. Traitement symptomatique</CardTitle>
+          </CardHeader>
+          <CardContent className="text-gray-600">
+            <p>SOS lumbago intervient rapidement pour soulager votre douleur aiguë</p>
+          </CardContent>
+        </Card>
+
+        {/* Analyse approfondie */}
+        <Card className="bg-white shadow-md border border-gray-200">
+          <CardHeader>
+            <Brain className="h-12 w-12 text-primary mb-2 mx-auto" />
+            <CardTitle className="text-gray-900 text-xl">2. Analyse approfondie</CardTitle>
+          </CardHeader>
+          <CardContent className="text-gray-600">
+            <p>Examen détaillé des causes sous-jacentes pour prévenir les récidives</p>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Comment vous aider */}
       <section className="py-16">
