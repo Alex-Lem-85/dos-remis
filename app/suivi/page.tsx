@@ -147,7 +147,7 @@ export default function Suivi() {
       <p className="text-xl">
         Dos-remis est le chef d'orchestre de votre prise en charge, mais vous faites partie de l'orchestre. 
         Ce sont vos exercices physiques et l'adaptation de votre mode de vie qui permettront d'éviter les récidives 
-        et l'apparition de douleurs chroniques. Nous vous aiderons aussi à trouver d'autres professeurs de musique pour vous accompagner.
+        et l'apparition de douleurs chroniques. Nous vous aiderons aussi à trouver d'autres professeurs de musique pour vous accompagner
       </p>
     </div>
   </div>
