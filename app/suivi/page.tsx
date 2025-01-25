@@ -145,9 +145,10 @@ export default function Suivi() {
         <Music className="h-8 w-8 text-white" />
       </div>
       <p className="text-xl">
-        Dos-remis is the conductor of your care, but you are part of the orchestra. 
-        It is your physical exercises and lifestyle adjustments that will help prevent recurrences 
-        and the onset of chronic pain. We will also help you find other music teachers to support you.
+        Dos-remis est le chef d'orchestre de votre prise en charge, mais vous faites partie de l'orchestre. 
+        Ce sont vos exercices physiques et l'adaptation de votre mode de vie qui permettront d'éviter les récidives 
+        et l'apparition de douleurs chroniques. Nous vous aiderons aussi à trouver d'autres professeurs de musique pour vous accompagner
+      </p>
       </p>
     </div>
   </div>
