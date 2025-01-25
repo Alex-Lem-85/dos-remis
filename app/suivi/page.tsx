@@ -45,7 +45,7 @@ const pApproach = [
   },
   {
     title: "Participative",
-    description: "Implication active du patient dans son processus de guérison"
+    description: "Implication active du patient dans son processus de guérison sur le long terme"
   }
 ];
 
