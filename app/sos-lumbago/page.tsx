@@ -132,15 +132,17 @@ export default function SOSLumbago() {
         </div>
       </section>
 
-      {/* Notre solution */}
-      <section className="py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900">Notre solution</h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Une approche rapide et efficace pour soulager votre douleur
-            </p>
-          </div>
+{/* Notre solution */}
+<section className="py-12 bg-primary">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="text-center text-white">
+      <h2 className="text-2xl font-bold mb-4">Notre solution</h2>
+      <p className="text-xl">
+        Une approche rapide et efficace pour soulager votre douleur
+      </p>
+    </div>
+  </div>
+</section>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card>
               <CardHeader>
@@ -163,7 +165,7 @@ export default function SOSLumbago() {
                     </div>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Brain className="h-16 w-16 text-primary mt-1" />
+                    <Brain className="h-25 w-25 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">Technique sûre</p>
                       <p className="text-gray-600">Infiltration musculaire guidée par échographie pour une précision parfaite. Nous injectons un produit anesthésisant (Ropivacaine). Le muscle endormi va pouvoir se  décontracter. Ce n'est ni une infiltration de cortisone ni une péridurale.</p>
@@ -179,13 +181,13 @@ export default function SOSLumbago() {
               <CardContent>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-2">
-                    <Activity className="h-8 w-8 text-primary mt-1" />
+                    <Activity className="h-25 w-25 text-primary mt-1" />
                     <div>
                       <p className="text-gray-600">Profitez de l'anesthésie du muscle pour faire des étirements et reprendre le jour même une activité physique et professionnelle adaptées à votre douleur.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Stethoscope className="h-8 w-8 text-primary mt-1" />
+                    <Stethoscope className="h-25 w-25 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">Réévaluation à 3-4 semaines plus tard</p>
                       <p className="text-gray-600">Elle est importante pour évaluer le risque de chronicisation des douleurs et vous orienter vers les bons professionnels (RDV au cabinet Anesthau 7)</p>
@@ -199,7 +201,7 @@ export default function SOSLumbago() {
                     </div>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Info className="h-8 w-8 text-primary mt-1" />
+                    <Info className="h-25 w-25 text-primary mt-1" />
                     <div>
                       <p className="text-gray-600">En cas d'arrêt de travail, il n'est pas nécessaire d'attendre la disparition des symptômes pour reprendre. La reprise précoce améliore le pronostic.</p>
                     </div>
