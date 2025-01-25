@@ -52,7 +52,7 @@ const preventionSteps = [
   {
     icon: Stretch,
     title: "Étirements musculaires",
-    description: "Assouplissements réguliers pour maintenir la souplesse du dos"
+    description: "Assouplissements réguliers pour maintenir la mobilité du dos"
   },
   {
     icon: Dumbbell,
@@ -242,7 +242,7 @@ export default function Suivi() {
   </div>
 </section>
 
-      {/* Comment vous aider */}
+      {/* Et après l'analyse ? */}
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -251,7 +251,7 @@ export default function Suivi() {
               <Button 
                 asChild 
                 size="lg" 
-                className="bg-white text-red-500 hover:text-red-700 hover:bg-gray-100 shadow-lg border border-red-500"
+                className=bg-transparent text-primary hover:text-primary/90 border border-primary shadow-lg"
               >
                 <a 
                   href="https://www.ameli.fr/sites/default/files/Documents/Parcours-soins-patient-je-souffre-lombalgie.pdf" 
@@ -263,7 +263,7 @@ export default function Suivi() {
               </Button>
             </div>
             <p className="mt-4 text-lg text-gray-600">
-              Orientation vers une équipe pluridisciplinaire pour prendre le problème à la racine
+              Orientation vers une équipe pluridisciplinaire pour prendre les problèmes à la racine
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
