@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   Activity,
-  Biceps-flexed,
+  BicepsFlexed,
   BookOpen,
-  Brain-circuit,
-  Cigarette-off,
+  BrainCircuit,
+  CigaretteOff,
   Dumbbell,
   Fingerprint,
   Heart,
@@ -73,7 +73,7 @@ const additionalSupport = [
     description: "IRM ou scanner"
   },
   {
-    icon: Biceps-flexed,
+    icon: BicepsFlexed,
     title: "Programme d'exercices supervisés",
     description: "Par un kinésithérapeute pour éduquer et motiver"
   },
@@ -83,12 +83,12 @@ const additionalSupport = [
     description: "Rhumatologue, médecin physique et réadaptation, neurochirurgien"
   },
   {
-    icon: Brain-circuit,
+    icon: BrainCircuit,
     title: "Gestion du stress",
     description: "Relaxation, méditation et soutien psychologique permettent de réduire les tensions musculaires"
   },
   {
-    icon: Cigarette-off,
+    icon: CigaretteOff,
     title: "Mode de vie",
     description: "Accompagnement pour le sevrage tabagique et la réduction de l'inflammation"
   },
