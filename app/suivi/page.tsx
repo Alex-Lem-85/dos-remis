@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   Activity,
+  BedDouble
   BicepsFlexed,
   BookOpen,
   BrainCircuit,
@@ -106,6 +107,11 @@ const additionalSupport = [
     icon: Building,
     title: "Médecine du travail",
     description: "Visite de pré reprise, adaptation du poste, reconversion"
+  }
+  {
+    icon: BedDouble,
+    title: "Sommeil",
+    description: "il est important de bien dormir"
   }
 ];
 
