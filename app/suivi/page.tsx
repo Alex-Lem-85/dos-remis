@@ -3,23 +3,26 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   Activity,
-  Apple,
+  Biceps-flexed,
   BookOpen,
   Brain,
-  Cigarette,
+  Brain-circuit,
+  Cigarette-off,
   Dumbbell,
+  Fingerprint,
   Heart,
-  Image,
   Microscope,
   Scale,
   Shield,
   Smile,
   Sparkles,
   Stethoscope,
+  Syringe,
   Radiation,
   StretchVertical as Stretch,
   Target,
   UserCog,
+  Vegan,
   Building
 } from "lucide-react";
 
@@ -71,7 +74,7 @@ const additionalSupport = [
     description: "IRM ou scanner"
   },
   {
-    icon: Dumbbell,
+    icon: Biceps-flexed,
     title: "Programme d'exercices supervisés",
     description: "Par un kinésithérapeute pour éduquer et motiver"
   },
@@ -81,17 +84,17 @@ const additionalSupport = [
     description: "Rhumatologue, médecin physique et réadaptation, neurochirurgien"
   },
   {
-    icon: Brain,
+    icon: Brain-circuit,
     title: "Gestion du stress",
     description: "Relaxation, méditation et soutien psychologique permettent de réduire les tensions musculaires"
   },
   {
-    icon: Cigarette,
+    icon: Cigarette-off,
     title: "Mode de vie",
     description: "Accompagnement pour le sevrage tabagique et la réduction de l'inflammation"
   },
   {
-    icon: Apple,
+    icon: Vegan,
     title: "Nutrition",
     description: "Conseils nutritionnels pour réduire l'inflammation et perdre du poids"
   },
@@ -217,7 +220,7 @@ export default function Suivi() {
         {/* Traitement symptomatique */}
         <Card className="bg-white shadow-md border border-gray-200">
           <CardHeader>
-            <Activity className="h-12 w-12 text-primary mb-2 mx-auto" />
+            <Syringe className="h-12 w-12 text-primary mb-2 mx-auto" />
             <CardTitle className="text-gray-900 text-xl">1. Traitement symptomatique</CardTitle>
           </CardHeader>
           <CardContent className="text-gray-600">
@@ -228,7 +231,7 @@ export default function Suivi() {
         {/* Analyse approfondie */}
         <Card className="bg-white shadow-md border border-gray-200">
           <CardHeader>
-            <Brain className="h-12 w-12 text-primary mb-2 mx-auto" />
+            <Fingerprint className="h-12 w-12 text-primary mb-2 mx-auto" />
             <CardTitle className="text-gray-900 text-xl">2. Analyse approfondie</CardTitle>
           </CardHeader>
           <CardContent className="text-gray-600">
