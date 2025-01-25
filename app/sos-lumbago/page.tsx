@@ -42,7 +42,7 @@ const faqItems = [
     question: "Et que pouvez vous me prescrire pour avoir moins mal ?",
     answer: (
       <div className="space-y-4">
-        <p>Primum non nocere : les médicaments sont inefficaces et font plus de mal que de bien</p>
+        <p>Primum non nocere : les médicaments sont quasiment inefficaces et font plus de mal que de bien.</p>
         <ul className="space-y-2">
         </ul>
       </div>
@@ -144,7 +144,7 @@ export default function SOSLumbago() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card>
               <CardHeader>
-                <CardTitle>Le traitement</CardTitle>
+                <CardTitle>Le traitement : SOS Lumbago</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-4">
@@ -152,7 +152,7 @@ export default function SOSLumbago() {
                     <Clock className="h-8 w-8 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">Durée : 5 minutes</p>
-                      <p className="text-gray-600">Comptez 1-2h au total avec les formalités et la surveillance</p>
+                      <p className="text-gray-600">Comptez 1 à 2 h au total avec les formalités et la surveillance</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-2">
@@ -165,8 +165,8 @@ export default function SOSLumbago() {
                   <li className="flex items-start gap-2">
                     <Brain className="h-8 w-8 text-primary mt-1" />
                     <div>
-                      <p className="font-semibold">Technique simple et sûre</p>
-                      <p className="text-gray-600">Injection de Ropivacaine pour décontracter le muscle. Ce n'est ni une infiltration de cortisone ni une péridurale.</p>
+                      <p className="font-semibold">Technique sûre</p>
+                      <p className="text-gray-600">Infiltration dans le muscle guidée par échographie pour une précision parfaite. Nous injectons un produit anesthésisant (Ropivacaine). Le muscle endormi va pouvoir se  décontracter. Ce n'est ni une infiltration de cortisone ni une péridurale.</p>
                     </div>
                   </li>
                 </ul>
@@ -174,28 +174,28 @@ export default function SOSLumbago() {
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle>Les suites</CardTitle>
+                <CardTitle>Et après ?</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-2">
                     <Activity className="h-8 w-8 text-primary mt-1" />
                     <div>
-                      <p className="text-gray-600">Profitez de l'anesthésie du muscle pour faire des étirement et reprendre tout de suite une activité physique et professionnelle adaptées à votre douleur.</p>
+                      <p className="text-gray-600">Profitez de l'anesthésie du muscle pour faire des étirements et reprendre le jour même une activité physique et professionnelle adaptées à votre douleur.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-2">
                     <Stethoscope className="h-8 w-8 text-primary mt-1" />
                     <div>
-                      <p className="font-semibold">Réévaluation à 3-4 semaines</p>
-                      <p className="text-gray-600">En consultation au cabinet Anesthau7</p>
+                      <p className="font-semibold">Réévaluation à 3-4 semaines plus tard</p>
+                      <p className="text-gray-600">En consultation au cabinet Anesthau 7</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-8 w-8 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">Kinésithérapie</p>
-                      <p className="text-gray-600">5 séances avec réévaluation à la 4ème séance</p>
+                      <p className="text-gray-600">Prescription de 5 séances avec réévaluation à la 4ème séance</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-2">
@@ -219,7 +219,7 @@ export default function SOSLumbago() {
               Vous souffrez d'un lumbago ?
             </h2>
             <p className="mt-4 text-lg text-primary-foreground/90">
-              N'attendez pas que la douleur s'aggrave. Notre équipe est là pour vous soulager rapidement.
+              N'attendez pas que la douleur s'aggrave. Plus vous tardez, plus vos muscles fondent à cause de l'inactivité.
             </p>
             <div className="mt-8">
               <Button asChild variant="secondary" size="lg">
