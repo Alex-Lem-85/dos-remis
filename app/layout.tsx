@@ -8,7 +8,7 @@ import { Footer } from '@/components/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Dos-remis | Spécialistes en lumbago à Sète',
+  title: 'Dos-remis | Spécialistes du lumbago à Sète',
   description: 'Vous souffrez de lombalgie aiguë, de mal au dos ou de dos bloqué ? Le centre SOS Lumbago à Sète est spécialisé dans le traitement rapide et efficace des douleurs dorsales grâce à des infiltrations et des soins personnalisés.',
   keywords: [
     'lombalgie aiguë', 
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'soins du dos'
   ],
   openGraph: {
-    title: 'Dos-remis | Spécialistes en lumbago à Sète',
+    title: 'Dos-remis | Spécialistes du lumbago à Sète',
     description: 'Découvrez Dos-remis à Sète : une équipe spécialisée pour soulager vos douleurs dorsales, traiter la lombalgie aiguë, et retrouver rapidement votre mobilité grâce à des techniques modernes comme SOS lumbago.',
     url: 'https://dos-remis.com/',
     images: [
