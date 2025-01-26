@@ -163,7 +163,7 @@ export default function SOSLumbago() {
                     </div>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Brain className="h-28 w-28 text-primary mt-1" />
+                    <Brain className="h-32 w-32 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">Technique sûre</p>
                       <p className="text-gray-600">Infiltration musculaire guidée par échographie pour une précision parfaite. Nous injectons un produit anesthésisant (Ropivacaine). Le muscle endormi va pouvoir se  décontracter. Ce n'est ni une infiltration de cortisone ni une péridurale. Nous restons à distance des nerfs et de la colonne vertebrale</p>
