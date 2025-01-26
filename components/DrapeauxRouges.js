@@ -3,7 +3,7 @@
 export default function DrapeauxRouges() {
   return (
     <p className="mb-2">
-      Dans la majorité des cas de lumbago, il n'est pas nécessaire de réaliser une radio, un scanner ou une IRM. Ces examens ne sont recommandés que dans des situations particulières, que votre médecin saura identifier. En cas de présence de 
+      Dans la majorité des cas de lumbago, il n'est pas nécessaire de réaliser une radio, un scanner ou une IRM. Ces examens ne sont recommandés que dans des situations particulières, que votre médecin saura identifier. En cas de présence de  
       <span
         className="text-primary underline cursor-pointer"
         onClick={() =>
