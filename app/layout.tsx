@@ -8,7 +8,7 @@ import { Footer } from '@/components/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Dos-remis | Spécialistes du traitement du lumbago',
+  title: 'Dos-remis | Spécialistes du lumbago',
   description: 'Centre spécialisé dans le traitement de la lombalgie aiguë par l\'équipe Dos-remis',
 };
 
