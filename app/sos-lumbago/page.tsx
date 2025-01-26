@@ -84,7 +84,7 @@ export default function SOSLumbago() {
             <h2 className="text-3xl font-bold mb-4">Message important</h2>
             <p className="text-xl">
               L'équipe de SOS lumbago vous propose d'accélérer le processus de guérison en diminuant la douleur aiguë. 
-              Cela permet de casser le cercle vicieux qui pourrait conduire à l'apparition de douleurs chroniques.
+              Cela permet de casser le cercle vicieux qui pourrait conduire à l'apparition de douleurs chroniques
             </p>
           </div>
         </div>
@@ -93,7 +93,7 @@ export default function SOSLumbago() {
       {/* FAQ Section */}
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">C'est quoi un lumbago au fait ?</h2>
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-6">C'est quoi un lumbago au fait ?</h2>
           
           <div className="flex justify-center mb-12"> {/* Center the button and add margin bottom */}
             <Button 
