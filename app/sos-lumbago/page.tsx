@@ -6,12 +6,6 @@ import {
   X, Activity, Brain, Pill, Ban, Stethoscope, Laptop, BookOpen, 
   Heart, Utensils, Weight, Cigarette, HelpCircle 
 } from "lucide-react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import DrapeauxRouges from "@/components/DrapeauxRouges";
 
 
