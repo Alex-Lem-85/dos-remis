@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Activity, ClipboardCheck, Phone, Stethoscope } from "lucide-react";
+import { Users, Activity, ClipboardCheck, Phone, Stethoscope, AlarmClockCheck } from "lucide-react";
 
 const doctors = [
   {
@@ -68,7 +68,7 @@ export default function Home() {
             </Card>
             <Card>
               <CardHeader>
-                <Activity className="h-8 w-8 text-primary" />
+                <AlarmClockCheck className="h-8 w-8 text-primary" />
                 <CardTitle>Traitement rapide</CardTitle>
                 <CardDescription>
                   Prise en charge immédiate de votre douleur
