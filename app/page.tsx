@@ -28,30 +28,28 @@ const doctors = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary/10 to-primary/5 py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Prenons soin de votre dos
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Une équipe pluridisciplinaire spécialisée dans le traitement de la lombalgie aiguë
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button asChild size="lg">
-                <Link href="/sos-lumbago">Découvrir SOS Lumbago</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <a href="https://form.jotform.com/242954146506055" target="_blank" rel="noopener noreferrer">
-                  Prendre rendez-vous
-                </a>
-              </Button>
-            </div>
-          </div>
+<div className="flex flex-col min-h-screen">
+  {/* Hero Section */}
+  <section className="relative bg-gradient-to-r from-primary/10 to-primary/5 py-20">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          Prenons soin de votre dos
+        </h1>
+        <p className="mt-6 text-lg leading-8 text-gray-600">
+          Une équipe pluridisciplinaire spécialisée dans le traitement de la lombalgie aiguë
+        </p>
+        <div className="mt-8 flex justify-center gap-4">
+          <button className="bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-700">
+            Découvrir SOS Lumbago
+          </button>
+          <button className="border border-red-600 text-red-600 py-3 px-6 rounded-lg hover:bg-red-50">
+            Prendre rendez-vous
+          </button>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
       {/* Features Section */}
       <section className="py-16">
