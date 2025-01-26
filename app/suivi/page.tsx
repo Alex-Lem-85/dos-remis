@@ -187,7 +187,7 @@ export default function Suivi() {
             <h2 className="text-3xl font-bold text-gray-900">Eviter les récidives</h2>
             <p className="mt-4 text-lg text-gray-600">
               L'activité physique régulière est la clé de la prévention. 
-              L'éducation et la prévention sont les meilleures des médecines.
+              L'éducation et la prévention sont les meilleures des médecines
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -258,7 +258,7 @@ export default function Suivi() {
       {/* Et après l'analyse ? */}
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6">
             <h2 className="text-3xl font-bold text-gray-900">Et après l'analyse ?</h2>
             <div className="mt-8">
               <Button 
