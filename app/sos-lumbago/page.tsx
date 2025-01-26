@@ -26,7 +26,16 @@ const faqItems = [
     question: "Faut-il faire des examens d'imagerie ?",
     answer: (
       <>
-        <p className="mb-2">Dans la majorité des cas de lumbago, il n'est pas nécessaire de réaliser une radio, un scanner ou une IRM. Ces examens ne sont recommandés que dans des situations particulières, que votre médecin saura identifier. En cas de présence de <TooltipProvider><Tooltip><TooltipTrigger className="text-primary underline cursor-help">drapeaux rouges</TooltipTrigger><TooltipContent className="max-w-md p-4"><ul className="list-disc space-y-2"><li>Douleur de type non mécanique : douleur d'aggravation progressive, présente au repos et en particulier durant la nuit</li><li>Symptôme neurologique étendu (déficit dans le contrôle des sphincters vésicaux ou anaux, atteinte motrice au niveau des jambes, syndrome de la queue-de-cheval)</li><li>Paresthésie au niveau du pubis (ou périnée)</li><li>Traumatisme important (tel qu'une chute de hauteur)</li><li>Perte de poids inexpliquée</li><li>Antécédent de cancer</li><li>Usage de drogue intraveineuse, ou usage prolongé de corticoïdes</li><li>Déformation structurale importante de la colonne</li><li>Douleur thoracique (rachialgies dorsales)</li><li>Âge d'apparition inférieur à 20 ans ou supérieur à 55 ans</li><li>Fièvre</li><li>Altération de l'état général</li></ul></TooltipContent></Tooltip></TooltipProvider>, il est préférable d'aller vers un service d'urgence</p>
+<p className="mb-2">
+  Dans la majorité des cas de lumbago, il n'est pas nécessaire de réaliser une radio, un scanner ou une IRM. Ces examens ne sont recommandés que dans des situations particulières, que votre médecin saura identifier. En cas de présence de 
+  <span
+    className="text-primary underline cursor-pointer"
+    onClick={() => alert('Drapeaux rouges :\n\n1. Douleur de type non mécanique : douleur d\'aggravation progressive, présente au repos et en particulier durant la nuit\n2. Symptôme neurologique étendu (déficit dans le contrôle des sphincters vésicaux ou anaux, atteinte motrice au niveau des jambes, syndrome de la queue-de-cheval)\n3. Paresthésie au niveau du pubis (ou périnée)\n4. Traumatisme important (tel qu\'une chute de hauteur)\n5. Perte de poids inexpliquée\n6. Antécédent de cancer\n7. Usage de drogue intraveineuse ou usage prolongé de corticoïdes\n8. Déformation structurale importante de la colonne\n9. Douleur thoracique (rachialgies dorsales)\n10. Âge d\'apparition inférieur à 20 ans ou supérieur à 55 ans\n11. Fièvre\n12. Altération de l\'état général')}
+  >
+    drapeaux rouges
+  </span>
+  , il est préférable d'aller vers un service d'urgence.
+</p>
       </>
     )
   },
