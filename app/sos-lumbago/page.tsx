@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   ArrowRight, Clock, CheckCircle, Shield, AlertCircle, Info, 
   X, Activity, Brain, Pill, Ban, Stethoscope, Laptop, BookOpen, 
-  Heart, Utensils, Weight, Cigarette, HelpCircle 
+  Heart, Utensils, Weight, Cigarette, HelpCircle, FastForward, Syringe, PersonStanding
 } from "lucide-react";
 import DrapeauxRouges from "@/components/DrapeauxRouges";
 
@@ -152,14 +152,14 @@ export default function SOSLumbago() {
                     </div>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Activity className="h-8 w-8 text-primary mt-1" />
+                    <FastForward className="h-8 w-8 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">Action rapide</p>
                       <p className="text-gray-600">Soulagement immédiat, effet maximal le lendemain</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Brain className="h-32 w-32 text-primary mt-1" />
+                    <Syringe className="h-32 w-32 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">Technique sûre</p>
                       <p className="text-gray-600">Infiltration musculaire guidée par échographie pour une précision parfaite. Nous injectons un produit anesthésisant (Ropivacaine). Le muscle endormi va pouvoir se  décontracter. Ce n'est ni une infiltration de cortisone ni une péridurale. Nous restons à distance des nerfs et de la colonne vertebrale</p>
@@ -175,7 +175,7 @@ export default function SOSLumbago() {
               <CardContent>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-2">
-                    <Activity className="h-20 w-20 text-primary mt-1" />
+                    <PersonStanding className="h-20 w-20 text-primary mt-1" />
                     <div>
                       <p className="text-gray-600">Profitez de l'anesthésie du muscle pour faire des étirements et reprendre le jour même une activité physique et professionnelle adaptées à votre douleur</p>
                     </div>
