@@ -6,7 +6,7 @@ import {
   X, Activity, Brain, Pill, Ban, Stethoscope, Laptop, BookOpen, 
   Heart, Utensils, Weight, Cigarette, HelpCircle 
 } from "lucide-react";
-import DrapeauxRouges from "@/components/ui/DrapeauxRouges";
+import DrapeauxRouges from "@/components/DrapeauxRouges";
 
 const faqItems = [
   {
