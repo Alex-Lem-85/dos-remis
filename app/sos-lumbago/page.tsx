@@ -95,11 +95,11 @@ export default function SOSLumbago() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-6">C'est quoi un lumbago au fait ?</h2>
           
-          <div className="flex justify-center mb-12"> {/* Center the button and add margin bottom */}
+          <div className="flex justify-center mb-6"> {/* Center the button and add margin bottom */}
             <Button 
               asChild 
               size="lg" 
-              className="bg-white hover:bg-gray-100 text-primary hover:text-primary/90 border-primary"
+              className="bg-primary text-white hover:bg-primary/90 border border-primary"
             >
               <a 
                 href="https://www.ameli.fr/sites/default/files/Documents/Parcours-soins-patient-je-souffre-lombalgie.pdf" 
