@@ -180,13 +180,24 @@ export default function SOSLumbago() {
                       <p className="text-gray-600">Profitez de l'anesthésie du muscle pour faire des étirements et reprendre le jour même une activité physique et professionnelle adaptées à votre douleur</p>
                     </div>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <Stethoscope className="h-20 w-20 text-primary mt-1" />
-                    <div>
-                      <p className="font-semibold">Réévaluation à 3-4 semaines plus tard</p>
-                      <p className="text-gray-600">Elle est importante pour évaluer le risque de chronicisation des douleurs et vous orienter vers les bons professionnels (RDV au cabinet Anesthau 7)</p>
-                    </div>
-                  </li>
+                 <li className="flex items-start gap-2">
+  <Stethoscope className="h-20 w-20 text-primary mt-1" />
+  <div>
+    <p className="font-semibold">
+      <a 
+        href="https://dos-remis.com/suivi/" 
+        rel="noopener noreferrer" 
+        className="text-primary underline hover:text-primary/90"
+      >
+        Réévaluation à 3-4 semaines plus tard
+      </a>
+    </p>
+    <p className="text-gray-600">
+      Elle est importante pour évaluer le risque de chronicisation des douleurs et vous orienter vers les bons professionnels (RDV au cabinet Anesthau 7)
+    </p>
+  </div>
+</li>
+
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-8 w-8 text-primary mt-1" />
                     <div>
