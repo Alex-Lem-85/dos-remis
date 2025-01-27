@@ -7,7 +7,7 @@ export function Footer() {
       {/* Carte Google Maps */}
       <div className="w-full h-[500px] grayscale">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2897.0458343392584!2d3.7038097!3d43.4080619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b13598a83c3699%3A0x5f9561153467f77d!2sPolyclinique%20Sainte%20Th%C3%A9r%C3%A8se!5e0!3m2!1sfr!2sfr!4v1710835200000!5m2!1sfr!2sfr"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2898.5106713688247!2d3.701276376289802!3d43.40815607111469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b135eafdb0e8cf%3A0xed77ac88d495f41d!2sDos-remis%20-%20SOS%20Lumbago!5e0!3m2!1sfr!2sfr!4v1737991445088!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           width="100%"
           height="100%"
           style={{ border: 0 }}
