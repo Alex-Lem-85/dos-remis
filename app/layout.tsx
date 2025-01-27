@@ -11,7 +11,12 @@ export const metadata: Metadata = {
   title: 'Dos-remis | Spécialistes du lumbago à Sète',
   description: 'Vous souffrez de lombalgie aiguë, de mal au dos ou de dos bloqué ? Le centre SOS Lumbago à Sète est spécialisé dans le traitement rapide et efficace des douleurs dorsales grâce à des infiltrations et des soins personnalisés.',
   icons: {
-    icon: '/android-chrome-512x512.png',
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
     apple: '/apple-touch-icon.png',
   },
   manifest: '/site.webmanifest',
@@ -35,7 +40,7 @@ export const metadata: Metadata = {
     url: 'https://dos-remis.com/',
     images: [
       {
-        url: 'https://votre-site.com/images/lombalgie-dos.jpg',
+        url: '/android-chrome-512x512.png',
         alt: 'Traitement lombalgie aiguë - SOS Lumbago',
       },
     ],
