@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Mail, MapPin, Clock, Star } from "lucide-react";
+import { Mail, MapPin, Clock } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -73,23 +73,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Google Avis Section */}
-      <section className="bg-white py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Avis Google</h2>
-          <div className="flex justify-center items-center gap-2 text-yellow-500 text-2xl mb-4">
-            <Star /> <Star /> <Star /> <Star /> <Star />
-            <span className="text-gray-700 text-lg ml-2">5.0 sur 5</span>
-          </div>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!4v1710835200000!6m8!1m7!1sCAoSLEFGMVFpcE40YjBiRmJVT2ZrbWxSRjNwcjQ0eUR0MkM4NVpPZ3pqV3Z4QW82!2m2!1d43.40815607111469!2d3.701276376289802!3f0!4f0!5f0.7820865974627469"
-            className="w-full h-[400px] rounded-lg border border-gray-200"
-            loading="lazy"
-            allowFullScreen
-          ></iframe>
-        </div>
-      </section>
-
       {/* Prise de rendez-vous */}
       <section className="py-16 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -114,4 +97,4 @@ export default function Contact() {
       </section>
     </div>
   );
-}
+} 
