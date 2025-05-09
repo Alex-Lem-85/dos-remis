@@ -1,7 +1,17 @@
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Activity, ClipboardCheck, Ear, Stethoscope, AlarmClockCheck } from "lucide-react";
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  AlarmClockCheck,
+  ClipboardCheck,
+  Ear,
+  Stethoscope,
+  Users,
+} from "lucide-react";
 
 const doctors = [
   {
@@ -28,40 +38,40 @@ const doctors = [
 
 export default function Home() {
   return (
-<div className="flex flex-col min-h-screen">
-  {/* Hero Section */}
-<section className="relative bg-gradient-to-r from-primary/10 to-primary/5 py-20">
-  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-        Prenons soin de votre dos
-      </h1>
-      <p className="mt-6 text-lg leading-8 text-gray-600">
-        Une équipe pluridisciplinaire spécialisée dans le traitement de la lombalgie aiguë
-      </p>
-      <div className="mt-8 flex justify-center gap-4">
-        {/* Bouton 1 : Découvrir SOS Lumbago */}
-        <a 
-          href="/sos-lumbago" 
-          className="bg-primary text-white py-3 px-6 rounded-lg hover:bg-primary/90"
-        >
-          Découvrir SOS Lumbago
-        </a>
+    <div className="flex flex-col min-h-screen">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-primary/10 to-primary/5 py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              Prenons soin de votre dos
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Une équipe pluridisciplinaire spécialisée dans le traitement de la
+              lombalgie aiguë
+            </p>
+            <div className="mt-8 flex justify-center gap-4">
+              {/* Bouton 1 : Découvrir SOS Lumbago */}
+              <a
+                href="/sos-lumbago"
+                className="bg-primary text-white py-3 px-6 rounded-lg hover:bg-primary/90"
+              >
+                Découvrir SOS Lumbago
+              </a>
 
-        {/* Bouton 2 : Prendre rendez-vous */}
-        <a 
-          href="https://form.jotform.com/242954146506055" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="border border-primary text-primary py-3 px-6 rounded-lg hover:bg-primary hover:text-white"
-        >
-          Prendre rendez-vous
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
+              {/* Bouton 2 : Prendre rendez-vous */}
+              <a
+                href="https://form.jotform.com/242954146506055"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-primary text-primary py-3 px-6 rounded-lg hover:bg-primary hover:text-white"
+              >
+                Prendre rendez-vous
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Features Section */}
       <section className="py-16">
@@ -98,9 +108,7 @@ export default function Home() {
               <CardHeader>
                 <Ear className="h-8 w-8 text-primary" />
                 <CardTitle>Disponibilité</CardTitle>
-                <CardDescription>
-                  Une équipe à votre écoute
-                </CardDescription>
+                <CardDescription>Une équipe à votre écoute</CardDescription>
               </CardHeader>
             </Card>
           </div>
@@ -115,16 +123,24 @@ export default function Home() {
               Notre équipe médicale
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Des médecins anesthésistes réanimateurs spécialisés dans le traitement du lumbago
+              Des médecins anesthésistes réanimateurs spécialisés dans le
+              traitement du lumbago
             </p>
           </div>
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
             {doctors.map((doctor) => (
-              <Card key={doctor.name} className="text-center">
+              <Card
+                key={doctor.name}
+                className="text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:rotate-1 hover:bg-primary/5 group"
+              >
                 <CardHeader>
-                  <Stethoscope className="h-8 w-8 text-primary mx-auto mb-4" />
-                  <CardTitle>{doctor.name}</CardTitle>
-                  <p className="text-sm text-gray-600">{doctor.role}</p>
+                  <Stethoscope className="h-8 w-8 text-primary mx-auto mb-4 transition-colors duration-300 group-hover:text-primary/80" />
+                  <CardTitle className="transition-colors duration-300 group-hover:text-primary">
+                    {doctor.name}
+                  </CardTitle>
+                  <p className="text-sm text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                    {doctor.role}
+                  </p>
                 </CardHeader>
               </Card>
             ))}
@@ -144,7 +160,11 @@ export default function Home() {
             </p>
             <div className="mt-8">
               <Button asChild variant="secondary" size="lg">
-                <a href="https://form.jotform.com/242954146506055" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://form.jotform.com/242954146506055"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Prendre rendez-vous
                 </a>
               </Button>
