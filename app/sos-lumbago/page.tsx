@@ -232,7 +232,7 @@ export default function SOSLumbago() {
                           rel="noopener noreferrer"
                           className="text-primary underline hover:text-primary/90"
                         >
-                          Réévaluation à 3-4 semaines plus tard
+                          Réévaluation à 2 semaines plus tard
                         </a>
                       </p>
                       <p className="text-gray-600">
