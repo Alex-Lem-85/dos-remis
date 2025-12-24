@@ -32,7 +32,7 @@ const doctors = [
 const reviews = [
   {
     author: "Evelyne",
-    text: "Prise en charge rapide (le jour même de l'appel) et efficace. Ca m'a évité un arrêt de travail et des douleurs inutiles. Merci",
+    text: "Prise en charge rapide (le jour même de l'appel) et efficace . Ca m'a évité un arrêt de travail et des douleurs inutiles. Merci",
   },
   {
     author: "Isabel",
@@ -52,18 +52,18 @@ const reviews = [
   },
   {
     author: "Delphine",
-    text: "Anesthésiste très efficace qui après une écho repère tout de suite le problème. Après plusieurs injections, une surveillance en salle de réveil avec des infirmières adorables. Retour chez moi et comme par magie plus aucune douleur. Alors que le matin j'étais pliée en 2 le soir je pouvais m'occuper de mes enfant",
+    text: "Anesthésiste très efficace qui après une écho repère tout de suite le problème. Après plusieurs injections,une surveillance en salle de réveil avec des infirmières adorables. Retour chez moi et comme par magie plus aucune douleur. Alors que le matin j'étais pliée en 2 le soir je pouvais m'occuper de mes enfant",
   },
 ];
 
-function Stars5() {
+function Etoiles5() {
   return (
     <div className="flex items-center gap-1 text-yellow-500">
-      <Star className="h-4 w-4 fill-current" />
-      <Star className="h-4 w-4 fill-current" />
-      <Star className="h-4 w-4 fill-current" />
-      <Star className="h-4 w-4 fill-current" />
-      <Star className="h-4 w-4 fill-current" />
+      <Star className="h-4 w-4" />
+      <Star className="h-4 w-4" />
+      <Star className="h-4 w-4" />
+      <Star className="h-4 w-4" />
+      <Star className="h-4 w-4" />
     </div>
   );
 }
@@ -82,6 +82,11 @@ export default function Equipe() {
               Des médecins anesthésistes réanimateurs spécialisés dans le
               traitement du lumbago
             </p>
+
+            {/* Marqueur visible pour vérifier que le bon fichier est déployé */}
+            <div className="mt-6 inline-flex items-center rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+              NOUVEAU : section avis activée
+            </div>
           </div>
         </div>
       </section>
@@ -138,7 +143,7 @@ export default function Equipe() {
                       <p className="font-semibold text-gray-900">
                         {review.author}
                       </p>
-                      <Stars5 />
+                      <Etoiles5 />
                     </div>
 
                     <p className="text-gray-600 leading-relaxed">
