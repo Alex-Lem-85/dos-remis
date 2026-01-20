@@ -1,39 +1,39 @@
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
-  AlarmClockCheck,
-  ClipboardCheck,
-  Ear,
-  Stethoscope,
-  Users,
-  Star,
-} from "lucide-react";
+importateur  de  Étoile, Utilisateurs,
+importateur {
+ Carte,
+ Description de la carte,
+ En tête de carte,
+ Titre de la carte,
+} de "@/composants/ui/carte";
+importateur {
+ Vérification de l'horloge d'alarme,
+ Presse-papiersVérificateur,
+ Oreille,
+ Stéthoscope,
+ Utilisateurs,
+ Étoile,
+} de "réaction lucide";
 
-const doctors = [
-  { name: "Dr. Lemaitre", role: "Médecin Anesthésiste Réanimateur" },
-  { name: "Dr. Swisser", role: "Médecin Anesthésiste Réanimateur" },
-  { name: "Dr. Sekkat", role: "Médecin Anesthésiste Réanimateur" },
-  { name: "Dr. Gallais", role: "Médecin Anesthésiste Réanimateur" },
-  { name: "Dr. Vallée", role: "Médecin Anesthésiste Réanimateur" },
+const médecins = [
+  { nom: "Dr. Lemaitre", rôle: "Médecin Anesthésiste Réanimateur" },
+  { nom: "Dr. Suisse", rôle: "Médecin Anesthésiste Réanimateur" },
+  { nom: "Dr. Sekkat", rôle: "Médecin Anesthésiste Réanimateur" },
+  { nom: "Dr. Gallais", rôle: "Médecin Anesthésiste Réanimateur" },
+  { nom: "Dr. Vallée", rôle: "Médecin Anesthésiste Réanimateur" },
 ];
 
-const reviews = [
+const avis = [
   {
-    name: "Evelyne",
-    text: "Prise en charge rapide (le jour même de l'appel) et efficace. Cela m’a évité un arrêt de travail et des douleurs inutiles. Merci.",
+    nom: "Evelyne",
+    texte: "Prise en charge rapide (le jour même de l'appel) et efficace. Cela m'a évité un arrêt de travail et des douleurs inutiles. Merci.",
   },
   {
-    name: "Isabel",
-    text: "Une équipe à l'écoute, et sympathique de surcroît. Le soulagement a été immédiat. C'est magique ! Inutile de souffrir pendant des semaines... Encore merci.",
+    nom: "Isabel",
+    texte: "Une équipe à l'écute, et sympathique de surcroît. Le soulagement à l'été immédiat. C'est magique ! Inutile de souffrir pendant des semaines... Encore merci.",
   },
   {
-    name: "Ber",
-    text: "Un énorme MERCI. La prise en charge rapide, les explications claires et la gentillesse de l'anesthésiste, Dr Alexandre Lemaitre, ont été au top, en tout point de vue. Arrivé bloqué avec d'intenses douleurs, incapable de trouver une posture de repos, je suis reparti souriant et soulagé, impressionné du résultat immédiat. N'hésitez surtout pas, en attendant inutilement de souffrir. Je ne peux que vous recommander et vous remercier.",
+    nom: "Ber",
+    texte: "Un anorme MERCI. La prise en charge rapide, les explications claires et la gentillesse de l'anesthésiste, Dr Alexandre Lemaitre, ont été au top, en tout point de vue. Arrivé bloqué avec d'intenses douleurs, incapable de trouver une posture de repos, je suis reparti soutenant et soulagé, impressionné du résultat immédiat. N'hésitez surtout pas, en attendant l'utilisation du souffrir. Je ne peux que vous recommander et vous remettre,
   },
   {
     name: "Pierre",
