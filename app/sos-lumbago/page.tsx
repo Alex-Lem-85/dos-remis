@@ -219,7 +219,7 @@ export default function SOSLumbago() {
                       <p className="text-gray-600">
                         Profitez de l'anesthésie du muscle pour faire des
                         étirements et reprendre le jour même une activité
-                        physique et professionnelle adaptées à votre douleur
+                        physique et professionnelle adaptée à votre douleur
                       </p>
                     </div>
                   </li>
@@ -279,7 +279,7 @@ export default function SOSLumbago() {
             </h2>
             <p className="mt-4 text-lg text-primary-foreground/90">
               N'attendez pas que la douleur s'aggrave. Plus vous tardez, plus
-              vos muscles fondent à cause de l'inactivité.
+              vos muscles diminuent à cause de l'inactivité.
             </p>
             <div className="mt-8">
               <Button asChild variant="secondary" size="lg">
