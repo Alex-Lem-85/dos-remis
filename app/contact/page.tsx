@@ -49,7 +49,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-lg">Horaires</h3>
                     <ul className="text-gray-600 space-y-1">
-                      <li>Lundi - Vendredi : 9h00 - 16h00</li>
+                      <li>Lundi - Vendredi : 10h00 - 16h00</li>
                       <li>Samedi : Fermé</li>
                       <li>Dimanche : Fermé</li>
                     </ul>
