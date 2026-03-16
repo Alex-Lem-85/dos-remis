@@ -54,7 +54,7 @@ export function Footer() {
                   <Clock className="h-4 w-4 mr-3 text-primary mt-1" />
                   <div>
                     <p className="font-medium">Lundi - Vendredi</p>
-                    <p>9h00 - 16h00</p>
+                    <p>10h00 - 16h00</p>
                   </div>
                 </div>
                 <div className="mt-4 p-4 bg-white rounded-lg border border-gray-200">
