@@ -291,23 +291,26 @@ export default function Suivi() {
         </Card>
       </div>
 
-      {/* Image iceberg */}
-      <div className="mt-16">
-        <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-          Comprendre les causes profondes : la douleur n’est que la partie visible du problème
+{/* Image iceberg full width */}
+<div className="mt-16">
 
+  <div className="mx-auto max-w-4xl px-4 text-center">
+    <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+      Comprendre les causes profondes : la douleur n’est que la partie visible du problème
+    </h3>
+    <p className="text-gray-600 mb-8">
+      Traiter la douleur sans les causes expose à des récidives
+    </p>
+  </div>
 
-        </h3>
-        <p className="text-gray-600 mb-8">
-          Traiter la douleur sans les causes expose à des recidives
-        </p>
+  {/* Image vraiment pleine largeur */}
+  <img
+    src="/iceberg-etapes-levrai.jpeg"
+    alt="Schéma iceberg lombalgie"
+    className="w-full h-auto"
+  />
 
-        <img
-          src="/iceberg-etapes-levrai.jpeg"
-          alt="Schéma iceberg lombalgie"
-          className="mx-auto rounded-2xl shadow-xl max-h-[500px] object-contain"
-        />
-      </div>
+</div>
 
     </div>
   </div>
