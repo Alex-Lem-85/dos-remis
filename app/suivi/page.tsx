@@ -265,7 +265,7 @@ export default function Suivi() {
           <CardHeader>
             <Syringe className="h-12 w-12 text-primary mb-2 mx-auto" />
             <CardTitle className="text-gray-900 text-xl">
-              1. Traitement symptomatique
+              Etape 1 : traitement symptomatique
             </CardTitle>
           </CardHeader>
           <CardContent className="text-gray-600">
@@ -280,7 +280,7 @@ export default function Suivi() {
           <CardHeader>
             <Fingerprint className="h-12 w-12 text-primary mb-2 mx-auto" />
             <CardTitle className="text-gray-900 text-xl">
-              2. Analyse approfondie
+              Etape 2 : analyse approfondie
             </CardTitle>
           </CardHeader>
           <CardContent className="text-gray-600">
@@ -294,10 +294,12 @@ export default function Suivi() {
       {/* Image iceberg */}
       <div className="mt-16">
         <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-          Comprendre votre douleur
+          Comprendre les causes profondes : la douleur n’est que la partie visible du problème
+
+
         </h3>
         <p className="text-gray-600 mb-8">
-          La douleur n’est que la partie visible du problème
+          Traiter la douleur sans les causes expose à des recidives
         </p>
 
         <img
