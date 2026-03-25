@@ -270,6 +270,33 @@ export default function SOSLumbago() {
         </div>
       </section>
 
+            {/* Vidéo présentation */}
+      <section className="py-16 bg-gray-50">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900">
+              Découvrez le traitement en vidéo
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Une explication simple et rapide de la prise en charge SOS Lumbago
+            </p>
+          </div>
+
+          <div
+            className="relative w-full overflow-hidden rounded-2xl shadow-xl"
+            style={{ paddingTop: "56.25%" }}
+          >
+            <iframe
+              className="absolute inset-0 h-full w-full"
+              src="https://www.youtube.com/embed/YpejbojhWrY"
+              title="SOS Lumbago vidéo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
