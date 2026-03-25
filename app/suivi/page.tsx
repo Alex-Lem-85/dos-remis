@@ -261,14 +261,14 @@ export default function Suivi() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 {/* Traitement symptomatique */}
-<Card className="shadow-md border border-gray-200 bg-[#AFC9D8]">
+<Card className="shadow-md border-2 border-black bg-[#9FBFCC]">
   <CardHeader>
-    <Syringe className="h-12 w-12 text-primary mb-2 mx-auto" />
-    <CardTitle className="text-gray-900 text-xl">
+    <Syringe className="h-12 w-12 text-black mb-2 mx-auto" />
+    <CardTitle className="text-black text-xl">
       1. Traitement symptomatique
     </CardTitle>
   </CardHeader>
-  <CardContent className="text-gray-800">
+  <CardContent className="text-black">
     <p>
       SOS lumbago intervient rapidement pour soulager votre douleur aiguë
     </p>
@@ -276,7 +276,7 @@ export default function Suivi() {
 </Card>
 
 {/* Analyse approfondie */}
-<Card className="shadow-md border border-gray-200 bg-[#1E5C85]">
+<Card className="shadow-md border-2 border-black bg-[#1E5C85]">
   <CardHeader>
     <Fingerprint className="h-12 w-12 text-white mb-2 mx-auto" />
     <CardTitle className="text-white text-xl">
