@@ -260,35 +260,35 @@ export default function Suivi() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Traitement symptomatique */}
-        <Card className="bg-white shadow-md border border-gray-200">
-          <CardHeader>
-            <Syringe className="h-12 w-12 text-primary mb-2 mx-auto" />
-            <CardTitle className="text-gray-900 text-xl">
-              Etape 1 : traitement symptomatique
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-gray-600">
-            <p>
-              SOS lumbago intervient rapidement pour soulager votre douleur aiguë
-            </p>
-          </CardContent>
-        </Card>
+{/* Traitement symptomatique */}
+<Card className="shadow-md border border-gray-200 bg-[#AFC9D8]">
+  <CardHeader>
+    <Syringe className="h-12 w-12 text-primary mb-2 mx-auto" />
+    <CardTitle className="text-gray-900 text-xl">
+      1. Traitement symptomatique
+    </CardTitle>
+  </CardHeader>
+  <CardContent className="text-gray-800">
+    <p>
+      SOS lumbago intervient rapidement pour soulager votre douleur aiguë
+    </p>
+  </CardContent>
+</Card>
 
-        {/* Analyse approfondie */}
-        <Card className="bg-white shadow-md border border-gray-200">
-          <CardHeader>
-            <Fingerprint className="h-12 w-12 text-primary mb-2 mx-auto" />
-            <CardTitle className="text-gray-900 text-xl">
-              Etape 2 : analyse approfondie
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-gray-600">
-            <p>
-              Examen détaillé des causes sous-jacentes pour prévenir les récidives
-            </p>
-          </CardContent>
-        </Card>
+{/* Analyse approfondie */}
+<Card className="shadow-md border border-gray-200 bg-[#1E5C85]">
+  <CardHeader>
+    <Fingerprint className="h-12 w-12 text-white mb-2 mx-auto" />
+    <CardTitle className="text-white text-xl">
+      2. Analyse approfondie
+    </CardTitle>
+  </CardHeader>
+  <CardContent className="text-white">
+    <p>
+      Examen détaillé des causes sous-jacentes pour prévenir les récidives
+    </p>
+  </CardContent>
+</Card>
       </div>
 
 {/* Image iceberg full width */}
