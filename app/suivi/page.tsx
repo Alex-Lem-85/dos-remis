@@ -228,7 +228,7 @@ export default function Suivi() {
         Explication simple et rapide pour éviter les recidives
       </h2>
       <p className="mt-4 text-lg text-gray-600">
-        Recommandation de la HAS (haute autorité de santé)
+        Recommandations de la HAS (haute autorité de santé)
       </p>
     </div>
 
