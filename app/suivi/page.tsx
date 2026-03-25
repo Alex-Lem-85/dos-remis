@@ -261,7 +261,7 @@ export default function Suivi() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 {/* Traitement symptomatique */}
-<Card className="shadow-md border-2 border-black bg-[#A7C6D7]">
+<Card className="shadow-md border-[3px] border-black bg-[#BDD8E6]">
   <CardHeader>
     <Syringe className="h-12 w-12 text-black mb-2 mx-auto" />
     <CardTitle className="text-black text-xl">
@@ -276,7 +276,7 @@ export default function Suivi() {
 </Card>
 
 {/* Analyse approfondie */}
-<Card className="shadow-md border-2 border-black bg-[#1E5C85]">
+<Card className="shadow-md border-[3px] border-black bg-[#1E5C85]">
   <CardHeader>
     <Fingerprint className="h-12 w-12 text-white mb-2 mx-auto" />
     <CardTitle className="text-white text-xl">
