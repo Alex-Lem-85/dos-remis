@@ -275,7 +275,7 @@ export default function SOSLumbago() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900">
-              Découvrez le traitement en vidéo
+              Découvrez comment éviter les récidives
             </h2>
             <p className="mt-4 text-lg text-gray-600">
               Une explication simple et rapide de la prise en charge SOS Lumbago
