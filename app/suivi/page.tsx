@@ -220,6 +220,24 @@ export default function Suivi() {
         </div>
       </section>
 
+            {/* Vidéo explicative */}
+      <section className="py-16 bg-white">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div
+            className="relative w-full overflow-hidden rounded-2xl shadow-xl"
+            style={{ paddingTop: "56.25%" }}
+          >
+            <iframe
+              className="absolute inset-0 h-full w-full"
+              src="https://www.youtube.com/embed/YpejbojhWrY"
+              title="Exercices lombalgie vidéo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+
 {/* Notre approche en deux temps */}
 <section className="py-16 bg-gradient-to-r from-primary/10 to-primary/5">
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
