@@ -252,19 +252,26 @@ export default function Suivi() {
 <section className="py-16 bg-gradient-to-r from-primary/10 to-primary/5">
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div className="text-center">
-      <h2 className="text-3xl font-bold text-gray-900 mb-6">Notre approche en deux temps</h2>
+      <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        Notre approche en deux temps
+      </h2>
       <p className="text-lg text-gray-600 mb-12">
         SOS lumbago est seulement un traitement symptomatique
       </p>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Traitement symptomatique */}
         <Card className="bg-white shadow-md border border-gray-200">
           <CardHeader>
             <Syringe className="h-12 w-12 text-primary mb-2 mx-auto" />
-            <CardTitle className="text-gray-900 text-xl">1. Traitement symptomatique</CardTitle>
+            <CardTitle className="text-gray-900 text-xl">
+              1. Traitement symptomatique
+            </CardTitle>
           </CardHeader>
           <CardContent className="text-gray-600">
-            <p>SOS lumbago intervient rapidement pour soulager votre douleur aiguë</p>
+            <p>
+              SOS lumbago intervient rapidement pour soulager votre douleur aiguë
+            </p>
           </CardContent>
         </Card>
 
@@ -272,13 +279,34 @@ export default function Suivi() {
         <Card className="bg-white shadow-md border border-gray-200">
           <CardHeader>
             <Fingerprint className="h-12 w-12 text-primary mb-2 mx-auto" />
-            <CardTitle className="text-gray-900 text-xl">2. Analyse approfondie</CardTitle>
+            <CardTitle className="text-gray-900 text-xl">
+              2. Analyse approfondie
+            </CardTitle>
           </CardHeader>
           <CardContent className="text-gray-600">
-            <p>Examen détaillé des causes sous-jacentes pour prévenir les récidives</p>
+            <p>
+              Examen détaillé des causes sous-jacentes pour prévenir les récidives
+            </p>
           </CardContent>
         </Card>
       </div>
+
+      {/* Image iceberg */}
+      <div className="mt-16">
+        <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+          Comprendre votre douleur
+        </h3>
+        <p className="text-gray-600 mb-8">
+          La douleur n’est que la partie visible du problème
+        </p>
+
+        <img
+          src="/iceberg-etapes-levrai.jpeg"
+          alt="Schéma iceberg lombalgie"
+          className="mx-auto rounded-2xl shadow-xl max-h-[500px] object-contain"
+        />
+      </div>
+
     </div>
   </div>
 </section>
