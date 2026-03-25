@@ -316,7 +316,7 @@ export default function Suivi() {
   </div>
 </section>
 
-      {/* Et après l'analyse ? */}
+      {/* Consultation de suivi avec analyse de vos réponses aux questionnaires */}
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6">
