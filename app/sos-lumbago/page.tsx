@@ -275,10 +275,10 @@ export default function SOSLumbago() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900">
-              Découvrez comment éviter les récidives
+              Découvrez SOS lumbago en vidéo
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Une explication simple et rapide de la prise en charge SOS Lumbago
+              Des explications par notre maître, le Dr. Choquet, du CHU de Montpellier
             </p>
           </div>
 
@@ -288,7 +288,7 @@ export default function SOSLumbago() {
           >
             <iframe
               className="absolute inset-0 h-full w-full"
-              src="https://www.youtube.com/embed/YpejbojhWrY"
+              src="https://www.youtube.com/embed/cXU6P7MNVUY"
               title="SOS Lumbago vidéo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
