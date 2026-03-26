@@ -17,32 +17,27 @@ const doctors = [
   {
     name: "Dr. Lemaitre",
     role: "Médecin Anesthésiste Réanimateur",
-    image: "/lemaitre.jpg",
-    position: "object-[center_15%]",
+    image: "/lemaitre.jpeg",
   },
   {
     name: "Dr. Swisser",
     role: "Médecin Anesthésiste Réanimateur",
-    image: "/swisser.jpg",
-    position: "object-center",
+    image: "/swisser.jpeg",
   },
   {
     name: "Dr. Sekkat",
     role: "Médecin Anesthésiste Réanimateur",
-    image: "/sekkat.jpg",
-    position: "object-center",
+    image: "/sekkat.jpeg",
   },
   {
     name: "Dr. Gallais",
     role: "Médecin Anesthésiste Réanimateur",
-    image: "/gallais.jpg",
-    position: "object-center",
+    image: "/gallais.jpeg",
   },
   {
     name: "Dr. Vallée",
     role: "Médecin Anesthésiste Réanimateur",
-    image: "/vallee.jpg",
-    position: "object-[center_15%]",
+    image: "/vallee.jpeg",
   },
 ];
 
