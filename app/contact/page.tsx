@@ -6,18 +6,30 @@ export default function Contact() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary/10 to-primary/5 py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Contactez-nous
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Notre équipe est à votre écoute pour vous accompagner
-            </p>
-          </div>
+<section className="relative bg-gradient-to-r from-primary/10 to-primary/5 py-20">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        Contactez-nous
+      </h1>
+      <p className="mt-6 text-lg leading-8 text-gray-600">
+        Notre équipe est à votre écoute pour vous accompagner
+      </p>
+
+      {/* Photo équipe */}
+      <div className="mt-12 flex justify-center">
+        <div className="w-full max-w-4xl overflow-hidden rounded-2xl shadow-lg">
+          <img
+            src="/equipe.jpg"
+            alt="Équipe Anesthau7"
+            className="w-full h-auto object-cover"
+          />
         </div>
-      </section>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* Contact Info */}
       <section className="py-16">
