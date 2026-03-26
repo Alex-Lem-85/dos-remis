@@ -175,7 +175,8 @@ export default function Home() {
                 className="group rounded-3xl bg-white p-6 text-center shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
 <div className="mx-auto h-40 w-40 sm:h-44 sm:w-44 lg:h-48 lg:w-48 overflow-hidden rounded-full ring-2 ring-black">
-  src={doctor.image}
+  <img
+    src={doctor.image}
     alt={doctor.name}
     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
     style={{ objectPosition: doctor.objectPosition }}
