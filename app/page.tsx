@@ -18,36 +18,26 @@ const doctors = [
     name: "Dr. Lemaitre",
     role: "Médecin Anesthésiste Réanimateur",
     image: "/lemaitre.jpeg",
-    fit: "cover",
-    objectPosition: "center 18%",
   },
   {
     name: "Dr. Swisser",
     role: "Médecin Anesthésiste Réanimateur",
     image: "/swisser.jpeg",
-    fit: "contain",
-    objectPosition: "center center",
   },
   {
     name: "Dr. Sekkat",
     role: "Médecin Anesthésiste Réanimateur",
     image: "/sekkat.jpeg",
-    fit: "contain",
-    objectPosition: "center center",
   },
   {
     name: "Dr. Gallais",
     role: "Médecin Anesthésiste Réanimateur",
     image: "/gallais.jpeg",
-    fit: "contain",
-    objectPosition: "center center",
   },
   {
     name: "Dr. Vallée",
     role: "Médecin Anesthésiste Réanimateur",
     image: "/vallee.jpeg",
-    fit: "cover",
-    objectPosition: "center 18%",
   },
 ];
 
@@ -169,7 +159,7 @@ export default function Home() {
             </h2>
             <p className="mt-4 text-lg text-gray-600">
               Une équipe engagée, expérimentée et spécialisée dans la prise en
-              charge du lumbago
+              charge du lumbago aigu.
             </p>
           </div>
 
@@ -177,21 +167,18 @@ export default function Home() {
             {doctors.map((doctor) => (
               <div
                 key={doctor.name}
-                className="group rounded-3xl bg-white p-6 text-center shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="group rounded-3xl bg-white p-6 text-center shadow-sm border border-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-<div className="mx-auto h-40 w-40 sm:h-44 sm:w-44 lg:h-48 lg:w-48 overflow-hidden rounded-full ring-2 ring-black bg-white">
-  <img
-    src={doctor.image}
-    alt={doctor.name}
-    className={`h-full w-full ${
-      doctor.fit === "contain" ? "object-contain p-2" : "object-cover"
-    } transition-transform duration-300 group-hover:scale-105`}
-    style={{ objectPosition: doctor.objectPosition }}
-  />
-</div>
+                <div className="mx-auto w-full max-w-[180px] overflow-hidden rounded-2xl border-2 border-primary bg-white">
+                  <img
+                    src={doctor.image}
+                    alt={doctor.name}
+                    className="h-[220px] w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
 
                 <div className="mt-6">
-                  <h3 className="text-lg font-semibold text-gray-900">
+                  <h3 className="text-lg font-semibold text-primary">
                     {doctor.name}
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-gray-600">
