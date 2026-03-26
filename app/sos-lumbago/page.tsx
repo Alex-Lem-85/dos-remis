@@ -88,7 +88,7 @@ export default function SOSLumbago() {
               SOS Lumbago
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Une prise en charge rapide et efficace de votre mal de dos
+              Une prise en charge rapide et efficace pour débloquer la situation
             </p>
           </div>
         </div>
@@ -159,7 +159,7 @@ export default function SOSLumbago() {
           <div className="text-center text-white">
             <h2 className="text-4xl font-bold mb-4">Notre solution</h2>
             <p className="text-xl mb-6">
-              Une approche rapide et efficace pour soulager votre douleur
+              Soigner vite, soigner mieux et soigner durablement votre mal de dos
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
