@@ -173,7 +173,7 @@ export default function Home() {
   <img
     src={doctor.image}
     alt={doctor.name}
-    className="h-full w-full object-cover object-center scale-90 transition-transform duration-300 group-hover:scale-95"
+    className="h-full w-full object-cover object-[center_20%] transition-transform duration-300 group-hover:scale-105"
   />
 </div>
 
