@@ -190,7 +190,7 @@ export default function Home() {
       {/* Avis patients */}
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-10">
             Avis de nos patients
           </h2>
 
@@ -220,7 +220,7 @@ export default function Home() {
       {/* Actualités */}
       <section className="py-16 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-10">
             Actualités
           </h2>
 
