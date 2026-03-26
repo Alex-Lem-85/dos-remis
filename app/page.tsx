@@ -169,11 +169,11 @@ export default function Home() {
                 key={doctor.name}
                 className="group rounded-3xl bg-white p-6 text-center shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className="mx-auto h-36 w-36 overflow-hidden rounded-full ring-2 ring-black">
+<div className="mx-auto h-36 w-36 overflow-hidden rounded-full ring-2 ring-black">
   <img
     src={doctor.image}
     alt={doctor.name}
-    className="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+    className="h-full w-full object-cover object-center scale-90 transition-transform duration-300 group-hover:scale-95"
   />
 </div>
 
