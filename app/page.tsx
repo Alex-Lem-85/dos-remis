@@ -169,7 +169,7 @@ export default function Home() {
                 key={doctor.name}
                 className="group rounded-3xl bg-white p-6 text-center shadow-sm border border-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className="mx-auto w-full max-w-[180px] overflow-hidden rounded-2xl border-2 border-primary bg-white">
+                <div className="mx-auto w-full max-w-[180px] overflow-hidden rounded-2xl border-2 border-black bg-white">
                   <img
                     src={doctor.image}
                     alt={doctor.name}
