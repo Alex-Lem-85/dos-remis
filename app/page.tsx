@@ -18,30 +18,35 @@ const doctors = [
     name: "Dr. Lemaitre",
     role: "Médecin Anesthésiste Réanimateur",
     image: "/lemaitre.jpeg",
+    fit: "cover",
     objectPosition: "center 18%",
   },
   {
     name: "Dr. Swisser",
     role: "Médecin Anesthésiste Réanimateur",
     image: "/swisser.jpeg",
+    fit: "contain",
     objectPosition: "center center",
   },
   {
     name: "Dr. Sekkat",
     role: "Médecin Anesthésiste Réanimateur",
     image: "/sekkat.jpeg",
+    fit: "contain",
     objectPosition: "center center",
   },
   {
     name: "Dr. Gallais",
     role: "Médecin Anesthésiste Réanimateur",
     image: "/gallais.jpeg",
+    fit: "contain",
     objectPosition: "center center",
   },
   {
     name: "Dr. Vallée",
     role: "Médecin Anesthésiste Réanimateur",
     image: "/vallee.jpeg",
+    fit: "cover",
     objectPosition: "center 18%",
   },
 ];
@@ -174,11 +179,13 @@ export default function Home() {
                 key={doctor.name}
                 className="group rounded-3xl bg-white p-6 text-center shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-<div className="mx-auto h-40 w-40 sm:h-44 sm:w-44 lg:h-48 lg:w-48 overflow-hidden rounded-full ring-2 ring-black">
+<div className="mx-auto h-40 w-40 sm:h-44 sm:w-44 lg:h-48 lg:w-48 overflow-hidden rounded-full ring-2 ring-black bg-white">
   <img
     src={doctor.image}
     alt={doctor.name}
-    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+    className={`h-full w-full ${
+      doctor.fit === "contain" ? "object-contain p-2" : "object-cover"
+    } transition-transform duration-300 group-hover:scale-105`}
     style={{ objectPosition: doctor.objectPosition }}
   />
 </div>
