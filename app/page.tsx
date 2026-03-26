@@ -114,6 +114,43 @@ export default function Home() {
         </div>
       </section>
 
+            {/* Team */}
+      <section className="py-20 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+              Notre équipe médicale
+            </h2>
+          </div>
+
+          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
+            {doctors.map((doctor) => (
+              <div
+                key={doctor.name}
+                className="group rounded-3xl bg-white p-6 text-center shadow-sm border border-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              >
+                <div className="mx-auto w-full max-w-[180px] overflow-hidden rounded-2xl border-2 border-black bg-white">
+                  <img
+                    src={doctor.image}
+                    alt={doctor.name}
+                    className="h-[220px] w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="mt-6">
+                  <h3 className="text-lg font-semibold text-primary">
+                    {doctor.name}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-gray-600">
+                    {doctor.role}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
       {/* Features */}
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -146,47 +183,6 @@ export default function Home() {
                 <CardDescription>Disponibilité et bienveillance</CardDescription>
               </CardHeader>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-20 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-              Notre équipe médicale
-            </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Une équipe engagée, expérimentée et spécialisée dans la prise en
-              charge du lumbago aigu.
-            </p>
-          </div>
-
-          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
-            {doctors.map((doctor) => (
-              <div
-                key={doctor.name}
-                className="group rounded-3xl bg-white p-6 text-center shadow-sm border border-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              >
-                <div className="mx-auto w-full max-w-[180px] overflow-hidden rounded-2xl border-2 border-black bg-white">
-                  <img
-                    src={doctor.image}
-                    alt={doctor.name}
-                    className="h-[220px] w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-
-                <div className="mt-6">
-                  <h3 className="text-lg font-semibold text-primary">
-                    {doctor.name}
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-gray-600">
-                    {doctor.role}
-                  </p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
