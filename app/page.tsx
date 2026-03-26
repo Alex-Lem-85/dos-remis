@@ -17,27 +17,32 @@ const doctors = [
   {
     name: "Dr. Lemaitre",
     role: "Médecin Anesthésiste Réanimateur",
-    image: "/lemaitre.jpeg",
+    image: "/lemaitre.jpg",
+    className: "object-[center_15%]",
   },
   {
     name: "Dr. Swisser",
     role: "Médecin Anesthésiste Réanimateur",
-    image: "/swisser.jpeg",
+    image: "/swisser.jpg",
+    className: "scale-110 object-center",
   },
   {
     name: "Dr. Sekkat",
     role: "Médecin Anesthésiste Réanimateur",
-    image: "/sekkat.jpeg",
+    image: "/sekkat.jpg",
+    className: "scale-110 object-center",
   },
   {
     name: "Dr. Gallais",
     role: "Médecin Anesthésiste Réanimateur",
-    image: "/gallais.jpeg",
+    image: "/gallais.jpg",
+    className: "scale-110 object-center",
   },
   {
     name: "Dr. Vallée",
     role: "Médecin Anesthésiste Réanimateur",
-    image: "/vallee.jpeg",
+    image: "/vallee.jpg",
+    className: "object-[center_15%]",
   },
 ];
 
@@ -170,11 +175,11 @@ export default function Home() {
                 className="group rounded-3xl bg-white p-6 text-center shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
 <div className="mx-auto h-36 w-36 overflow-hidden rounded-full ring-2 ring-black">
-  <img
-    src={doctor.image}
-    alt={doctor.name}
-    className="h-full w-full object-cover object-[center_20%] transition-transform duration-300 group-hover:scale-105"
-  />
+<img
+  src={doctor.image}
+  alt={doctor.name}
+  className={`h-full w-full object-cover ${doctor.className} transition-transform duration-300 group-hover:scale-105`}
+/>
 </div>
 
                 <div className="mt-6">
