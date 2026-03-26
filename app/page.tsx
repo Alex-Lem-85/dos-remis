@@ -9,17 +9,36 @@ import {
   AlarmClockCheck,
   ClipboardCheck,
   Ear,
-  Stethoscope,
   Users,
   Star,
 } from "lucide-react";
 
 const doctors = [
-  { name: "Dr. Lemaitre", role: "Médecin Anesthésiste Réanimateur" },
-  { name: "Dr. Swisser", role: "Médecin Anesthésiste Réanimateur" },
-  { name: "Dr. Sekkat", role: "Médecin Anesthésiste Réanimateur" },
-  { name: "Dr. Gallais", role: "Médecin Anesthésiste Réanimateur" },
-  { name: "Dr. Vallée", role: "Médecin Anesthésiste Réanimateur" },
+  {
+    name: "Dr. Lemaitre",
+    role: "Médecin Anesthésiste Réanimateur",
+    image: "/lemaitre.jpg",
+  },
+  {
+    name: "Dr. Swisser",
+    role: "Médecin Anesthésiste Réanimateur",
+    image: "/swisser.jpg",
+  },
+  {
+    name: "Dr. Sekkat",
+    role: "Médecin Anesthésiste Réanimateur",
+    image: "/sekkat.jpg",
+  },
+  {
+    name: "Dr. Gallais",
+    role: "Médecin Anesthésiste Réanimateur",
+    image: "/gallais.jpg",
+  },
+  {
+    name: "Dr. Vallée",
+    role: "Médecin Anesthésiste Réanimateur",
+    image: "/vallee.jpg",
+  },
 ];
 
 const reviews = [
@@ -132,22 +151,41 @@ export default function Home() {
       </section>
 
       {/* Team */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
               Notre équipe médicale
             </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Une équipe engagée, expérimentée et spécialisée dans la prise en
+              charge du lumbago aigu.
+            </p>
           </div>
+
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
             {doctors.map((doctor) => (
-              <Card key={doctor.name} className="text-center">
-                <CardHeader>
-                  <Stethoscope className="h-8 w-8 text-primary mx-auto mb-4" />
-                  <CardTitle>{doctor.name}</CardTitle>
-                  <p className="text-sm text-gray-600">{doctor.role}</p>
-                </CardHeader>
-              </Card>
+              <div
+                key={doctor.name}
+                className="group rounded-3xl bg-white p-6 text-center shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              >
+                <div className="mx-auto h-36 w-36 overflow-hidden rounded-full ring-4 ring-primary/10">
+                  <img
+                    src={doctor.image}
+                    alt={doctor.name}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="mt-6">
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    {doctor.name}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-gray-600">
+                    {doctor.role}
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
