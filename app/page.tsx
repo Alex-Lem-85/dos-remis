@@ -44,6 +44,24 @@ const reviews = [
     text: "Après plusieurs injections et une courte surveillance, retour à la maison sans douleur. Le matin j’étais pliée en deux, le soir je m’occupais de mes enfants.",
   },
 ];
+const newsItems = [
+  {
+    title: "SOS Lumbago dans la presse",
+    description:
+      "Le journal La Montagne met en lumière l’ouverture de SOS Lumbago à Beaumont et notre volonté de proposer une prise en charge rapide, concrète et innovante des lombalgies aiguës. Une belle reconnaissance pour notre équipe et pour cette nouvelle façon d’aborder le mal de dos : réactive, coordonnée et centrée sur le patient.",
+    image: "/article-seb-clermont.jpeg",
+    link: "https://www.lamontagne.fr/clermont-ferrand-63000/actualites/c-est-vraiment-leve-toi-et-marche-un-service-sos-lumbago-a-ouvert-a-la-chataigneraie-a-beaumont_14784335/",
+    buttonLabel: "Lire l’article",
+  },
+  {
+    title: "Soirée interprofessionnelle : construire ensemble une filière lombalgie d’excellence",
+    description:
+      "Dans la continuité de notre démarche autour du parcours lombalgie, nous organisons une soirée d’échange dédiée aux professionnels de santé du bassin de Thau, avec le soutien de la CPTS. L’objectif est clair : présenter concrètement le circuit Dos-Remis / SOS Lumbago, favoriser les échanges interprofessionnels et co-construire une filière locale cohérente, exigeante et multidisciplinaire.",
+    image: "/soiree-sos-lumbago-recto.png",
+    link: "https://form.jotform.com/260643154511045",
+    buttonLabel: "Cliquer pour s’inscrire",
+  },
+];
 
 export default function Home() {
   return (
@@ -161,6 +179,66 @@ export default function Home() {
                   {review.name}
                 </p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Actualités */}
+      <section className="py-16 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">
+            Actualités
+          </h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {newsItems.map((item, index) => (
+              <Card
+                key={index}
+                className="overflow-hidden border border-gray-200 shadow-sm"
+              >
+                <div className="w-full bg-white">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+
+                <CardHeader>
+                  <CardTitle className="text-2xl leading-tight">
+                    {item.title}
+                  </CardTitle>
+                  <CardDescription className="text-base leading-relaxed text-gray-600">
+                    {item.description}
+                  </CardDescription>
+                </CardHeader>
+
+                <div className="px-6 pb-6">
+                  <Button
+                    asChild
+                    size="lg"
+                    className={
+                      item.buttonLabel === "Cliquer pour s’inscrire"
+                        ? "bg-primary text-white hover:bg-primary/90"
+                        : ""
+                    }
+                    variant={
+                      item.buttonLabel === "Cliquer pour s’inscrire"
+                        ? "default"
+                        : "secondary"
+                    }
+                  >
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {item.buttonLabel}
+                    </a>
+                  </Button>
+                </div>
+              </Card>
             ))}
           </div>
         </div>
