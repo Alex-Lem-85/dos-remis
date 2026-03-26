@@ -18,26 +18,31 @@ const doctors = [
     name: "Dr. Lemaitre",
     role: "Médecin Anesthésiste Réanimateur",
     image: "/lemaitre.jpeg",
+    objectPosition: "center 18%",
   },
   {
     name: "Dr. Swisser",
     role: "Médecin Anesthésiste Réanimateur",
     image: "/swisser.jpeg",
+    objectPosition: "center center",
   },
   {
     name: "Dr. Sekkat",
     role: "Médecin Anesthésiste Réanimateur",
     image: "/sekkat.jpeg",
+    objectPosition: "center center",
   },
   {
     name: "Dr. Gallais",
     role: "Médecin Anesthésiste Réanimateur",
     image: "/gallais.jpeg",
+    objectPosition: "center center",
   },
   {
     name: "Dr. Vallée",
     role: "Médecin Anesthésiste Réanimateur",
     image: "/vallee.jpeg",
+    objectPosition: "center 18%",
   },
 ];
 
@@ -173,7 +178,8 @@ export default function Home() {
   <img
     src={doctor.image}
     alt={doctor.name}
-    className="h-full w-full object-cover object-center"
+    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+    style={{ objectPosition: doctor.objectPosition }}
   />
 </div>
 
