@@ -48,8 +48,7 @@ const newsItems = [
   {
     title: "SOS Lumbago dans la presse",
     description:
-      "Le journal La Montagne met en lumière l’ouverture de SOS Lumbago à Beaumont et notre volonté de proposer une prise en charge rapide, concrète et innovante des lombalgies aiguës. Une belle reconnaissance pour notre équipe et pour cette nouvelle façon d’aborder le mal de dos : réactive, coordonnée et centrée sur le patient.",
-    image: "/article-seb-clermont.jpeg",
+    "Le journal La Montagne nous fait l’honneur d’une dédicace en ouverture d’article, mettant en lumière l’ouverture de SOS Lumbago à Beaumont et notre approche innovante de la prise en charge des lombalgies aiguës. Une belle reconnaissance pour notre équipe et pour cette nouvelle façon d’aborder le mal de dos : rapide, coordonnée et centrée sur le patient.",    image: "/article-seb-clermont.jpeg",
     link: "https://www.lamontagne.fr/clermont-ferrand-63000/actualites/c-est-vraiment-leve-toi-et-marche-un-service-sos-lumbago-a-ouvert-a-la-chataigneraie-a-beaumont_14784335/",
     buttonLabel: "Lire l’article",
   },
