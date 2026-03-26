@@ -293,7 +293,7 @@ export default function Suivi() {
 
   <div className="mx-auto max-w-4xl px-4 text-center">
     <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-      Comprendre les causes profondes : la douleur n’est que la partie visible du problème
+      Comprendre les causes "profondes" : la douleur n’est que la partie visible de l'iceberg
     </h3>
     <p className="text-gray-600 mb-8">
       Traiter la douleur sans les causes expose à des récidives
