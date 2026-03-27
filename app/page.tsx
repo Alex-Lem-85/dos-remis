@@ -189,8 +189,9 @@ export default function Home() {
         </div>
       </section>
 
+      <ClinicalResultsBlock />
       <NPSBlock />
-<ClinicalResultsBlock />
+
 
 {/* Avis patients */}
 <section className="py-16">
