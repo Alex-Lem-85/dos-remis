@@ -97,18 +97,18 @@ export default function ClinicalResultsBlock() {
         <div className="rounded-3xl border border-gray-200 bg-gradient-to-r from-primary/10 to-primary/5 p-10 shadow-sm">
           <div className="text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-              Résultats cliniques
+              Résultats cliniques live
             </h2>
 
             <p className="mt-4 text-lg text-gray-600">
-              Évolution moyenne des patients après prise en charge
+              Comparaison du score de douleur (EVA) et du score de gêne fonctionnelle (EIFEL) avant et après l'infiltration
             </p>
           </div>
 
           <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
             {/* EVA */}
             <div className="rounded-2xl border border-gray-100 bg-white p-8 text-center shadow-sm">
-              <p className="text-sm font-semibold uppercase tracking-widest text-gray-500">
+              <p className="text-base font-bold uppercase tracking-widest text-primary">
                 Douleur (EVA)
               </p>
 
@@ -129,7 +129,7 @@ export default function ClinicalResultsBlock() {
 
             {/* EIFEL */}
             <div className="rounded-2xl border border-gray-100 bg-white p-8 text-center shadow-sm">
-              <p className="text-sm font-semibold uppercase tracking-widest text-gray-500">
+              <p className="text-base font-bold uppercase tracking-widest text-primary">
                 Handicap (EIFEL)
               </p>
 
