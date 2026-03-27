@@ -95,7 +95,7 @@ export default function ClinicalResultsBlock() {
   return (
     <section className="py-16 bg-white">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-gray-200 bg-gradient-to-r from-primary/10 to-primary/5 p-10 shadow-sm">
+        <div className="overflow-hidden rounded-[2rem] border border-gray-200 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.08)] p-10">
           <div className="text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
               Nos résultats cliniques en direct
