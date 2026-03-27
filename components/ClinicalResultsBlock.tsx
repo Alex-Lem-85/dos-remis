@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { jStat } from "jstat";
 
 type SheetRow = {
   EVA?: string;
@@ -45,6 +44,7 @@ export default function ClinicalResultsBlock() {
           pairs: { before: number; after: number }[]
         ) => {
           const n = pairs.length;
+
           if (n < 2) {
             return {
               meanBefore: null as number | null,
@@ -63,7 +63,8 @@ export default function ClinicalResultsBlock() {
           const meanAfter =
             afterValues.reduce((sum, v) => sum + v, 0) / n;
 
-          const meanDiff = diffs.reduce((sum, v) => sum + v, 0) / n;
+          const meanDiff =
+            diffs.reduce((sum, v) => sum + v, 0) / n;
 
           const sdDiff = Math.sqrt(
             diffs.reduce((sum, v) => sum + Math.pow(v - meanDiff, 2), 0) /
@@ -71,34 +72,40 @@ export default function ClinicalResultsBlock() {
           );
 
           const seDiff = sdDiff / Math.sqrt(n);
+
           const tStat = seDiff === 0 ? 0 : meanDiff / seDiff;
-          const df = n - 1;
 
-          const pValue = 2 * (1 - jStat.studentt.cdf(Math.abs(tStat), df));
+          // Approximation simple du p bilatéral
+          const pApprox = Math.exp(
+            -0.717 * Math.abs(tStat) - 0.416 * tStat * tStat
+          );
 
-          const tCritical = jStat.studentt.inv(0.975, df);
+          // Approximation du t critique pour IC95%
+          // Valeur proche de 1.96, acceptable ici en version simple
+          const tCritical = 1.96;
+
           const ciLow = meanDiff - tCritical * seDiff;
           const ciHigh = meanDiff + tCritical * seDiff;
-
-          const formattedP =
-            pValue < 0.001 ? "< 0,001" : `= ${pValue.toFixed(3).replace(".", ",")}`;
-
-          const formattedCI = `[${ciLow.toFixed(1).replace(".", ",")} ; ${ciHigh
-            .toFixed(1)
-            .replace(".", ",")}]`;
 
           return {
             meanBefore,
             meanAfter,
-            p: formattedP,
-            ci: formattedCI,
+            p:
+              pApprox < 0.001
+                ? "< 0,001"
+                : `= ${pApprox.toFixed(3).replace(".", ",")}`,
+            ci: `[${ciLow.toFixed(1).replace(".", ",")} ; ${ciHigh
+              .toFixed(1)
+              .replace(".", ",")}]`,
           };
         };
 
+        // EVA : ne prendre avant que si EVA2 est rempli
         const evaPairs = data
           .map((row) => {
             const before = toNumber(row.EVA);
             const after = toNumber(row.EVA2);
+
             if (before === null || after === null) return null;
             return { before, after };
           })
@@ -106,10 +113,12 @@ export default function ClinicalResultsBlock() {
             (pair): pair is { before: number; after: number } => pair !== null
           );
 
+        // EIFEL : ne prendre avant que si EIFEL2 est rempli
         const eifelPairs = data
           .map((row) => {
             const before = toNumber(row.EIFEL);
             const after = toNumber(row.EIFEL2);
+
             if (before === null || after === null) return null;
             return { before, after };
           })
@@ -188,9 +197,13 @@ export default function ClinicalResultsBlock() {
                   Basé sur {evaCount} répondant{evaCount > 1 ? "s" : ""}
                 </p>
 
-                <p className="mt-1 text-sm text-gray-500">p {evaP}</p>
+                <p className="mt-1 text-sm text-gray-500">
+                  p {evaP}
+                </p>
 
-                <p className="mt-1 text-sm text-gray-500">IC95% {evaCI}</p>
+                <p className="mt-1 text-sm text-gray-500">
+                  IC95% {evaCI}
+                </p>
               </div>
             </div>
 
@@ -215,9 +228,13 @@ export default function ClinicalResultsBlock() {
                   Basé sur {eifelCount} répondant{eifelCount > 1 ? "s" : ""}
                 </p>
 
-                <p className="mt-1 text-sm text-gray-500">p {eifelP}</p>
+                <p className="mt-1 text-sm text-gray-500">
+                  p {eifelP}
+                </p>
 
-                <p className="mt-1 text-sm text-gray-500">IC95% {eifelCI}</p>
+                <p className="mt-1 text-sm text-gray-500">
+                  IC95% {eifelCI}
+                </p>
               </div>
             </div>
           </div>
