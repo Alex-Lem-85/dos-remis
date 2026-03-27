@@ -82,13 +82,12 @@ export default function NPSBlock() {
               </h2>
 
               <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                Un indicateur simple et exigeant pour mesurer la qualité perçue
-                de notre prise en charge.
+                Le Net Promoter Score (NPS) : un indicateur simple et exigeant
               </p>
 
               <div className="mt-10 flex justify-center">
                 <div className="flex min-w-[220px] flex-col items-center rounded-[2rem] border border-primary/15 bg-gradient-to-b from-white to-primary/5 px-10 py-8 shadow-sm">
-                  <span className="text-sm font-medium uppercase tracking-[0.2em] text-gray-500">
+                  <span className="text-lg font-bold uppercase tracking-[0.25em] text-gray-700">
                     NPS
                   </span>
                   <p className="mt-2 text-6xl sm:text-7xl font-bold text-primary leading-none">
@@ -123,7 +122,7 @@ export default function NPSBlock() {
               </p>
 
               <p className="mt-3 text-sm text-gray-500">
-                Score mis à jour automatiquement à partir des retours patients.
+                Score mis à jour automatiquement à partir des retours patients depuis le 1er janvier 2026
               </p>
             </div>
           </div>
