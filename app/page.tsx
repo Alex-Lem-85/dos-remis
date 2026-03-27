@@ -13,6 +13,7 @@ import {
   Star,
 } from "lucide-react";
 import NPSBlock from "@/components/NPSBlock";
+import ClinicalResultsBlock from "@/components/ClinicalResultsBlock";
 
 const doctors = [
   {
@@ -188,7 +189,8 @@ export default function Home() {
         </div>
       </section>
 
-<NPSBlock />
+      <NPSBlock />
+<ClinicalResultsBlock />
 
 {/* Avis patients */}
 <section className="py-16">
