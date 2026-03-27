@@ -115,7 +115,7 @@ export default function ClinicalResultsBlock() {
                   Douleur (EVA)
                 </p>
 
-                <p className="mt-4 text-4xl font-bold text-gray-900">
+                <p className="mt-4 text-3xl sm:text-4xl font-bold text-gray-900">
                   {format(evaBefore)} → {format(evaAfter)}
                 </p>
 
@@ -138,7 +138,7 @@ export default function ClinicalResultsBlock() {
                   Handicap (EIFEL)
                 </p>
 
-                <p className="mt-4 text-4xl font-bold text-gray-900">
+                <p className="mt-4 text-3xl sm:text-4xl font-bold text-gray-900">
                   {format(eifelBefore)} → {format(eifelAfter)}
                 </p>
 
