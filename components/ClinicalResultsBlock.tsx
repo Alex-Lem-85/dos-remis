@@ -24,6 +24,9 @@ export default function ClinicalResultsBlock() {
   const [evaCI, setEvaCI] = useState<string>("");
   const [eifelCI, setEifelCI] = useState<string>("");
 
+  const [evaMeanGain, setEvaMeanGain] = useState<string>("");
+  const [eifelMeanGain, setEifelMeanGain] = useState<string>("");
+
   useEffect(() => {
     async function loadData() {
       try {
@@ -49,6 +52,7 @@ export default function ClinicalResultsBlock() {
             return {
               meanBefore: null as number | null,
               meanAfter: null as number | null,
+              meanGain: "",
               p: "",
               ci: "",
             };
@@ -56,40 +60,40 @@ export default function ClinicalResultsBlock() {
 
           const beforeValues = pairs.map((p) => p.before);
           const afterValues = pairs.map((p) => p.after);
-          const diffs = pairs.map((p) => p.before - p.after);
+
+          // Variation clinique affichée : après - avant (donc négative si amélioration)
+          const deltas = pairs.map((p) => p.after - p.before);
 
           const meanBefore =
             beforeValues.reduce((sum, v) => sum + v, 0) / n;
           const meanAfter =
             afterValues.reduce((sum, v) => sum + v, 0) / n;
 
-          const meanDiff =
-            diffs.reduce((sum, v) => sum + v, 0) / n;
+          const meanDelta =
+            deltas.reduce((sum, v) => sum + v, 0) / n;
 
-          const sdDiff = Math.sqrt(
-            diffs.reduce((sum, v) => sum + Math.pow(v - meanDiff, 2), 0) /
+          const sdDelta = Math.sqrt(
+            deltas.reduce((sum, v) => sum + Math.pow(v - meanDelta, 2), 0) /
               (n - 1)
           );
 
-          const seDiff = sdDiff / Math.sqrt(n);
-
-          const tStat = seDiff === 0 ? 0 : meanDiff / seDiff;
+          const seDelta = sdDelta / Math.sqrt(n);
+          const tStat = seDelta === 0 ? 0 : meanDelta / seDelta;
 
           // Approximation simple du p bilatéral
           const pApprox = Math.exp(
             -0.717 * Math.abs(tStat) - 0.416 * tStat * tStat
           );
 
-          // Approximation du t critique pour IC95%
-          // Valeur proche de 1.96, acceptable ici en version simple
+          // Approximation simple de l'IC95%
           const tCritical = 1.96;
-
-          const ciLow = meanDiff - tCritical * seDiff;
-          const ciHigh = meanDiff + tCritical * seDiff;
+          const ciLow = meanDelta - tCritical * seDelta;
+          const ciHigh = meanDelta + tCritical * seDelta;
 
           return {
             meanBefore,
             meanAfter,
+            meanGain: meanDelta.toFixed(1).replace(".", ","),
             p:
               pApprox < 0.001
                 ? "< 0,001"
@@ -100,7 +104,6 @@ export default function ClinicalResultsBlock() {
           };
         };
 
-        // EVA : ne prendre avant que si EVA2 est rempli
         const evaPairs = data
           .map((row) => {
             const before = toNumber(row.EVA);
@@ -113,7 +116,6 @@ export default function ClinicalResultsBlock() {
             (pair): pair is { before: number; after: number } => pair !== null
           );
 
-        // EIFEL : ne prendre avant que si EIFEL2 est rempli
         const eifelPairs = data
           .map((row) => {
             const before = toNumber(row.EIFEL);
@@ -134,11 +136,13 @@ export default function ClinicalResultsBlock() {
 
         setEvaBefore(evaStats.meanBefore);
         setEvaAfter(evaStats.meanAfter);
+        setEvaMeanGain(evaStats.meanGain);
         setEvaP(evaStats.p);
         setEvaCI(evaStats.ci);
 
         setEifelBefore(eifelStats.meanBefore);
         setEifelAfter(eifelStats.meanAfter);
+        setEifelMeanGain(eifelStats.meanGain);
         setEifelP(eifelStats.p);
         setEifelCI(eifelStats.ci);
       } catch (error) {
@@ -157,8 +161,8 @@ export default function ClinicalResultsBlock() {
     return Math.round(((before - after) / before) * 100);
   };
 
-  const evaGain = percentChange(evaBefore, evaAfter);
-  const eifelGain = percentChange(eifelBefore, eifelAfter);
+  const evaGainPercent = percentChange(evaBefore, evaAfter);
+  const eifelGainPercent = percentChange(eifelBefore, eifelAfter);
 
   return (
     <section className="py-16 bg-white">
@@ -187,9 +191,9 @@ export default function ClinicalResultsBlock() {
                   {format(evaBefore)} → {format(evaAfter)}
                 </p>
 
-                {evaGain !== null && (
+                {evaGainPercent !== null && (
                   <p className="mt-3 text-xl font-semibold text-green-600">
-                    ↓ {evaGain}%
+                    ↓ {evaGainPercent}%
                   </p>
                 )}
 
@@ -199,6 +203,10 @@ export default function ClinicalResultsBlock() {
 
                 <p className="mt-1 text-sm text-gray-500">
                   p {evaP}
+                </p>
+
+                <p className="mt-1 text-sm text-gray-500">
+                  Gain moyen {evaMeanGain}
                 </p>
 
                 <p className="mt-1 text-sm text-gray-500">
@@ -218,9 +226,9 @@ export default function ClinicalResultsBlock() {
                   {format(eifelBefore)} → {format(eifelAfter)}
                 </p>
 
-                {eifelGain !== null && (
+                {eifelGainPercent !== null && (
                   <p className="mt-3 text-xl font-semibold text-green-600">
-                    ↓ {eifelGain}%
+                    ↓ {eifelGainPercent}%
                   </p>
                 )}
 
@@ -230,6 +238,10 @@ export default function ClinicalResultsBlock() {
 
                 <p className="mt-1 text-sm text-gray-500">
                   p {eifelP}
+                </p>
+
+                <p className="mt-1 text-sm text-gray-500">
+                  Gain moyen {eifelMeanGain}
                 </p>
 
                 <p className="mt-1 text-sm text-gray-500">
