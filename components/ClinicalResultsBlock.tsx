@@ -206,11 +206,11 @@ export default function ClinicalResultsBlock() {
                 </p>
 
                 <p className="mt-1 text-sm text-gray-500">
-                  Gain moyen {evaMeanGain}
+                  Gain moyen : {evaMeanGain}
                 </p>
 
                 <p className="mt-1 text-sm text-gray-500">
-                  IC95% {evaCI}
+                  IC95% : {evaCI}
                 </p>
               </div>
             </div>
@@ -241,11 +241,11 @@ export default function ClinicalResultsBlock() {
                 </p>
 
                 <p className="mt-1 text-sm text-gray-500">
-                  Gain moyen {eifelMeanGain}
+                  Gain moyen : {eifelMeanGain}
                 </p>
 
                 <p className="mt-1 text-sm text-gray-500">
-                  IC95% {eifelCI}
+                  IC95% : {eifelCI}
                 </p>
               </div>
             </div>
