@@ -14,7 +14,9 @@ export default function ClinicalResultsBlock() {
   const [evaAfter, setEvaAfter] = useState<number | null>(null);
   const [eifelBefore, setEifelBefore] = useState<number | null>(null);
   const [eifelAfter, setEifelAfter] = useState<number | null>(null);
-  const [count, setCount] = useState<number>(0);
+
+  const [evaCount, setEvaCount] = useState<number>(0);
+  const [eifelCount, setEifelCount] = useState<number>(0);
 
   useEffect(() => {
     async function loadData() {
@@ -24,40 +26,52 @@ export default function ClinicalResultsBlock() {
         );
         const data: SheetRow[] = await res.json();
 
-        const validRows = data.filter((row) => {
-          const evaAfter = Number(String(row.EVA2 ?? "").replace(",", "."));
-          return !Number.isNaN(evaAfter);
-        });
+        const toNumber = (value: string | undefined) => {
+          const raw = String(value ?? "").trim();
+          if (raw === "") return null;
 
-        const total = validRows.length;
-        setCount(total);
+          const parsed = Number(raw.replace(",", "."));
+          return Number.isNaN(parsed) ? null : parsed;
+        };
 
-        if (total === 0) return;
+        // EVA : on ne garde que les patients qui ont une valeur EVA2 renseignée
+        // et une valeur EVA avant disponible pour faire une vraie comparaison
+        const evaPairs = data
+          .map((row) => {
+            const before = toNumber(row.EVA);
+            const after = toNumber(row.EVA2);
 
-        const avg = (arr: number[]) =>
-          arr.reduce((a, b) => a + b, 0) / arr.length;
+            if (before === null || after === null) return null;
+            return { before, after };
+          })
+          .filter((pair): pair is { before: number; after: number } => pair !== null);
 
-        const evaBeforeArr: number[] = [];
-        const evaAfterArr: number[] = [];
-        const eifelBeforeArr: number[] = [];
-        const eifelAfterArr: number[] = [];
+        // EIFEL : même logique
+        const eifelPairs = data
+          .map((row) => {
+            const before = toNumber(row.EIFEL);
+            const after = toNumber(row.EIFEL2);
 
-        validRows.forEach((row) => {
-          const evaB = Number(String(row.EVA ?? "").replace(",", "."));
-          const evaA = Number(String(row.EVA2 ?? "").replace(",", "."));
-          const eifelB = Number(String(row.EIFEL ?? "").replace(",", "."));
-          const eifelA = Number(String(row.EIFEL2 ?? "").replace(",", "."));
+            if (before === null || after === null) return null;
+            return { before, after };
+          })
+          .filter((pair): pair is { before: number; after: number } => pair !== null);
 
-          if (!Number.isNaN(evaB)) evaBeforeArr.push(evaB);
-          if (!Number.isNaN(evaA)) evaAfterArr.push(evaA);
-          if (!Number.isNaN(eifelB)) eifelBeforeArr.push(eifelB);
-          if (!Number.isNaN(eifelA)) eifelAfterArr.push(eifelA);
-        });
+        const avg = (values: number[]) =>
+          values.reduce((sum, value) => sum + value, 0) / values.length;
 
-        setEvaBefore(avg(evaBeforeArr));
-        setEvaAfter(avg(evaAfterArr));
-        setEifelBefore(avg(eifelBeforeArr));
-        setEifelAfter(avg(eifelAfterArr));
+        setEvaCount(evaPairs.length);
+        setEifelCount(eifelPairs.length);
+
+        if (evaPairs.length > 0) {
+          setEvaBefore(avg(evaPairs.map((pair) => pair.before)));
+          setEvaAfter(avg(evaPairs.map((pair) => pair.after)));
+        }
+
+        if (eifelPairs.length > 0) {
+          setEifelBefore(avg(eifelPairs.map((pair) => pair.before)));
+          setEifelAfter(avg(eifelPairs.map((pair) => pair.after)));
+        }
       } catch (error) {
         console.error("Erreur chargement résultats :", error);
       }
@@ -70,7 +84,7 @@ export default function ClinicalResultsBlock() {
     value !== null ? value.toFixed(1) : "…";
 
   const percentChange = (before: number | null, after: number | null) => {
-    if (before === null || after === null) return null;
+    if (before === null || after === null || before === 0) return null;
     return Math.round(((before - after) / before) * 100);
   };
 
@@ -80,9 +94,7 @@ export default function ClinicalResultsBlock() {
   return (
     <section className="py-16 bg-white">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-
         <div className="rounded-3xl border border-gray-200 bg-gradient-to-r from-primary/10 to-primary/5 p-10 shadow-sm">
-
           <div className="text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
               Résultats cliniques
@@ -93,11 +105,10 @@ export default function ClinicalResultsBlock() {
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-
+          <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
             {/* EVA */}
-            <div className="rounded-2xl bg-white p-8 shadow-sm border border-gray-100 text-center">
-              <p className="text-sm uppercase tracking-widest text-gray-500 font-semibold">
+            <div className="rounded-2xl border border-gray-100 bg-white p-8 text-center shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-widest text-gray-500">
                 Douleur (EVA)
               </p>
 
@@ -110,11 +121,15 @@ export default function ClinicalResultsBlock() {
                   ↓ {evaGain}%
                 </p>
               )}
+
+              <p className="mt-4 text-sm text-gray-500">
+                Basé sur {evaCount} répondant{evaCount > 1 ? "s" : ""}
+              </p>
             </div>
 
             {/* EIFEL */}
-            <div className="rounded-2xl bg-white p-8 shadow-sm border border-gray-100 text-center">
-              <p className="text-sm uppercase tracking-widest text-gray-500 font-semibold">
+            <div className="rounded-2xl border border-gray-100 bg-white p-8 text-center shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-widest text-gray-500">
                 Handicap (EIFEL)
               </p>
 
@@ -127,15 +142,12 @@ export default function ClinicalResultsBlock() {
                   ↓ {eifelGain}%
                 </p>
               )}
+
+              <p className="mt-4 text-sm text-gray-500">
+                Basé sur {eifelCount} répondant{eifelCount > 1 ? "s" : ""}
+              </p>
             </div>
-
           </div>
-
-          <p className="mt-10 text-center text-gray-600">
-            Basé sur <span className="font-semibold text-gray-900">{count}</span>{" "}
-            patient{count > 1 ? "s" : ""}
-          </p>
-
         </div>
       </div>
     </section>
