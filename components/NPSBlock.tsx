@@ -66,62 +66,66 @@ export default function NPSBlock() {
       ? "Solide"
       : "En progression";
 
+  const stars =
+    nps === null ? 0 : nps >= 70 ? 5 : nps >= 50 ? 4 : nps >= 30 ? 3 : 2;
+
   return (
     <section className="py-16 bg-white">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        
-        {/* Bloc premium */}
-        <div className="rounded-3xl border border-gray-200 bg-gradient-to-r from-primary/10 to-primary/5 p-10 shadow-sm">
-          
-          <div className="text-center">
-            
-            {/* Titre */}
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-              Nos patients nous recommandent
-            </h2>
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="overflow-hidden rounded-[2rem] border border-gray-200 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
 
-            {/* Sous-titre */}
-            <p className="mt-4 text-lg text-gray-600">
-              Le Net Promoter Score (NPS) : un indicateur simple et exigeant
-            </p>
+          <div className="px-6 py-10 md:px-12 md:py-14">
+            <div className="text-center">
+              
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+                Nos patients nous recommandent
+              </h2>
 
-            {/* Bloc score */}
-            <div className="mt-10 flex justify-center">
-              <div className="rounded-2xl border border-gray-200 bg-white px-12 py-10 shadow-sm">
-                
-                {/* NPS label */}
-                <p className="text-base font-bold uppercase tracking-widest text-gray-500">
-                  NPS
-                </p>
+              <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Un indicateur simple et exigeant pour mesurer la qualité perçue
+                de notre prise en charge.
+              </p>
 
-                {/* Score */}
-                <p className="mt-2 text-7xl font-bold text-primary leading-none">
-                  {nps !== null ? nps : "…"}
-                </p>
-
-                {/* Label */}
-                <p className="mt-3 text-xl font-semibold text-gray-900">
-                  {label}
-                </p>
-
+              <div className="mt-10 flex justify-center">
+                <div className="flex min-w-[220px] flex-col items-center rounded-[2rem] border border-primary/15 bg-gradient-to-b from-white to-primary/5 px-10 py-8 shadow-sm">
+                  <span className="text-sm font-medium uppercase tracking-[0.2em] text-gray-500">
+                    NPS
+                  </span>
+                  <p className="mt-2 text-6xl sm:text-7xl font-bold text-primary leading-none">
+                    {nps !== null ? nps : "…"}
+                  </p>
+                  <p className="mt-3 text-base font-semibold text-gray-900">
+                    {label}
+                  </p>
+                </div>
               </div>
+
+              <div className="mt-8 flex justify-center gap-1">
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <span
+                    key={index}
+                    className={`text-2xl ${
+                      index < stars ? "text-yellow-400" : "text-gray-200"
+                    }`}
+                  >
+                    ★
+                  </span>
+                ))}
+              </div>
+
+              <p className="mt-6 text-lg text-gray-700">
+                Basé sur{" "}
+                <span className="font-semibold text-gray-900">
+                  {responsesCount}
+                </span>{" "}
+                réponse{responsesCount > 1 ? "s" : ""} patient
+                {responsesCount > 1 ? "s" : ""}
+              </p>
+
+              <p className="mt-3 text-sm text-gray-500">
+                Score mis à jour automatiquement à partir des retours patients.
+              </p>
             </div>
-
-            {/* Réponses */}
-            <p className="mt-6 text-gray-600">
-              Basé sur{" "}
-              <span className="font-semibold text-gray-900">
-                {responsesCount}
-              </span>{" "}
-              réponse{responsesCount > 1 ? "s" : ""} patient
-              {responsesCount > 1 ? "s" : ""}
-            </p>
-
-            {/* Footer */}
-            <p className="mt-4 text-sm text-gray-500">
-              Score mis à jour automatiquement à partir des retours patients.
-            </p>
-
           </div>
         </div>
       </div>
