@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { jStat } from "jstat";
 
 type SheetRow = {
   EVA?: string;
@@ -18,6 +19,12 @@ export default function ClinicalResultsBlock() {
   const [evaCount, setEvaCount] = useState<number>(0);
   const [eifelCount, setEifelCount] = useState<number>(0);
 
+  const [evaP, setEvaP] = useState<string>("");
+  const [eifelP, setEifelP] = useState<string>("");
+
+  const [evaCI, setEvaCI] = useState<string>("");
+  const [eifelCI, setEifelCI] = useState<string>("");
+
   useEffect(() => {
     async function loadData() {
       try {
@@ -34,11 +41,64 @@ export default function ClinicalResultsBlock() {
           return Number.isNaN(parsed) ? null : parsed;
         };
 
+        const computePairedStats = (
+          pairs: { before: number; after: number }[]
+        ) => {
+          const n = pairs.length;
+          if (n < 2) {
+            return {
+              meanBefore: null as number | null,
+              meanAfter: null as number | null,
+              p: "",
+              ci: "",
+            };
+          }
+
+          const beforeValues = pairs.map((p) => p.before);
+          const afterValues = pairs.map((p) => p.after);
+          const diffs = pairs.map((p) => p.before - p.after);
+
+          const meanBefore =
+            beforeValues.reduce((sum, v) => sum + v, 0) / n;
+          const meanAfter =
+            afterValues.reduce((sum, v) => sum + v, 0) / n;
+
+          const meanDiff = diffs.reduce((sum, v) => sum + v, 0) / n;
+
+          const sdDiff = Math.sqrt(
+            diffs.reduce((sum, v) => sum + Math.pow(v - meanDiff, 2), 0) /
+              (n - 1)
+          );
+
+          const seDiff = sdDiff / Math.sqrt(n);
+          const tStat = seDiff === 0 ? 0 : meanDiff / seDiff;
+          const df = n - 1;
+
+          const pValue = 2 * (1 - jStat.studentt.cdf(Math.abs(tStat), df));
+
+          const tCritical = jStat.studentt.inv(0.975, df);
+          const ciLow = meanDiff - tCritical * seDiff;
+          const ciHigh = meanDiff + tCritical * seDiff;
+
+          const formattedP =
+            pValue < 0.001 ? "< 0,001" : `= ${pValue.toFixed(3).replace(".", ",")}`;
+
+          const formattedCI = `[${ciLow.toFixed(1).replace(".", ",")} ; ${ciHigh
+            .toFixed(1)
+            .replace(".", ",")}]`;
+
+          return {
+            meanBefore,
+            meanAfter,
+            p: formattedP,
+            ci: formattedCI,
+          };
+        };
+
         const evaPairs = data
           .map((row) => {
             const before = toNumber(row.EVA);
             const after = toNumber(row.EVA2);
-
             if (before === null || after === null) return null;
             return { before, after };
           })
@@ -50,7 +110,6 @@ export default function ClinicalResultsBlock() {
           .map((row) => {
             const before = toNumber(row.EIFEL);
             const after = toNumber(row.EIFEL2);
-
             if (before === null || after === null) return null;
             return { before, after };
           })
@@ -58,21 +117,21 @@ export default function ClinicalResultsBlock() {
             (pair): pair is { before: number; after: number } => pair !== null
           );
 
-        const avg = (values: number[]) =>
-          values.reduce((sum, value) => sum + value, 0) / values.length;
+        const evaStats = computePairedStats(evaPairs);
+        const eifelStats = computePairedStats(eifelPairs);
 
         setEvaCount(evaPairs.length);
         setEifelCount(eifelPairs.length);
 
-        if (evaPairs.length > 0) {
-          setEvaBefore(avg(evaPairs.map((pair) => pair.before)));
-          setEvaAfter(avg(evaPairs.map((pair) => pair.after)));
-        }
+        setEvaBefore(evaStats.meanBefore);
+        setEvaAfter(evaStats.meanAfter);
+        setEvaP(evaStats.p);
+        setEvaCI(evaStats.ci);
 
-        if (eifelPairs.length > 0) {
-          setEifelBefore(avg(eifelPairs.map((pair) => pair.before)));
-          setEifelAfter(avg(eifelPairs.map((pair) => pair.after)));
-        }
+        setEifelBefore(eifelStats.meanBefore);
+        setEifelAfter(eifelStats.meanAfter);
+        setEifelP(eifelStats.p);
+        setEifelCI(eifelStats.ci);
       } catch (error) {
         console.error("Erreur chargement résultats :", error);
       }
@@ -82,7 +141,7 @@ export default function ClinicalResultsBlock() {
   }, []);
 
   const format = (value: number | null) =>
-    value !== null ? value.toFixed(1) : "…";
+    value !== null ? value.toFixed(1).replace(".", ",") : "…";
 
   const percentChange = (before: number | null, after: number | null) => {
     if (before === null || after === null || before === 0) return null;
@@ -128,6 +187,10 @@ export default function ClinicalResultsBlock() {
                 <p className="mt-4 text-sm text-gray-500">
                   Basé sur {evaCount} répondant{evaCount > 1 ? "s" : ""}
                 </p>
+
+                <p className="mt-1 text-sm text-gray-500">p {evaP}</p>
+
+                <p className="mt-1 text-sm text-gray-500">IC95% {evaCI}</p>
               </div>
             </div>
 
@@ -151,6 +214,10 @@ export default function ClinicalResultsBlock() {
                 <p className="mt-4 text-sm text-gray-500">
                   Basé sur {eifelCount} répondant{eifelCount > 1 ? "s" : ""}
                 </p>
+
+                <p className="mt-1 text-sm text-gray-500">p {eifelP}</p>
+
+                <p className="mt-1 text-sm text-gray-500">IC95% {eifelCI}</p>
               </div>
             </div>
           </div>
