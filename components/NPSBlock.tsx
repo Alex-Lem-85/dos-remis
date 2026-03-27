@@ -9,6 +9,7 @@ type SheetRow = {
 export default function NPSBlock() {
   const [nps, setNps] = useState<number | null>(null);
   const [responsesCount, setResponsesCount] = useState<number>(0);
+  const [displayedNps, setDisplayedNps] = useState(0);
 
   useEffect(() => {
     async function loadNPS() {
@@ -55,6 +56,28 @@ export default function NPSBlock() {
     loadNPS();
   }, []);
 
+  useEffect(() => {
+    if (nps === null) return;
+
+    let start = 0;
+    const duration = 800;
+    const stepTime = 15;
+    const increment = nps / (duration / stepTime);
+
+    const counter = setInterval(() => {
+      start += increment;
+
+      if (start >= nps) {
+        setDisplayedNps(nps);
+        clearInterval(counter);
+      } else {
+        setDisplayedNps(Math.round(start));
+      }
+    }, stepTime);
+
+    return () => clearInterval(counter);
+  }, [nps]);
+
   const label =
     nps === null
       ? "Mise à jour en cours"
@@ -73,10 +96,8 @@ export default function NPSBlock() {
     <section className="py-16 bg-white">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="overflow-hidden rounded-[2rem] border border-gray-200 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
-
           <div className="px-6 py-10 md:px-12 md:py-14">
             <div className="text-center">
-              
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
                 Nos patients nous recommandent
               </h2>
@@ -91,7 +112,7 @@ export default function NPSBlock() {
                     NPS
                   </span>
                   <p className="mt-2 text-6xl sm:text-7xl font-bold text-primary leading-none">
-                    {nps !== null ? nps : "…"}
+                    {nps !== null ? displayedNps : "…"}
                   </p>
                   <p className="mt-3 text-base font-semibold text-gray-900">
                     {label}
@@ -122,7 +143,8 @@ export default function NPSBlock() {
               </p>
 
               <p className="mt-3 text-sm text-gray-500">
-                Score mis à jour automatiquement à partir des retours patients depuis le 1er janvier 2026
+                Score mis à jour automatiquement à partir des retours patients
+                depuis le 1er janvier 2026
               </p>
             </div>
           </div>
