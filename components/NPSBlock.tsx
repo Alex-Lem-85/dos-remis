@@ -14,7 +14,7 @@ export default function NPSBlock() {
     async function loadNPS() {
       try {
         const res = await fetch(
-          "https://opensheet.elk.sh/1fV0I_TpI3bDenR_27218klfe9L1tUzeiv9ahlJ-tar4/Dos-Remis?raw=true"
+          "https://opensheet.elk.sh/1fV0I_TpI3bDenR_27218klfe9L1tUzeiv9ahlJ-tar4/Dos-Remis"
         );
         const data: SheetRow[] = await res.json();
 
@@ -23,12 +23,15 @@ export default function NPSBlock() {
             const raw = String(row.NPS ?? "").trim();
             if (raw === "") return null;
 
-            const value = Number(raw);
+            const value = Number(raw.replace(",", "."));
             if (Number.isNaN(value)) return null;
 
             return value;
           })
-          .filter((value): value is number => value !== null && value >= 0 && value <= 10);
+          .filter(
+            (value): value is number =>
+              value !== null && value >= 0 && value <= 10
+          );
 
         const total = scores.length;
         setResponsesCount(total);
@@ -84,12 +87,11 @@ export default function NPSBlock() {
               </div>
             </div>
 
-            <p className="mt-6 text-lg font-medium text-gray-900">
-              {label}
-            </p>
+            <p className="mt-6 text-lg font-medium text-gray-900">{label}</p>
 
             <p className="mt-2 text-gray-600">
-              Basé sur {responsesCount} réponse{responsesCount > 1 ? "s" : ""} patient
+              Basé sur {responsesCount} réponse
+              {responsesCount > 1 ? "s" : ""} patient
               {responsesCount > 1 ? "s" : ""}
             </p>
 
