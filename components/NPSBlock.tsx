@@ -69,7 +69,10 @@ export default function NPSBlock() {
   return (
     <section className="py-16 bg-white">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-gray-200 bg-white p-10 shadow-sm">
+        
+        {/* Bloc premium */}
+        <div className="rounded-3xl border border-gray-200 bg-gradient-to-r from-primary/10 to-primary/5 p-10 shadow-sm">
+          
           <div className="text-center">
             
             {/* Titre */}
@@ -82,19 +85,26 @@ export default function NPSBlock() {
               Le Net Promoter Score (NPS) : un indicateur simple et exigeant
             </p>
 
-            {/* NPS */}
-            <div className="mt-10">
-              <p className="text-sm uppercase tracking-widest text-gray-500">
-                NPS
-              </p>
+            {/* Bloc score */}
+            <div className="mt-10 flex justify-center">
+              <div className="rounded-2xl border border-gray-200 bg-white px-12 py-10 shadow-sm">
+                
+                {/* NPS label */}
+                <p className="text-base font-bold uppercase tracking-widest text-gray-500">
+                  NPS
+                </p>
 
-              <p className="mt-2 text-6xl sm:text-7xl font-bold text-primary">
-                {nps !== null ? nps : "…"}
-              </p>
+                {/* Score */}
+                <p className="mt-2 text-7xl font-bold text-primary leading-none">
+                  {nps !== null ? nps : "…"}
+                </p>
 
-              <p className="mt-3 text-lg font-medium text-gray-900">
-                {label}
-              </p>
+                {/* Label */}
+                <p className="mt-3 text-xl font-semibold text-gray-900">
+                  {label}
+                </p>
+
+              </div>
             </div>
 
             {/* Réponses */}
