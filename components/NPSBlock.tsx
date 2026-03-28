@@ -19,6 +19,17 @@ export default function NPSBlock() {
         );
         const data: SheetRow[] = await res.json();
 
+// 🔍 DEBUG
+console.log("CLES JSON :", Object.keys(data[0] ?? {}));
+
+console.log(
+  "EVA aperçu :",
+  data.slice(0, 5).map((row) => ({
+    evaBefore: row[EVA_BEFORE_KEY],
+    evaAfter: row[EVA_AFTER_KEY],
+  }))
+);
+
         const scores = data
           .map((row) => {
             const raw = String(row.NPS ?? "").trim();
