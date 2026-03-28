@@ -4,14 +4,6 @@ import { useEffect, useState } from "react";
 
 type SheetRow = Record<string, string | undefined>;
 
-// 🔑 Clés EXACTES (corrigées)
-const EVA_BEFORE_KEY = "EVA initial";
-const EVA_AFTER_KEY =
-  "EVA : évaluez votre douleur de 0 à 10 (aujourd'hui, c'est à dire APRES L'INFILTRATION)";
-
-const EIFEL_BEFORE_KEY = "EIFEL initial";
-const EIFEL_AFTER_KEY = "Score EIFEL";
-
 export default function ClinicalResultsBlock() {
   const [evaBefore, setEvaBefore] = useState<number | null>(null);
   const [evaAfter, setEvaAfter] = useState<number | null>(null);
@@ -39,8 +31,43 @@ export default function ClinicalResultsBlock() {
 
         const data: SheetRow[] = await res.json();
 
+        const normalize = (value: string) =>
+          value
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/\s+/g, " ")
+            .trim()
+            .toLowerCase();
+
+        const keys = Object.keys(data[0] ?? {});
+
+        const findKey = (predicate: (normalizedKey: string) => boolean) =>
+          keys.find((key) => predicate(normalize(key)));
+
+        const evaBeforeKey = findKey(
+          (k) => k === "eva initial" || k === "eva initiale"
+        );
+
+        const evaAfterKey = findKey(
+          (k) =>
+            k.includes("eva") &&
+            k.includes("aujourd'hui") &&
+            k.includes("apres l'infiltration")
+        );
+
+        const eifelBeforeKey = findKey((k) => k === "eifel initial");
+
+        const eifelAfterKey = findKey((k) => k === "score eifel");
+
+        console.log("Colonnes détectées :", {
+          evaBeforeKey,
+          evaAfterKey,
+          eifelBeforeKey,
+          eifelAfterKey,
+        });
+
         const toNumber = (value: string | undefined) => {
-          const raw = String(value ?? "").trim(); // 🔥 trim important
+          const raw = String(value ?? "").trim();
           if (raw === "") return null;
 
           const parsed = Number(raw.replace(",", "."));
@@ -107,8 +134,8 @@ export default function ClinicalResultsBlock() {
 
         const evaPairs = data
           .map((row) => {
-            const before = toNumber(row[EVA_BEFORE_KEY]);
-            const after = toNumber(row[EVA_AFTER_KEY]);
+            const before = evaBeforeKey ? toNumber(row[evaBeforeKey]) : null;
+            const after = evaAfterKey ? toNumber(row[evaAfterKey]) : null;
 
             if (before === null || after === null) return null;
             return { before, after };
@@ -119,8 +146,8 @@ export default function ClinicalResultsBlock() {
 
         const eifelPairs = data
           .map((row) => {
-            const before = toNumber(row[EIFEL_BEFORE_KEY]);
-            const after = toNumber(row[EIFEL_AFTER_KEY]);
+            const before = eifelBeforeKey ? toNumber(row[eifelBeforeKey]) : null;
+            const after = eifelAfterKey ? toNumber(row[eifelAfterKey]) : null;
 
             if (before === null || after === null) return null;
             return { before, after };
@@ -181,7 +208,6 @@ export default function ClinicalResultsBlock() {
           </div>
 
           <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-            {/* EVA */}
             <div className="flex justify-center">
               <div className="flex min-w-[240px] flex-col items-center rounded-[2rem] border border-primary/15 bg-gradient-to-b from-white to-primary/5 px-10 py-10 shadow-sm text-center">
                 <p className="text-base font-bold uppercase tracking-widest text-primary">
@@ -202,9 +228,7 @@ export default function ClinicalResultsBlock() {
                   Basé sur {evaCount} répondant{evaCount > 1 ? "s" : ""}
                 </p>
 
-                <p className="mt-1 text-sm text-gray-500">
-                  p {evaP}
-                </p>
+                <p className="mt-1 text-sm text-gray-500">p {evaP}</p>
 
                 <p className="mt-1 text-sm text-gray-500">
                   Gain moyen : {evaMeanGain}
@@ -216,7 +240,6 @@ export default function ClinicalResultsBlock() {
               </div>
             </div>
 
-            {/* EIFEL */}
             <div className="flex justify-center">
               <div className="flex min-w-[240px] flex-col items-center rounded-[2rem] border border-primary/15 bg-gradient-to-b from-white to-primary/5 px-10 py-10 shadow-sm text-center">
                 <p className="text-base font-bold uppercase tracking-widest text-primary">
@@ -237,9 +260,7 @@ export default function ClinicalResultsBlock() {
                   Basé sur {eifelCount} répondant{eifelCount > 1 ? "s" : ""}
                 </p>
 
-                <p className="mt-1 text-sm text-gray-500">
-                  p {eifelP}
-                </p>
+                <p className="mt-1 text-sm text-gray-500">p {eifelP}</p>
 
                 <p className="mt-1 text-sm text-gray-500">
                   Gain moyen : {eifelMeanGain}
