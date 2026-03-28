@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 
 type SheetRow = Record<string, string | undefined>;
 
-const EVA_BEFORE_KEY = "EVA initiale";
+// 🔑 Clés EXACTES (corrigées)
+const EVA_BEFORE_KEY = "EVA initial";
 const EVA_AFTER_KEY =
   "EVA : évaluez votre douleur de 0 à 10 (aujourd'hui, c'est à dire APRES L'INFILTRATION)";
 
@@ -32,28 +33,14 @@ export default function ClinicalResultsBlock() {
   useEffect(() => {
     async function loadData() {
       try {
-        // Remplace NOM_DE_LA_FEUILLE par le nom exact de ton onglet Google Sheets
-        // Exemple si l’onglet s’appelle "Sheet1" :
-        // https://opensheet.elk.sh/1ziqoV37aDOhACAju-d3eg8e-77U0AeeCsHs-_3-KQcM/Sheet1
         const res = await fetch(
           "https://opensheet.elk.sh/1ziqoV37aDOhACAju-d3eg8e-77U0AeeCsHs-_3-KQcM/Form%20responses"
         );
 
         const data: SheetRow[] = await res.json();
 
-// 🔍 DEBUG
-console.log("CLES JSON :", Object.keys(data[0] ?? {}));
-
-console.log(
-  "EVA aperçu :",
-  data.slice(0, 5).map((row) => ({
-    evaBefore: row[EVA_BEFORE_KEY],
-    evaAfter: row[EVA_AFTER_KEY],
-  }))
-);
-
         const toNumber = (value: string | undefined) => {
-          const raw = String(value ?? "").trim();
+          const raw = String(value ?? "").trim(); // 🔥 trim important
           if (raw === "") return null;
 
           const parsed = Number(raw.replace(",", "."));
@@ -78,8 +65,6 @@ console.log(
           const beforeValues = pairs.map((p) => p.before);
           const afterValues = pairs.map((p) => p.after);
 
-          // après - avant
-          // négatif si amélioration
           const deltas = pairs.map((p) => p.after - p.before);
 
           const meanBefore =
@@ -98,12 +83,10 @@ console.log(
           const seDelta = sdDelta / Math.sqrt(n);
           const tStat = seDelta === 0 ? 0 : meanDelta / seDelta;
 
-          // Approximation simple du p bilatéral
           const pApprox = Math.exp(
             -0.717 * Math.abs(tStat) - 0.416 * tStat * tStat
           );
 
-          // Approximation simple de l'IC95%
           const tCritical = 1.96;
           const ciLow = meanDelta - tCritical * seDelta;
           const ciHigh = meanDelta + tCritical * seDelta;
