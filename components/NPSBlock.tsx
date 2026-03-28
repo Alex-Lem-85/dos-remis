@@ -2,9 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-type SheetRow = {
-  NPS?: string;
-};
+type SheetRow = Record<string, string | undefined>;
 
 export default function NPSBlock() {
   const [nps, setNps] = useState<number | null>(null);
@@ -15,13 +13,24 @@ export default function NPSBlock() {
     async function loadNPS() {
       try {
         const res = await fetch(
-          "https://opensheet.elk.sh/1fV0I_TpI3bDenR_27218klfe9L1tUzeiv9ahlJ-tar4/Dos-Remis"
+          "https://opensheet.elk.sh/1ziqoV37aDOhACAju-d3eg8e-77U0AeeCsHs-_3-KQcM/Form%20responses"
         );
         const data: SheetRow[] = await res.json();
 
+        const normalize = (value: string) =>
+          value
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/\s+/g, " ")
+            .trim()
+            .toLowerCase();
+
+        const keys = Object.keys(data[0] ?? {});
+        const npsKey = keys.find((key) => normalize(key) === "nps");
+
         const scores = data
           .map((row) => {
-            const raw = String(row.NPS ?? "").trim();
+            const raw = String((npsKey ? row[npsKey] : "") ?? "").trim();
             if (raw === "") return null;
 
             const value = Number(raw.replace(",", "."));
@@ -144,7 +153,6 @@ export default function NPSBlock() {
 
               <p className="mt-3 text-sm text-gray-500">
                 Score mis à jour automatiquement à partir des retours patients
-                depuis le 1er janvier 2026
               </p>
             </div>
           </div>
