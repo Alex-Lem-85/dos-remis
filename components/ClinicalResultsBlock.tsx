@@ -2,12 +2,14 @@
 
 import { useEffect, useState } from "react";
 
-type SheetRow = {
-  EVA?: string;
-  EVA2?: string;
-  EIFEL?: string;
-  EIFEL2?: string;
-};
+type SheetRow = Record<string, string | undefined>;
+
+const EVA_BEFORE_KEY = "EVA initiale";
+const EVA_AFTER_KEY =
+  "EVA : évaluez votre douleur de 0 à 10 (aujourd'hui, c'est à dire APRES L'INFILTRATION)";
+
+const EIFEL_BEFORE_KEY = "EIFEL initial";
+const EIFEL_AFTER_KEY = "Score EIFEL";
 
 export default function ClinicalResultsBlock() {
   const [evaBefore, setEvaBefore] = useState<number | null>(null);
@@ -30,9 +32,13 @@ export default function ClinicalResultsBlock() {
   useEffect(() => {
     async function loadData() {
       try {
+        // Remplace NOM_DE_LA_FEUILLE par le nom exact de ton onglet Google Sheets
+        // Exemple si l’onglet s’appelle "Sheet1" :
+        // https://opensheet.elk.sh/1ziqoV37aDOhACAju-d3eg8e-77U0AeeCsHs-_3-KQcM/Sheet1
         const res = await fetch(
-          "https://opensheet.elk.sh/1fV0I_TpI3bDenR_27218klfe9L1tUzeiv9ahlJ-tar4/Dos-Remis"
+          "https://opensheet.elk.sh/1ziqoV37aDOhACAju-d3eg8e-77U0AeeCsHs-_3-KQcM/Form%20responses"
         );
+
         const data: SheetRow[] = await res.json();
 
         const toNumber = (value: string | undefined) => {
@@ -61,7 +67,8 @@ export default function ClinicalResultsBlock() {
           const beforeValues = pairs.map((p) => p.before);
           const afterValues = pairs.map((p) => p.after);
 
-          // Variation clinique affichée : après - avant (donc négative si amélioration)
+          // après - avant
+          // négatif si amélioration
           const deltas = pairs.map((p) => p.after - p.before);
 
           const meanBefore =
@@ -106,8 +113,8 @@ export default function ClinicalResultsBlock() {
 
         const evaPairs = data
           .map((row) => {
-            const before = toNumber(row.EVA);
-            const after = toNumber(row.EVA2);
+            const before = toNumber(row[EVA_BEFORE_KEY]);
+            const after = toNumber(row[EVA_AFTER_KEY]);
 
             if (before === null || after === null) return null;
             return { before, after };
@@ -118,8 +125,8 @@ export default function ClinicalResultsBlock() {
 
         const eifelPairs = data
           .map((row) => {
-            const before = toNumber(row.EIFEL);
-            const after = toNumber(row.EIFEL2);
+            const before = toNumber(row[EIFEL_BEFORE_KEY]);
+            const after = toNumber(row[EIFEL_AFTER_KEY]);
 
             if (before === null || after === null) return null;
             return { before, after };
