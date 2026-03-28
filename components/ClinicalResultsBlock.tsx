@@ -41,6 +41,17 @@ export default function ClinicalResultsBlock() {
 
         const data: SheetRow[] = await res.json();
 
+// 🔍 DEBUG
+console.log("CLES JSON :", Object.keys(data[0] ?? {}));
+
+console.log(
+  "EVA aperçu :",
+  data.slice(0, 5).map((row) => ({
+    evaBefore: row[EVA_BEFORE_KEY],
+    evaAfter: row[EVA_AFTER_KEY],
+  }))
+);
+
         const toNumber = (value: string | undefined) => {
           const raw = String(value ?? "").trim();
           if (raw === "") return null;
