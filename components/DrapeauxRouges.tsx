@@ -82,23 +82,22 @@ export default function DrapeauxRouges() {
       de présence de&nbsp;
       <Dialog>
         <DialogTrigger asChild>
-          <span className="text-primary underline cursor-pointer hover:text-primary/80 transition-colors">
+          <span className="text-primary underline cursor-pointer hover:text-primary/80 transition-colors text-lg font-medium">
             drapeaux rouges
           </span>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[700px] max-h-[90vh] overflow-y-auto">
           <DialogHeader className="sticky top-0 bg-background z-10 pb-4">
-            <DialogTitle className="flex items-center gap-2 text-primary">
-              <AlertTriangle className="h-5 w-5" />
+            <DialogTitle className="flex items-center gap-2 text-primary text-2xl font-bold">
+              <AlertTriangle className="h-8 w-8" />
               Drapeaux Rouges
             </DialogTitle>
           </DialogHeader>
           <div className="mt-4 space-y-4">
-            <p className="text-sm text-gray-600">
+            <p className="text-lg font-bold text-black">
               Les drapeaux rouges sont des signes d'alerte qui nécessitent une
               attention médicale immédiate. En cas de présence d'un ou plusieurs
-              de ces signes, il est recommandé de consulter un service
-              d'urgence.
+              de ces signes, il est <span className="underline">recommandé de consulter un service d'urgence</span>.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {drapeauxRouges.map((drapeau, index) => (
@@ -106,9 +105,9 @@ export default function DrapeauxRouges() {
                   key={index}
                   className="flex items-start gap-3 p-4 rounded-lg hover:bg-primary/5 hover:shadow-md transition-all duration-200 border border-transparent hover:border-primary/20 min-h-[120px]"
                 >
-                  <drapeau.icon className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                  <drapeau.icon className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
                   <div className="flex-1">
-                    <span className="text-sm">{drapeau.text}</span>
+                    <span className="text-base">{drapeau.text}</span>
                   </div>
                 </div>
               ))}
