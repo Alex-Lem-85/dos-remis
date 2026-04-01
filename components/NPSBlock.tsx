@@ -103,13 +103,13 @@ export default function NPSBlock() {
 
   return (
     <section className="py-16 bg-white">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="overflow-hidden rounded-[2rem] border border-gray-200 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
-          <div className="px-6 py-10 md:px-12 md:py-14">
-            <div className="text-center">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-                Le Net Promoter Score (NPS) : un indicateur simple mais exigeant
-              </h2>
+  <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div className="overflow-hidden rounded-[2rem] border border-gray-200 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
+      <div className="px-6 py-10 md:px-12 md:py-14">
+        <div className="text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+            Le Net Promoter Score (NPS) : un indicateur simple mais exigeant
+          </h2>
 
               <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
                 On ne peut améliorer que ce que l’on peut mesurer
