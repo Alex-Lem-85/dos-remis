@@ -108,11 +108,11 @@ export default function NPSBlock() {
           <div className="px-6 py-10 md:px-12 md:py-14">
             <div className="text-center">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-                Nos patients nous recommandent
+                Le Net Promoter Score (NPS) : un indicateur simple mais exigeant
               </h2>
 
               <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                Le Net Promoter Score (NPS) : un indicateur simple et exigeant
+                On ne peut améliorer que ce que l’on peut mesurer
               </p>
 
               <div className="mt-10 flex justify-center">
