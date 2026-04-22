@@ -20,7 +20,7 @@ const faqItems = [
   {
     question: "C'est grave docteur ?",
     answer:
-      "Rassurez-vous, ce n'est pas grave et vous allez guérir naturellement. Le lumbago est une contracture musculaire sans réelle lésion sous-jacente. La douleur peut irradier dans la fesse sans qu'il s'agisse d'une compression nerveuse (sciatique) car c'est le trajet des muscles.",
+      "Rassurez-vous, ce n'est pas grave et vous allez guérir naturellement. Le lumbago est un exces de tension et d'inflammation dans le fascia. La douleur peut irradier dans la fesse sans qu'il s'agisse d'une compression nerveuse (sciatique) car c'est le trajet des fascias.",
   },
   {
     question: "Faut-il faire des examens d'imagerie ?",
@@ -195,10 +195,10 @@ export default function SOSLumbago() {
                     <div>
                       <p className="font-semibold">Technique sûre</p>
                       <p className="text-gray-600">
-                        Infiltration musculaire guidée par échographie pour une
+                        Infiltration myo-fasciale guidée par échographie pour une
                         précision parfaite. Nous injectons un produit
-                        anesthésisant (Ropivacaine). Le muscle endormi va
-                        pouvoir se décontracter. Ce n'est ni une infiltration de
+                        anesthésisant (Ropivacaine) au niveau du fascia thoraco-lombaire. Ainsi "endormi", il va
+                        pouvoir se détendre et se régener seul. Ce n'est ni une infiltration de
                         cortisone ni une péridurale. Nous restons à distance des
                         nerfs et de la colonne vertebrale
                       </p>
@@ -217,7 +217,7 @@ export default function SOSLumbago() {
                     <PersonStanding className="h-20 w-20 text-primary mt-1" />
                     <div>
                       <p className="text-gray-600">
-                        Profitez de l'anesthésie du muscle pour faire des
+                        Profitez de l'anesthésie pour faire des
                         étirements et reprendre le jour même une activité
                         physique et professionnelle adaptée à votre douleur
                       </p>
@@ -306,7 +306,7 @@ export default function SOSLumbago() {
             </h2>
             <p className="mt-4 text-lg text-primary-foreground/90">
               N'attendez pas que la douleur s'aggrave. Plus vous tardez, plus
-              vos muscles diminuent à cause de l'inactivité.
+              vos muscles diminuent à cause de l'inactivité et plus vos fascias se fibrosent.
             </p>
             <div className="mt-8">
               <Button asChild variant="secondary" size="lg">
