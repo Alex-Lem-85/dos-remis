@@ -140,8 +140,13 @@ export default function Home() {
 <section className="py-16 bg-white">
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-12">
-      <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-        Une prise en charge rapide (dans la journée), efficace et durable
+      <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 leading-tight">
+        <span className="block">
+          Une prise en charge rapide
+        </span>
+        <span className="block mt-2 text-lg sm:text-2xl font-medium text-gray-600">
+          (dans la journée), efficace et durable
+        </span>
       </h2>
     </div>
 
