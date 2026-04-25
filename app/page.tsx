@@ -81,6 +81,12 @@ const newsItems = [
     link: "https://form.jotform.com/260643154511045",
     buttonLabel: "Cliquer pour s’inscrire",
   },
+    {
+    title: "Rencontre autour des fascias avec le Dr Ranoux",
+    description:
+      "Nous aurons la chance d’accueillir le Dr Ranoux lors de notre soirée du 19 juin des échanges passionnants autour des fascias",
+    video: "https://www.youtube.com/embed/dCzdCsyUpTk",
+  },
 ];
 
 export default function Home() {
