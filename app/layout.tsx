@@ -8,10 +8,8 @@ import { Footer } from '@/components/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Dos-remis | Spécialistes du lumbago à Sète',
-  description: 'Vous souffrez de lombalgie aiguë, de mal au dos ou de dos bloqué ? Le centre SOS Lumbago à Sète est spécialisé dans le traitement rapide et efficace des douleurs dorsales grâce à des infiltrations et des soins personnalisés.',
-};
-
+  title: 'Dos-remis | SOS Lumbago à Sète',
+description: "Lumbago ou dos bloqué à Sète ou Montpellier ? Dos-Remis propose une prise en charge rapide avec infiltration ciblée et suivi médical personnalisé.",
 export default function RootLayout({
   children,
 }: {
