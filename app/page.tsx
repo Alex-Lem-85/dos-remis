@@ -43,7 +43,7 @@ const steps = [
     description: "Du lundi au vendredi, 10h–16h",
   },
   {
-    title: "On vous évalue (RDV dans la journée)",
+    title: "On vous évalue",
     description: "Consultation médicale spécialisée",
   },
   {
