@@ -229,65 +229,79 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Actualités */}
-      <section className="py-16 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-10">
-            Actualités
-          </h2>
+{/* Actualités */}
+<section className="py-16 bg-gray-50">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-10">
+      Actualités
+    </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {newsItems.map((item, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden border border-gray-200 shadow-sm"
-              >
-                <div className="w-full bg-white">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-
-                <CardHeader>
-                  <CardTitle className="text-2xl leading-tight">
-                    {item.title}
-                  </CardTitle>
-                  <CardDescription className="text-base leading-relaxed text-gray-600">
-                    {item.description}
-                  </CardDescription>
-                </CardHeader>
-
-                <div className="px-6 pb-6">
-                  <Button
-                    asChild
-                    size="lg"
-                    className={
-                      item.buttonLabel === "Cliquer pour s’inscrire"
-                        ? "bg-primary text-white hover:bg-primary/90"
-                        : ""
-                    }
-                    variant={
-                      item.buttonLabel === "Cliquer pour s’inscrire"
-                        ? "default"
-                        : "secondary"
-                    }
-                  >
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {item.buttonLabel}
-                    </a>
-                  </Button>
-                </div>
-              </Card>
-            ))}
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      {newsItems.map((item, index) => (
+        <Card
+          key={index}
+          className="overflow-hidden border border-gray-200 shadow-sm"
+        >
+          <div className="w-full bg-white">
+            {item.video ? (
+              <div className="aspect-video w-full">
+                <iframe
+                  className="h-full w-full"
+                  src={item.video}
+                  title={item.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            ) : (
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-auto object-cover"
+              />
+            )}
           </div>
-        </div>
-      </section>
+
+          <CardHeader>
+            <CardTitle className="text-2xl leading-tight">
+              {item.title}
+            </CardTitle>
+            <CardDescription className="text-base leading-relaxed text-gray-600">
+              {item.description}
+            </CardDescription>
+          </CardHeader>
+
+          {item.link && item.buttonLabel && (
+            <div className="px-6 pb-6">
+              <Button
+                asChild
+                size="lg"
+                className={
+                  item.buttonLabel === "Cliquer pour s’inscrire"
+                    ? "bg-primary text-white hover:bg-primary/90"
+                    : ""
+                }
+                variant={
+                  item.buttonLabel === "Cliquer pour s’inscrire"
+                    ? "default"
+                    : "secondary"
+                }
+              >
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.buttonLabel}
+                </a>
+              </Button>
+            </div>
+          )}
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* CTA */}
       <section className="bg-primary py-16">
