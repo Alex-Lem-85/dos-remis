@@ -6,7 +6,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Star } from "lucide-react";
-import { PhoneCall, Stethoscope, Syringe, ShieldCheck, ArrowRight } from "lucide-react";
 import NPSBlock from "@/components/NPSBlock";
 import ClinicalResultsBlock from "@/components/ClinicalResultsBlock";
 
@@ -148,32 +147,27 @@ export default function Home() {
 </section>
 
      {/* Parcours patient */}
+{/* Parcours patient */}
 <section className="py-16 bg-white">
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-12">
       <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-        Une prise en charge simple, rapide et coordonnée
+        Une prise en charge rapide, efficace et coordonnée
       </h2>
     </div>
 
     <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-      {steps.map((step, index) => {
-        const icons = [PhoneCall, Stethoscope, Syringe, ShieldCheck];
-        const Icon = icons[index];
+      {steps.map((step, index) => (
+        <div key={index} className="relative">
+          <div className="group h-full rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/40">
 
-        return (
-          <div key={index} className="relative">
-            <div className="group h-full rounded-3xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/40">
-              <div className="mb-6 flex items-center justify-between">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-white">
-                  <Icon className="h-7 w-7" />
-                </div>
+            {/* GROS NUMÉRO */}
+            <div className="absolute -top-6 left-6 text-6xl font-bold text-primary/20">
+              {index + 1}
+            </div>
 
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-white text-sm font-bold shadow-md">
-                  {index + 1}
-                </div>
-              </div>
-
+            {/* CONTENU */}
+            <div className="mt-6">
               <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
                 {step.title}
               </h3>
@@ -182,15 +176,18 @@ export default function Home() {
                 {step.description}
               </p>
             </div>
-
-            {index < steps.length - 1 && (
-              <div className="hidden md:flex absolute top-1/2 -right-6 z-10 h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white border border-primary/20 shadow-sm">
-                <ArrowRight className="h-5 w-5 text-primary" />
-              </div>
-            )}
           </div>
-        );
-      })}
+
+          {/* FLÈCHE ENTRE BLOCS */}
+          {index < steps.length - 1 && (
+            <div className="hidden md:flex absolute top-1/2 -right-6 z-10 -translate-y-1/2 items-center justify-center">
+              <div className="h-10 w-10 flex items-center justify-center rounded-full bg-primary/10">
+                <span className="text-primary text-lg">→</span>
+              </div>
+            </div>
+          )}
+        </div>
+      ))}
     </div>
 
     <p className="mt-10 text-center text-sm text-gray-500">
