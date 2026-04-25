@@ -8,8 +8,23 @@ import { Footer } from '@/components/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Dos-remis | SOS Lumbago à Sète',
-description: "Lumbago ou dos bloqué à Sète ou Montpellier ? Dos-Remis propose une prise en charge rapide avec infiltration ciblée et suivi médical personnalisé.",
+  title: 'Mal au dos | SOS Lumbago à Sète & Montpellier',
+  description:
+    "Lumbago ou dos bloqué à Sète ou Montpellier ? Dos-Remis propose une prise en charge rapide avec infiltration ciblée et suivi médical personnalisé.",
+  keywords: [
+    "lumbago Sète",
+    "SOS Lumbago",
+    "urgence lumbago",
+    "lumbago Montpellier",
+    "mal de dos Montpellier",
+    "mal de dos Sète",
+    "dos bloqué",
+    "douleur lombaire",
+    "mal en bas du dos",
+    "urgence mal de dos",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
