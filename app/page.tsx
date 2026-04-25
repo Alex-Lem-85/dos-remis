@@ -109,23 +109,18 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
      {/* Hero Section */}
+{/* Hero Section */}
 <section className="relative bg-gradient-to-r from-primary/10 to-primary/5 py-20">
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div className="text-center">
-<h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-  <span className="block">
-    Mal au dos ?
-  </span>
-  <span className="block mt-2 text-2xl sm:text-4xl font-semibold text-gray-700">
-    SOS Lumbago vous accompagne
-  </span>
-</h1>
 
-      <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
-        Une équipe spécialisée pour évaluer, soulager et suivre votre lombalgie
-      </p>
+      <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight">
+        <span className="bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent drop-shadow-sm">
+          SOS Lumbago
+        </span>
+      </h1>
 
-      <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+      <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
         <a
           href="https://form.jotform.com/242954146506055"
           target="_blank"
