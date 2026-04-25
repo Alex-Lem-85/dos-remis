@@ -84,7 +84,7 @@ const newsItems = [
     {
     title: "Rencontre autour des fascias avec le Dr Ranoux",
     description:
-      "Nous aurons la chance d’accueillir le Dr Ranoux lors de notre soirée du 19 juin des échanges passionnants autour des fascias",
+      "Nous aurons la chance d’accueillir le Dr Ranoux, auteur du livre "Fascias - Les connaître pour mieux les soigner" lors de notre soirée du 19 juin. Cela promet des échanges passionnants autour des fascias (nous rélisons notre infiltration dans le fascia thoraco-lombaire)",
     video: "https://www.youtube.com/embed/dCzdCsyUpTk",
   },
 ];
