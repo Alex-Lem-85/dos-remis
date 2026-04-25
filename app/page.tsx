@@ -43,7 +43,7 @@ const steps = [
     description: "Du lundi au vendredi, 10h–16h",
   },
   {
-    title: "On vous évalue rapidement",
+    title: "On vous évalue (RDV dans la journée)",
     description: "Consultation médicale spécialisée",
   },
   {
@@ -52,7 +52,7 @@ const steps = [
   },
   {
     title: "On vous suit",
-    description: "Pour éviter la rechute",
+    description: "Pour s'assurer de l'efficacité et éviter la rechute",
   },
 ];
 
@@ -127,15 +127,9 @@ export default function Home() {
           rel="noopener noreferrer"
           className="bg-primary text-white py-3 px-6 rounded-lg hover:bg-primary/90 font-semibold shadow-md"
         >
-          Demander un rappel
+          Demander un RDV
         </a>
 
-        <a
-          href="/sos-lumbago"
-          className="border border-primary text-primary py-3 px-6 rounded-lg hover:bg-primary hover:text-white font-semibold"
-        >
-          Découvrir SOS Lumbago
-        </a>
       </div>
     </div>
   </div>
