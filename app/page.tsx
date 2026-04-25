@@ -6,6 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import { PhoneCall, Stethoscope, Syringe, ShieldCheck, ArrowRight } from "lucide-react";
 import NPSBlock from "@/components/NPSBlock";
 import ClinicalResultsBlock from "@/components/ClinicalResultsBlock";
 
@@ -108,108 +109,93 @@ const newsItems = [
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary/10 to-primary/5 py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-primary shadow-sm border border-primary/10 mb-6">
-              SOS Lumbago — prise en charge rapide de la lombalgie aiguë
-            </p>
+     {/* Hero Section */}
+<section className="relative bg-gradient-to-r from-primary/10 to-primary/5 py-20">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        Mal au dos ?
+        <br />
+        SOS Lumbago vous accompagne
+      </h1>
 
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Mal de dos aigu ?
-              <br />
-              On vous accompagne vite.
-            </h1>
+      <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
+        Une équipe spécialisée pour évaluer, soulager et suivre votre lombalgie
+      </p>
 
-            <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
-              Une équipe spécialisée pour évaluer, soulager et suivre votre
-              lombalgie rapidement.
-            </p>
+      <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+        <a
+          href="https://form.jotform.com/242954146506055"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-primary text-white py-3 px-6 rounded-lg hover:bg-primary/90 font-semibold shadow-md"
+        >
+          Demander un rappel
+        </a>
 
-            <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-              <a
-                href="https://form.jotform.com/242954146506055"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-primary text-white py-3 px-6 rounded-lg hover:bg-primary/90 font-semibold shadow-md"
-              >
-                Demander un rappel
-              </a>
+        <a
+          href="/sos-lumbago"
+          className="border border-primary text-primary py-3 px-6 rounded-lg hover:bg-primary hover:text-white font-semibold"
+        >
+          Découvrir SOS Lumbago
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-              <a
-                href="/sos-lumbago"
-                className="border border-primary text-primary py-3 px-6 rounded-lg hover:bg-primary hover:text-white font-semibold"
-              >
-                Découvrir SOS Lumbago
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+     {/* Parcours patient */}
+<section className="py-16 bg-white">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+        Une prise en charge simple, rapide et coordonnée
+      </h2>
+    </div>
 
-      {/* Parcours patient */}
-      <section className="py-16 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
-              SOS Lumbago
-            </p>
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+      {steps.map((step, index) => {
+        const icons = [PhoneCall, Stethoscope, Syringe, ShieldCheck];
+        const Icon = icons[index];
 
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-              Une prise en charge simple, rapide et coordonnée
-            </h2>
+        return (
+          <div key={index} className="relative">
+            <div className="group h-full rounded-3xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/40">
+              <div className="mb-6 flex items-center justify-between">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-white">
+                  <Icon className="h-7 w-7" />
+                </div>
 
-            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-              Un parcours clair pour vous soulager rapidement et limiter le
-              risque de récidive.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {steps.map((step, index) => (
-              <div
-                key={index}
-                className="group relative rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/40"
-              >
-                <div className="absolute -top-4 left-6 flex h-9 w-9 items-center justify-center rounded-full bg-primary text-white text-sm font-bold shadow-md">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-white text-sm font-bold shadow-md">
                   {index + 1}
                 </div>
-
-                <div className="pt-4">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
-                    {step.title}
-                  </h3>
-
-                  <p className="text-gray-600 leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-
-                {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-1/2 -right-3 h-0.5 w-6 bg-primary/30" />
-                )}
               </div>
-            ))}
-          </div>
 
-          <div className="mt-10 text-center">
-            <p className="text-sm text-gray-500 mb-4">
-              Du rappel initial au suivi, tout est pensé pour aller vite sans
-              perdre en rigueur médicale.
-            </p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                {step.title}
+              </h3>
 
-            <a
-              href="https://form.jotform.com/242954146506055"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-primary/90 hover:shadow-lg"
-            >
-              Demander un rappel
-            </a>
+              <p className="text-gray-600 leading-relaxed">
+                {step.description}
+              </p>
+            </div>
+
+            {index < steps.length - 1 && (
+              <div className="hidden md:flex absolute top-1/2 -right-6 z-10 h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white border border-primary/20 shadow-sm">
+                <ArrowRight className="h-5 w-5 text-primary" />
+              </div>
+            )}
           </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+
+    <p className="mt-10 text-center text-sm text-gray-500">
+      Du rappel initial au suivi, chaque étape est pensée pour avancer vite dans
+      un cadre médical rigoureux.
+    </p>
+  </div>
+</section>
 
       {/* Team */}
       <section className="py-20 bg-gray-50">
