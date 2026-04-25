@@ -141,7 +141,7 @@ export default function Home() {
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-12">
       <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-        Une prise en charge rapide, efficace et coordonnée
+        Objectif : soigner plus vite, soigner mieux et soigner durablement votre mal de dos
       </h2>
     </div>
 
