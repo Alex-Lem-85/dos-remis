@@ -113,11 +113,14 @@ export default function Home() {
 <section className="relative bg-gradient-to-r from-primary/10 to-primary/5 py-20">
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div className="text-center">
-      <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-        Mal au dos ?
-        <br />
-        SOS Lumbago vous accompagne
-      </h1>
+<h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+  <span className="block">
+    Mal au dos ?
+  </span>
+  <span className="block mt-2 text-2xl sm:text-4xl font-semibold text-gray-700">
+    SOS Lumbago vous accompagne
+  </span>
+</h1>
 
       <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
         Une équipe spécialisée pour évaluer, soulager et suivre votre lombalgie
