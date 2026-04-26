@@ -142,10 +142,10 @@ export default function Home() {
     <div className="text-center mb-12">
       <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 leading-tight">
         <span className="block">
-          Une prise en charge rapide
+          Une prise en charge dans la journée
         </span>
         <span className="block mt-2 text-lg sm:text-2xl font-medium text-gray-600">
-          (dans la journée), efficace et durable
+          rapide, efficace et durable
         </span>
       </h2>
     </div>
