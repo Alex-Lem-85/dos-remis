@@ -25,7 +25,7 @@ import {
   UserCog,
   Vegan,
   Building,
-  Walk
+  Footprints
 } from "lucide-react";
 
 const pApproach = [
@@ -58,7 +58,7 @@ const preventionSteps = [
     description: "Assouplissements pour maintenir la mobilité du dos. Peu importe les mouvements, ils doivent être amples, lents et surtout très reguliers"
   },
   {
-    icon: Walk,
+    icon: Footprints,
     title: "marcher",
     description: "la sédentarité est l'ennemie du dos, il faut marcher le plus possible et éviter les positions prolongées (assis ou debout)"
   },
