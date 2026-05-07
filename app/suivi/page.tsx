@@ -154,11 +154,53 @@ export default function Suivi() {
         </div>
       </section>
 
-      {/* Notre approche en 5P */}
+      {/* Notre Partition */}
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900">notre appppproche</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Notre Partition</h2>
+            
+            {/* Partition musicale avec les 5P */}
+            <div className="relative max-w-4xl mx-auto">
+              {/* Portée musicale (5 lignes) */}
+              <div className="relative h-24 sm:h-32">
+                {/* Lignes de la portée */}
+                <div className="absolute inset-0 flex flex-col justify-between">
+                  <div className="w-full h-0.5 bg-gray-400"></div>
+                  <div className="w-full h-0.5 bg-gray-400"></div>
+                  <div className="w-full h-0.5 bg-gray-400"></div>
+                  <div className="w-full h-0.5 bg-gray-400"></div>
+                  <div className="w-full h-0.5 bg-gray-400"></div>
+                </div>
+                
+                {/* Clé de sol */}
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-16">
+                  <svg viewBox="0 0 100 200" className="w-full h-full text-gray-800">
+                    <path d="M20 20 C40 10, 60 10, 80 30 C90 50, 90 70, 80 90 C60 110, 40 110, 20 90 C10 70, 10 50, 20 30 C30 20, 50 20, 70 40 C80 60, 80 80, 70 100 C50 120, 30 120, 20 100" 
+                          stroke="currentColor" strokeWidth="8" fill="none" />
+                  </svg>
+                </div>
+                
+                {/* Les 5P comme notes de musique */}
+                <div className="absolute left-12 right-0 top-1/2 -translate-y-1/2 flex justify-between items-center">
+                  {pApproach.map((p, index) => (
+                    <div key={index} className="flex flex-col items-center group">
+                      {/* Note (cercle) */}
+                      <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center mb-2 transition-all group-hover:scale-110">
+                        <span className="text-primary font-bold text-sm sm:text-base">{p.title.charAt(0)}</span>
+                      </div>
+                      {/* Ligne verticale (hampe de note) */}
+                      <div className="w-0.5 h-8 sm:h-12 bg-primary/40"></div>
+                      {/* Titre sous la note */}
+                      <div className="mt-2 text-center">
+                        <p className="text-red-600 font-bold text-sm sm:text-base">{p.title}</p>
+                        <p className="text-gray-600 text-xs sm:text-sm max-w-[120px] sm:max-w-[160px]">{p.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pApproach.map((p, index) => (
