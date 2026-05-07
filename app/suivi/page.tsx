@@ -154,51 +154,11 @@ export default function Suivi() {
         </div>
       </section>
 
-      {/* Notre Partition */}
+      {/* Notre approche en 5P */}
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Notre Partition</h2>
-            
-            {/* Partition musicale avec les 5P comme notes */}
-            <div className="relative max-w-4xl mx-auto">
-              {/* Portée musicale (5 lignes) */}
-              <div className="relative h-24 sm:h-32">
-                {/* Lignes de la portée */}
-                <div className="absolute inset-0 flex flex-col justify-between">
-                  <div className="w-full h-0.5 bg-gray-800"></div>
-                  <div className="w-full h-0.5 bg-gray-800"></div>
-                  <div className="w-full h-0.5 bg-gray-800"></div>
-                  <div className="w-full h-0.5 bg-gray-800"></div>
-                  <div className="w-full h-0.5 bg-gray-800"></div>
-                </div>
-                
-                {/* Clé de sol */}
-                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-16">
-                  <svg viewBox="0 0 100 200" className="w-full h-full text-gray-800">
-                    <path d="M20 20 C40 10, 60 10, 80 30 C90 50, 90 70, 80 90 C60 110, 40 110, 20 90 C10 70, 10 50, 20 30 C30 20, 50 20, 70 40 C80 60, 80 80, 70 100 C50 120, 30 120, 20 100" 
-                          stroke="currentColor" strokeWidth="8" fill="none" />
-                  </svg>
-                </div>
-                
-                {/* Les 5P comme notes de musique (vrais symboles) */}
-                <div className="absolute left-12 right-0 top-1/2 -translate-y-1/2 flex justify-between items-center">
-                  {pApproach.map((p, index) => (
-                    <div key={index} className="flex flex-col items-center group">
-                      {/* Note de musique (forme ovale avec hampe) */}
-                      <div className="relative">
-                        {/* Tête de note (ovale) */}
-                        <div className="w-8 h-10 sm:w-10 sm:h-12 rounded-full bg-primary border-2 border-gray-800 flex items-center justify-center transition-all group-hover:scale-110">
-                          <span className="text-white font-bold text-sm sm:text-base">{p.title}</span>
-                        </div>
-                        {/* Hampe de note */}
-                        <div className="absolute -right-1 top-1/2 -translate-y-1/2 w-0.5 h-12 sm:h-16 bg-gray-800"></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <h2 className="text-3xl font-bold text-gray-900">notre appppproche</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pApproach.map((p, index) => (
@@ -209,7 +169,7 @@ export default function Suivi() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Target className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
-                    <span className="text-red-600 font-bold">{p.title}</span>
+                    <span className="text-black"><span className="text-red-600 font-bold">{p.title.charAt(0)}</span>{p.title.slice(1)}</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -225,7 +185,7 @@ export default function Suivi() {
       <section className="py-16 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900">Eviter les récidives</h2>
+            <h2 className="text-3xl font-bold text-gray-900">Recommandations de la HAS (haute autorité de santé)</h2>
             <p className="mt-4 text-lg text-gray-600">
               L'activité physique régulière est la clé de la prévention. 
               L'éducation et la prévention sont les meilleures des médecines
@@ -238,8 +198,10 @@ export default function Suivi() {
                 className="transition-all duration-200 hover:shadow-lg hover:border-primary/20 border group"
               >
                 <CardHeader>
-                  <step.icon className="h-8 w-8 text-primary mb-2 group-hover:scale-110 transition-transform" />
-                  <CardTitle className="text-red-600 font-bold">{step.title}</CardTitle>
+                  <div className="flex items-center gap-3">
+                    <step.icon className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
+                    <CardTitle className="text-black">{step.title}</CardTitle>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600">{step.description}</p>
@@ -269,11 +231,8 @@ export default function Suivi() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900">
-              Explication simple et rapide pour éviter les recidives
-            </h2>
-            <p className="mt-4 text-lg text-gray-600">
               Recommandations de la HAS (haute autorité de santé)
-            </p>
+            </h2>
           </div>
           <div
             className="relative w-full overflow-hidden rounded-2xl shadow-xl"
@@ -290,68 +249,25 @@ export default function Suivi() {
         </div>
       </section>
 
-      {/* Notre approche en deux temps */}
+      {/* Image iceberg */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
-              <span className="bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent drop-shadow-sm">
-                Notre approche en deux temps
-              </span>
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Traitement symptomatique */}
-            <Card className="shadow-md border border-black bg-[#D1ECFD] group hover:shadow-xl transition-shadow">
-              <CardHeader>
-                <Syringe className="h-12 w-12 text-black mb-2 mx-auto transition-transform group-hover:scale-110" />
-                <CardTitle className="text-black text-xl font-bold">
-                  1. Traitement symptomatique
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-black">
-                <p>
-                  SOS lumbago intervient rapidement pour soulager votre douleur aiguë
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Analyse approfondie */}
-            <Card className="shadow-md border border-black bg-[#1E5C85] group hover:shadow-xl transition-shadow">
-              <CardHeader>
-                <Fingerprint className="h-12 w-12 text-white mb-2 mx-auto transition-transform group-hover:scale-110" />
-                <CardTitle className="text-white text-xl font-bold">
-                  2. Analyse approfondie
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-white">
-                <p>
-                  Examen détaillé des causes sous-jacentes pour prévenir les récidives
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Image iceberg full width */}
-          <div className="mt-16">
-            <div className="mx-auto max-w-4xl px-4 text-center">
-              <div className="bg-primary/10 rounded-2xl p-6 mb-8 border-2 border-primary/20">
-                <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">
-                  Comprendre les causes "profondes" : la douleur n'est que la partie visible de l'iceberg
-                </h3>
-                <p className="text-lg text-gray-700">
-                  Traiter la douleur sans les causes expose à des récidives
-                </p>
-              </div>
+          <div className="mx-auto max-w-4xl px-4 text-center">
+            <div className="bg-primary/10 rounded-2xl p-6 mb-8 border-2 border-primary/20">
+              <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">
+                Comprendre les causes "profondes" : la douleur n'est que la partie visible de l'iceberg
+              </h3>
+              <p className="text-lg text-gray-700">
+                Traiter la douleur sans les causes expose à des récidives
+              </p>
             </div>
-
-            <img
-              src="/iceberg-etapes-levrai.jpeg"
-              alt="Schéma iceberg lombalgie"
-              className="w-full h-auto"
-            />
           </div>
+
+          <img
+            src="/iceberg-etapes-levrai.jpeg"
+            alt="Schéma iceberg lombalgie"
+            className="w-full h-auto"
+          />
         </div>
       </section>
 
@@ -386,8 +302,10 @@ export default function Suivi() {
                 className="transition-all duration-200 hover:shadow-lg hover:border-primary/20 border group"
               >
                 <CardHeader>
-                  <support.icon className="h-8 w-8 text-primary mb-2 transition-transform group-hover:scale-110" />
-                  <CardTitle>{support.title}</CardTitle>
+                  <div className="flex items-center gap-3">
+                    <support.icon className="h-8 w-8 text-primary transition-transform group-hover:scale-110" />
+                    <CardTitle className="text-black">{support.title}</CardTitle>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600">{support.description}</p>
