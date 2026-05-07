@@ -188,15 +188,11 @@ export default function Suivi() {
                       {/* Note de musique (forme ovale avec hampe) */}
                       <div className="relative">
                         {/* Tête de note (ovale) */}
-                        <div className="w-6 h-8 sm:w-8 sm:h-10 rounded-full bg-primary border-2 border-gray-800 flex items-center justify-center transition-all group-hover:scale-110">
-                          <span className="text-white font-bold text-sm sm:text-base">{p.title.charAt(0)}</span>
+                        <div className="w-8 h-10 sm:w-10 sm:h-12 rounded-full bg-primary border-2 border-gray-800 flex items-center justify-center transition-all group-hover:scale-110">
+                          <span className="text-white font-bold text-sm sm:text-base">{p.title}</span>
                         </div>
                         {/* Hampe de note */}
                         <div className="absolute -right-1 top-1/2 -translate-y-1/2 w-0.5 h-12 sm:h-16 bg-gray-800"></div>
-                      </div>
-                      {/* Titre sous la note */}
-                      <div className="mt-4 text-center">
-                        <p className="text-red-600 font-bold text-sm sm:text-base">{p.title}</p>
                       </div>
                     </div>
                   ))}
