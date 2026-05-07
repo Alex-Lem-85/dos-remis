@@ -80,16 +80,26 @@ const faqItems = [
 export default function SOSLumbago() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section - Identique à la page d'accueil */}
       <section className="relative bg-gradient-to-r from-primary/10 to-primary/5 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              SOS Lumbago
+            <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight">
+              <span className="bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent drop-shadow-sm">
+                SOS Lumbago
+              </span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Une prise en charge rapide et efficace pour débloquer la situation
-            </p>
+
+            <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+              <a
+                href="https://form.jotform.com/242954146506055"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary text-white py-3 px-6 rounded-lg hover:bg-primary/90 font-semibold shadow-md"
+              >
+                Demander un RDV
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -113,9 +123,14 @@ export default function SOSLumbago() {
       <section className="py-16 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Notre solution</h2>
-            <p className="text-xl text-gray-600">
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+              Notre solution
+            </h2>
+            <p className="text-xl text-red-600 font-medium">
               Soigner vite, soigner mieux et soigner durablement votre mal de dos
+            </p>
+            <p className="mt-4 text-lg text-gray-600">
+              Nous suivons les recommandations de la HAS (Haute Autorité de Santé)
             </p>
           </div>
           
@@ -245,11 +260,11 @@ export default function SOSLumbago() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Section - Visuel amélioré */}
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-6">
-            C'est quoi un lumbago au fait ?
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-6">
+            FAQ : au fait c'est quoi un lumbago docteur ?
           </h2>
 
           <div className="flex justify-center mb-6">
@@ -268,19 +283,25 @@ export default function SOSLumbago() {
             </Button>
           </div>
 
-          <div className="grid gap-8">
+          <div className="grid gap-6">
             {faqItems.map((item, index) => (
-              <Card key={index}>
+              <Card 
+                key={index} 
+                className="transition-all duration-200 hover:shadow-lg hover:border-primary/20 border"
+              >
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Info
-                      className="h-5 w-5 text-primary"
-                      aria-label="Question fréquente"
-                    />
-                    {item.question}
+                  <CardTitle className="flex items-center gap-3 text-lg">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Info className="h-6 w-6 text-primary" aria-label="Question fréquente" />
+                    </div>
+                    <span className="text-primary font-medium">{item.question}</span>
                   </CardTitle>
                 </CardHeader>
-                <CardContent>{item.answer}</CardContent>
+                <CardContent className="pt-4">
+                  <div className="pl-13">
+                    {item.answer}
+                  </div>
+                </CardContent>
               </Card>
             ))}
           </div>
