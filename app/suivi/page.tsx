@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { 
+import {
   Activity,
   BedDouble,
   BicepsFlexed,
@@ -24,7 +24,8 @@ import {
   Target,
   UserCog,
   Vegan,
-  Building
+  Building,
+  Footprints
 } from "lucide-react";
 
 const pApproach = [
@@ -54,12 +55,12 @@ const preventionSteps = [
   {
     icon: Stretch,
     title: "Étirements musculaires",
-    description: "Assouplissements réguliers pour maintenir la mobilité du dos"
+    description: "Assouplissements pour maintenir la mobilité du dos. Peu importe les mouvements, ils doivent être amples, lents et surtout très reguliers"
   },
   {
-    icon: Dumbbell,
-    title: "Renforcement musculaire",
-    description: "Musculation à intensité modérée ciblant tous les groupes musculaires : dorsaux, abdominaux, transverse, plancher pelvien et diaphragme"
+    icon: Footprints,
+    title: "marcher",
+    description: "la sédentarité est l'ennemie du dos, il faut marcher le plus possible et éviter les positions prolongées (assis ou debout)"
   },
   {
     icon: BookOpen,
@@ -77,7 +78,7 @@ const additionalSupport = [
   {
     icon: BicepsFlexed,
     title: "Programme d'exercices supervisés",
-    description: "Par un kinésithérapeute pour éduquer et motiver"
+    description: "Par un kinésithérapeute pour éduquer et motiver. Activité physique adaptée (APA) avec notre spécialiste"
   },
   {
     icon: Stethoscope,
@@ -112,19 +113,21 @@ const additionalSupport = [
   {
     icon: BedDouble,
     title: "Sommeil",
-    description: "il est important de bien dormir"
+    description: "il est important de bien dormir. Les phases de récuperations sont essentielles pour une bonne santé des fascias et des muscles"
   }
 ];
 
 export default function Suivi() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Une approche globale */}
+      {/* Hero Section - Même style que SOS Lumbago */}
       <section className="relative bg-gradient-to-r from-primary/10 to-primary/5 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Une approche globale
+            <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight">
+              <span className="bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent drop-shadow-sm">
+                Une approche globale
+              </span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               L'équipe Dos-remis s'engage dans une nouvelle ère de la médecine, axée sur une vision holistique de votre santé
@@ -133,42 +136,37 @@ export default function Suivi() {
         </div>
       </section>
 
-{/* Harmonie retrouvée */}
-<section className="py-12 bg-primary">
-  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div className="text-center text-white">
-      <div className="flex items-center justify-center gap-4 mb-4">
-        {/* Icône à gauche */}
-        <Music className="h-8 w-8 text-white" />
-        <h2 className="text-3xl font-bold">Harmonie retrouvée</h2>
-        {/* Icône à droite */}
-        <Music className="h-8 w-8 text-white" />
-      </div>
-      <p className="text-xl">
-        Dos-remis est le chef d'orchestre de votre prise en charge, mais vous faites partie de l'orchestre. 
-        Ce sont vos exercices physiques et l'adaptation de votre mode de vie qui permettront d'éviter les récidives 
-        et l'apparition de douleurs chroniques. Nous vous aiderons aussi à trouver d'autres professeurs de musique pour vous accompagner
-      </p>
-    </div>
-  </div>
-</section>
+      {/* Harmonie retrouvée */}
+      <section className="py-12 bg-primary">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center text-white">
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <Music className="h-8 w-8 text-white" />
+              <h2 className="text-3xl font-bold">Harmonie retrouvée</h2>
+              <Music className="h-8 w-8 text-white" />
+            </div>
+            <p className="text-xl">
+              Dos-remis est le chef d'orchestre de votre prise en charge, mais vous faites partie de l'orchestre. 
+              Ce sont vos exercices physiques et l'adaptation de votre mode de vie qui permettront d'éviter les récidives 
+              et l'apparition de douleurs chroniques. Nous vous aiderons aussi à trouver d'autres professeurs de musique pour vous accompagner
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Notre approche en 5P */}
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900">Notre approche en 5P</h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Une méthodologie complète pour votre santé
-            </p>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pApproach.map((p, index) => (
-              <Card key={index}>
+              <Card 
+                key={index} 
+                className="transition-all duration-200 hover:shadow-lg hover:border-primary/20 border group"
+              >
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Target className="h-5 w-5 text-primary" />
-                    {p.title}
+                    <Target className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
+                    <span className="text-black">{p.title}</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -192,10 +190,15 @@ export default function Suivi() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {preventionSteps.map((step, index) => (
-              <Card key={index}>
+              <Card 
+                key={index} 
+                className="transition-all duration-200 hover:shadow-lg hover:border-primary/20 border group"
+              >
                 <CardHeader>
-                  <step.icon className="h-8 w-8 text-primary mb-2" />
-                  <CardTitle>{step.title}</CardTitle>
+                  <div className="flex items-center gap-3">
+                    <step.icon className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
+                    <CardTitle className="text-black">{step.title}</CardTitle>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600">{step.description}</p>
@@ -220,98 +223,50 @@ export default function Suivi() {
         </div>
       </section>
 
-<section className="py-16 bg-white">
-  <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      {/* Vidéo */}
+      <section className="py-16 bg-white">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900">
+              Recommandations de la HAS (haute autorité de santé)
+            </h2>
+          </div>
+          <div
+            className="relative w-full overflow-hidden rounded-2xl shadow-xl"
+            style={{ paddingTop: "56.25%" }}
+          >
+            <iframe
+              className="absolute inset-0 h-full w-full"
+              src="https://www.youtube.com/embed/YpejbojhWrY"
+              title="Exercices lombalgie vidéo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
 
-    <div className="text-center mb-8">
-      <h2 className="text-3xl font-bold text-gray-900">
-        Explication simple et rapide pour éviter les recidives
-      </h2>
-      <p className="mt-4 text-lg text-gray-600">
-        Recommandations de la HAS (haute autorité de santé)
-      </p>
-    </div>
+      {/* Image iceberg */}
+      <section className="py-16 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl px-4 text-center">
+            <div className="bg-primary/10 rounded-2xl p-6 mb-8 border-2 border-primary/20">
+              <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">
+                Comprendre les causes "profondes" : la douleur n'est que la partie visible de l'iceberg
+              </h3>
+              <p className="text-lg text-gray-700">
+                Traiter la douleur sans les causes expose à des récidives
+              </p>
+            </div>
+          </div>
 
-    <div
-      className="relative w-full overflow-hidden rounded-2xl shadow-xl"
-      style={{ paddingTop: "56.25%" }}
-    >
-      <iframe
-        className="absolute inset-0 h-full w-full"
-        src="https://www.youtube.com/embed/YpejbojhWrY"
-        title="Exercices lombalgie vidéo"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      />
-    </div>
-
-  </div>
-</section>
-
-{/* Notre approche en deux temps */}
-<section className="py-16 bg-white">
-  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div className="text-center">
-      <h2 className="text-3xl font-bold text-gray-900 mb-6">
-        Notre approche en deux temps
-      </h2>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-{/* Traitement symptomatique */}
-<Card className="shadow-md border border-black bg-[#D1ECFD]">
-  <CardHeader>
-    <Syringe className="h-12 w-12 text-black mb-2 mx-auto" />
-    <CardTitle className="text-black text-xl">
-      1. Traitement symptomatique
-    </CardTitle>
-  </CardHeader>
-  <CardContent className="text-black">
-    <p>
-      SOS lumbago intervient rapidement pour soulager votre douleur aiguë
-    </p>
-  </CardContent>
-</Card>
-
-{/* Analyse approfondie */}
-<Card className="shadow-md border border-black bg-[#1E5C85]">
-  <CardHeader>
-    <Fingerprint className="h-12 w-12 text-white mb-2 mx-auto" />
-    <CardTitle className="text-white text-xl">
-      2. Analyse approfondie
-    </CardTitle>
-  </CardHeader>
-  <CardContent className="text-white">
-    <p>
-      Examen détaillé des causes sous-jacentes pour prévenir les récidives
-    </p>
-  </CardContent>
-</Card>
-      </div>
-
-{/* Image iceberg full width */}
-<div className="mt-16">
-
-  <div className="mx-auto max-w-4xl px-4 text-center">
-    <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-      Comprendre les causes "profondes" : la douleur n’est que la partie visible de l'iceberg
-    </h3>
-    <p className="text-gray-600 mb-8">
-      Traiter la douleur sans les causes expose à des récidives
-    </p>
-  </div>
-
-  {/* Image vraiment pleine largeur */}
-  <img
-    src="/iceberg-etapes-levrai.jpeg"
-    alt="Schéma iceberg lombalgie"
-    className="w-full h-auto"
-  />
-
-</div>
-
-    </div>
-  </div>
-</section>
+          <img
+            src="/iceberg-etapes-levrai.jpeg"
+            alt="Schéma iceberg lombalgie"
+            className="w-full h-auto"
+          />
+        </div>
+      </section>
 
       {/* Consultation de suivi avec analyse de vos réponses aux questionnaires */}
       <section className="py-16">
@@ -322,7 +277,7 @@ export default function Suivi() {
               <Button 
                 asChild 
                 size="lg" 
-                className="bg-transparent text-primary hover:text-primary/90 border border-primary shadow-lg"
+                className="bg-transparent text-primary hover:text-primary/90 border border-primary shadow-lg hover:shadow-xl transition-shadow"
               >
                 <a 
                   href="https://www.ameli.fr/sites/default/files/Documents/Parcours-soins-patient-je-souffre-lombalgie.pdf" 
@@ -339,10 +294,15 @@ export default function Suivi() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {additionalSupport.map((support, index) => (
-              <Card key={index}>
+              <Card 
+                key={index} 
+                className="transition-all duration-200 hover:shadow-lg hover:border-primary/20 border group"
+              >
                 <CardHeader>
-                  <support.icon className="h-8 w-8 text-primary mb-2" />
-                  <CardTitle>{support.title}</CardTitle>
+                  <div className="flex items-center gap-3">
+                    <support.icon className="h-8 w-8 text-primary transition-transform group-hover:scale-110" />
+                    <CardTitle className="text-black">{support.title}</CardTitle>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600">{support.description}</p>
