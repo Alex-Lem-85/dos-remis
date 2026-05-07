@@ -160,17 +160,17 @@ export default function Suivi() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Notre Partition</h2>
             
-            {/* Partition musicale avec les 5P */}
+            {/* Partition musicale avec les 5P comme notes */}
             <div className="relative max-w-4xl mx-auto">
               {/* Portée musicale (5 lignes) */}
               <div className="relative h-24 sm:h-32">
                 {/* Lignes de la portée */}
                 <div className="absolute inset-0 flex flex-col justify-between">
-                  <div className="w-full h-0.5 bg-gray-400"></div>
-                  <div className="w-full h-0.5 bg-gray-400"></div>
-                  <div className="w-full h-0.5 bg-gray-400"></div>
-                  <div className="w-full h-0.5 bg-gray-400"></div>
-                  <div className="w-full h-0.5 bg-gray-400"></div>
+                  <div className="w-full h-0.5 bg-gray-800"></div>
+                  <div className="w-full h-0.5 bg-gray-800"></div>
+                  <div className="w-full h-0.5 bg-gray-800"></div>
+                  <div className="w-full h-0.5 bg-gray-800"></div>
+                  <div className="w-full h-0.5 bg-gray-800"></div>
                 </div>
                 
                 {/* Clé de sol */}
@@ -181,20 +181,22 @@ export default function Suivi() {
                   </svg>
                 </div>
                 
-                {/* Les 5P comme notes de musique */}
+                {/* Les 5P comme notes de musique (vrais symboles) */}
                 <div className="absolute left-12 right-0 top-1/2 -translate-y-1/2 flex justify-between items-center">
                   {pApproach.map((p, index) => (
                     <div key={index} className="flex flex-col items-center group">
-                      {/* Note (cercle) */}
-                      <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center mb-2 transition-all group-hover:scale-110">
-                        <span className="text-primary font-bold text-sm sm:text-base">{p.title.charAt(0)}</span>
+                      {/* Note de musique (forme ovale avec hampe) */}
+                      <div className="relative">
+                        {/* Tête de note (ovale) */}
+                        <div className="w-6 h-8 sm:w-8 sm:h-10 rounded-full bg-primary border-2 border-gray-800 flex items-center justify-center transition-all group-hover:scale-110">
+                          <span className="text-white font-bold text-sm sm:text-base">{p.title.charAt(0)}</span>
+                        </div>
+                        {/* Hampe de note */}
+                        <div className="absolute -right-1 top-1/2 -translate-y-1/2 w-0.5 h-12 sm:h-16 bg-gray-800"></div>
                       </div>
-                      {/* Ligne verticale (hampe de note) */}
-                      <div className="w-0.5 h-8 sm:h-12 bg-primary/40"></div>
                       {/* Titre sous la note */}
-                      <div className="mt-2 text-center">
+                      <div className="mt-4 text-center">
                         <p className="text-red-600 font-bold text-sm sm:text-base">{p.title}</p>
-                        <p className="text-gray-600 text-xs sm:text-sm max-w-[120px] sm:max-w-[160px]">{p.description}</p>
                       </div>
                     </div>
                   ))}
