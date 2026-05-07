@@ -157,9 +157,6 @@ export default function Suivi() {
       {/* Notre approche en 5P */}
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900">notre appppproche</h2>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pApproach.map((p, index) => (
               <Card 
@@ -169,7 +166,7 @@ export default function Suivi() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Target className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
-                    <span className="text-black"><span className="text-red-600 font-bold">{p.title.charAt(0)}</span>{p.title.slice(1)}</span>
+                    <span className="text-black">{p.title}</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -185,7 +182,7 @@ export default function Suivi() {
       <section className="py-16 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900">Recommandations de la HAS (haute autorité de santé)</h2>
+            <h2 className="text-3xl font-bold text-gray-900">Eviter les récidives</h2>
             <p className="mt-4 text-lg text-gray-600">
               L'activité physique régulière est la clé de la prévention. 
               L'éducation et la prévention sont les meilleures des médecines
