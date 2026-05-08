@@ -241,10 +241,10 @@ export default function Suivi() {
         </div>
       </section>
 
-      {/* Image iceberg */}
+      {/* Bandeau Comprendre les causes profondes */}
       <section className="py-12 bg-primary">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center text-white mb-8">
+          <div className="text-center text-white">
             <h3 className="text-2xl sm:text-3xl font-bold mb-4">
               Comprendre les causes "profondes" : la douleur n'est que la partie visible de l'iceberg
             </h3>
@@ -252,7 +252,12 @@ export default function Suivi() {
               Traiter la douleur sans les causes expose à des récidives
             </p>
           </div>
+        </div>
+      </section>
 
+      {/* Image iceberg */}
+      <section className="py-16 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <img
             src="/iceberg-etapes-levrai.jpeg"
             alt="Schéma iceberg lombalgie"
