@@ -73,12 +73,24 @@ export default function FAQ() {
           <div className="text-center">
             <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight">
               <span className="bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent drop-shadow-sm">
-                FAQ
+                FAQ : au fait c'est quoi un lumbago docteur ?
               </span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Réponses à vos questions sur le lumbago
-            </p>
+            <div className="mt-8">
+              <Button
+                asChild
+                size="lg"
+                className="bg-primary text-white hover:bg-primary/90 border border-primary"
+              >
+                <a
+                  href="https://www.ameli.fr/sites/default/files/Documents/Parcours-soins-patient-je-souffre-lombalgie.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Cliquez pour plus d'informations
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -86,25 +98,6 @@ export default function FAQ() {
       {/* FAQ Section */}
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-6">
-            FAQ : au fait c'est quoi un lumbago docteur ?
-          </h2>
-
-          <div className="flex justify-center mb-6">
-            <Button
-              asChild
-              size="lg"
-              className="bg-primary text-white hover:bg-primary/90 border border-primary"
-            >
-              <a
-                href="https://www.ameli.fr/sites/default/files/Documents/Parcours-soins-patient-je-souffre-lombalgie.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Cliquez pour plus d'informations
-              </a>
-            </Button>
-          </div>
 
           <div className="grid gap-6">
             {faqItems.map((item, index) => (
