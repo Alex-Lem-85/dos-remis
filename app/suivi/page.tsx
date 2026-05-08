@@ -179,7 +179,7 @@ export default function Suivi() {
       </section>
 
       {/* Prévenir les récidives */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gradient-to-r from-primary/10 to-primary/5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900">Eviter les récidives</h2>
