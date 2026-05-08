@@ -264,7 +264,7 @@ export default function Suivi() {
       </section>
 
       {/* Consultation de suivi avec analyse de vos réponses aux questionnaires */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-r from-primary/10 to-primary/5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6">
 <h2 className="text-3xl font-bold text-gray-900">Orientation vers une équipe pluridisciplinaire</h2>
