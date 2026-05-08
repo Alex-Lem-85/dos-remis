@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Info } from "lucide-react";
-import DrapeauxRouges from "@/components/DrapeauxRouges";
 
 const faqItems = [
   {
@@ -16,11 +15,7 @@ const faqItems = [
   },
   {
     question: "Faut-il faire des examens d'imagerie ?",
-    answer: (
-      <>
-        <DrapeauxRouges />
-      </>
-    ),
+    answer: "Non, sauf en cas de signes d'alerte (drapeaux rouges) : fièvre, perte de poids inexpliquée, antécédents de cancer, troubles urinaires ou fécaux, faiblesse musculaire importante, ou traumatisme violent. Dans ces cas, consultez en urgence.",
   },
   {
     question: "Combien de temps ça va durer ?",
