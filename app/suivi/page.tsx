@@ -226,11 +226,6 @@ export default function Suivi() {
       {/* Vidéo */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900">
-              Recommandations de la HAS (haute autorité de santé)
-            </h2>
-          </div>
           <div
             className="relative w-full overflow-hidden rounded-2xl shadow-xl"
             style={{ paddingTop: "56.25%" }}
