@@ -267,7 +267,7 @@ export default function Suivi() {
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6">
-<h2 className="text-3xl font-bold text-gray-900">Orientation vers une équipe pluridisciplinaire pour prendre les problèmes à la racine</h2>
+<h2 className="text-3xl font-bold text-gray-900">Orientation vers une équipe pluridisciplinaire</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {additionalSupport.map((support, index) => (
