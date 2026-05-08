@@ -73,7 +73,7 @@ export default function FAQ() {
           <div className="text-center">
             <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight">
               <span className="bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent drop-shadow-sm">
-                FAQ : au fait c'est quoi un lumbago docteur ?
+                C'est quoi un lumbago docteur ?
               </span>
             </h1>
             <div className="mt-8">
