@@ -4,6 +4,7 @@ import {
   CheckCircle,
   Clock,
   FastForward,
+  Info,
   PersonStanding,
   Stethoscope,
   Syringe,
