@@ -60,7 +60,7 @@ const preventionSteps = [
   {
     icon: Footprints,
     title: "marcher",
-    description: "la sédentarité est l'ennemie du dos, il faut marcher le plus possible et éviter les positions prolongées (assis ou debout)"
+    description: "La sédentarité est l'ennemie du dos, il faut marcher le plus possible et éviter les positions prolongées (assis ou debout)"
   },
   {
     icon: BookOpen,
@@ -245,11 +245,11 @@ export default function Suivi() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl px-4 text-center">
-            <div className="bg-primary/10 rounded-2xl p-6 mb-8 border-2 border-primary/20">
-              <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">
+            <div className="bg-primary rounded-2xl p-6 mb-8">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
                 Comprendre les causes "profondes" : la douleur n'est que la partie visible de l'iceberg
               </h3>
-              <p className="text-lg text-gray-700">
+              <p className="text-lg text-white">
                 Traiter la douleur sans les causes expose à des récidives
               </p>
             </div>
