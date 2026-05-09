@@ -184,9 +184,6 @@ export default function FAQ() {
         </div>
       </section>
 
-      {/* Additional Video Section */}
-      {additionalVideo}
-
     </div>
   );
 }
