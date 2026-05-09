@@ -94,31 +94,20 @@ const faqItems = [
         <p>
           L’équipe Dos-Remis espère contribuer à améliorer les connaissances sur les fascias.
         </p>
+        <div className="aspect-video w-full max-w-4xl mx-auto pt-4">
+          <iframe
+            className="w-full h-full rounded-lg"
+            src="https://www.youtube.com/embed/zCyigpz1HlQ?mute=0&playsinline=1"
+            title="Vidéo complémentaire sur les techniques non médicamenteuses"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
     ),
   },
 ];
-
-// Vidéo supplémentaire sous "Et les techniques non médicamenteuses ?"
-const additionalVideo = (
-  <section className="py-8">
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <h2 className="text-2xl font-bold text-center mb-4">
-        Nous injectons le fascia thoraco-lombaire, mais qu&apos;est-ce qu&apos;un fascia ?
-      </h2>
-      <div className="aspect-video w-full max-w-4xl mx-auto">
-        <iframe
-          className="w-full h-full rounded-lg"
-          src="https://www.youtube.com/embed/zCyigpz1HlQ?mute=0&playsinline=1"
-          title="Vidéo complémentaire sur les techniques non médicamenteuses"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
-      </div>
-    </div>
-  </section>
-);
 
 export default function FAQ() {
   return (
