@@ -44,6 +44,19 @@ const faqItems = [
     ),
   },
   {
+    question: "Donc pas de repos ?",
+    answer: (
+      <div className="space-y-4">
+        <p>
+          <span className="font-bold">Surtout pas</span>. Le repos, parfois « forcé », va <span className="font-bold">enraidir vos fascias</span> (lors d’une immobilisation, les fibroblastes synthétisent trop de fibres de collage) et <span className="font-bold">amyotrophie</span> (diminution du volume des muscles).
+        </p>
+        <p>
+          Ces mécanismes risquent de provoquer et entretenir les douleurs lombaires : c’est le <span className="font-bold">cercle vicieux de la lombalgie</span>.
+        </p>
+      </div>
+    ),
+  },
+  {
     question: "Et que pouvez vous me prescrire pour avoir moins mal ?",
     answer: (
       <div className="space-y-4">
