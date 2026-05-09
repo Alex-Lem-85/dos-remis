@@ -5,34 +5,50 @@ import { Info } from "lucide-react";
 const faqItems = [
   {
     question: "Mal de dos brutal ?",
-    answer:
-      "Vous avez probablement un lumbago, aussi appelé « tour de rein » ou lombalgie aiguë non spécifique par les médecins. C'est une douleur soudaine dans le bas du dos qui peut survenir lors d'un effort, après un faux mouvement, ou parfois sans raison apparente.",
+    answer: (
+      <p>
+        Vous avez probablement un lumbago, aussi appelé <span className="font-bold">« tour de rein »</span> ou lombalgie aiguë non spécifique par les médecins. C&apos;est une douleur soudaine dans le bas du dos qui peut survenir lors d&apos;un effort, après un faux mouvement, ou parfois sans raison apparente.
+      </p>
+    ),
   },
   {
     question: "C'est grave docteur ?",
-    answer:
-      "Rassurez-vous, ce n'est pas grave et vous allez guérir naturellement. Le lumbago est un exces de tension et d'inflammation dans le fascia. La douleur peut irradier dans la fesse sans qu'il s'agisse d'une compression nerveuse (sciatique) car c'est le trajet des fascias.",
+    answer: (
+      <p>
+        Rassurez-vous, <span className="font-bold">ce n&apos;est pas grave</span> et vous allez guérir naturellement. Le lumbago est un exces de tension et d&apos;inflammation dans le fascia. La douleur peut irradier dans la fesse et dans l&apos;arrière de la jambe sans qu&apos;il s&apos;agisse d&apos;une compression nerveuse (sciatique) car il s&apos;agit du trajet des fascias.
+      </p>
+    ),
   },
   {
     question: "Faut-il faire des examens d'imagerie ?",
-    answer: "Non, sauf en cas de signes d'alerte (drapeaux rouges) : fièvre, perte de poids inexpliquée, antécédents de cancer, troubles urinaires ou fécaux, faiblesse musculaire importante, ou traumatisme violent. Dans ces cas, consultez en urgence.",
+    answer: (
+      <p>
+        <span className="font-bold">Non</span>, sauf en cas de signes d&apos;alerte (drapeaux rouges) : fièvre, perte de poids inexpliquée, antécédents de cancer, troubles urinaires ou fécaux, faiblesse musculaire importante, ou traumatisme violent. Dans ces cas, consultez en urgence.
+      </p>
+    ),
   },
   {
     question: "Combien de temps ça va durer ?",
-    answer:
-      "La guérison naturelle peut prendre entre 1 et 6 semaines. Mais avec la prise en charge SOS lumbago, nous pouvons accélérer ce processus et soulager rapidement votre douleur.",
+    answer: (
+      <p>
+        La guérison naturelle peut prendre entre <span className="font-bold">1 et 6 semaines</span>. Mais avec la prise en charge SOS lumbago, nous pouvons accélérer ce processus et soulager rapidement votre douleur.
+      </p>
+    ),
   },
   {
     question: "Comment guérir plus vite ?",
-    answer:
-      "Les études scientifiques prouvent que le traitement de la lombalgie aigüe c'est le mouvement. Facile à dire quand on est bloqué.",
+    answer: (
+      <p>
+        Les études scientifiques prouvent que le traitement de la lombalgie aigüe c&apos;est <span className="font-bold">le mouvement</span>. Facile à dire quand on est bloqué.
+      </p>
+    ),
   },
   {
     question: "Et que pouvez vous me prescrire pour avoir moins mal ?",
     answer: (
       <div className="space-y-4">
         <p>
-          Primum non nocere : les médicaments sont quasiment inefficaces et font
+          Primum non nocere : <span className="font-bold">les médicaments sont quasi inefficaces</span> et font
           plus de mal que de bien.
         </p>
         <ul className="space-y-2"></ul>
@@ -48,21 +64,39 @@ const faqItems = [
           semelles orthopédiques, acupuncture, acupression, dry needling
         </p>
         <p>
-          En l'absence d'étude de bonne qualité, il n'est pas possible de
-          statuer sur l'efficacité de la sophrologie, de la relaxation, de la «
-          méditation pleine conscience » ou de l'hypnose. Elles peuvent
+          En l&apos;absence d&apos;étude de bonne qualité, il n&apos;est pas possible de
+          statuer sur l&apos;efficacité de la sophrologie, de la relaxation, de la «
+          méditation pleine conscience » ou de l&apos;hypnose. Elles peuvent
           cependant être envisagées.
         </p>
         <p>
-          Il est possible d'envisager le port d'une ceinture lombaire ou d'un
-          corset sur une courte durée pour aider à la reprise d'activités bien
-          qu'ils n'aient pas démontré d'efficacité sur l'évolution de la
+          Il est possible d&apos;envisager le port d&apos;une ceinture lombaire ou d&apos;un
+          corset sur une courte durée pour aider à la reprise d&apos;activités bien
+          qu&apos;ils n&apos;aient pas démontré d&apos;efficacité sur l&apos;évolution de la
           lombalgie.
         </p>
       </div>
     ),
   },
 ];
+
+// Vidéo supplémentaire sous "Et les techniques non médicamenteuses ?"
+const additionalVideo = (
+  <section className="py-8">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="aspect-video w-full max-w-4xl mx-auto">
+        <iframe
+          className="w-full h-full rounded-lg"
+          src="https://www.youtube.com/embed/zCyigpz1HlQ?autoplay=1&mute=0&playsinline=1"
+          title="Vidéo complémentaire sur les techniques non médicamenteuses"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+);
 
 export default function FAQ() {
   return (
@@ -73,7 +107,7 @@ export default function FAQ() {
           <div className="text-center">
             <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight">
               <span className="bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent drop-shadow-sm">
-                C'est quoi un lumbago docteur ?
+                C&apos;est quoi un lumbago docteur ?
               </span>
             </h1>
             <div className="mt-8">
@@ -87,7 +121,7 @@ export default function FAQ() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Cliquez pour plus d'informations
+                  Cliquez pour plus d&apos;informations
                 </a>
               </Button>
             </div>
@@ -95,10 +129,25 @@ export default function FAQ() {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="aspect-video w-full max-w-4xl mx-auto">
+            <iframe
+              className="w-full h-full rounded-lg"
+              src="https://www.youtube.com/embed/s5WLqHypbPM?autoplay=1&start=8&mute=0&playsinline=1"
+              title="Vidéo explicative sur le lumbago"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
           <div className="grid gap-6">
             {faqItems.map((item, index) => (
               <Card 
@@ -123,6 +172,10 @@ export default function FAQ() {
           </div>
         </div>
       </section>
+
+      {/* Additional Video Section */}
+      {additionalVideo}
+
     </div>
   );
 }
