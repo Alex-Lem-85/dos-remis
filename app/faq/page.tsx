@@ -78,6 +78,25 @@ const faqItems = [
       </div>
     ),
   },
+  {
+    question: "Et vous injectez où ?",
+    answer: (
+      <div className="space-y-4">
+        <p>
+          L’injection se fait dans le fascia thoraco-lombaire. Elle est guidée par échographie pour une précision parfaite.
+        </p>
+        <p>
+          Le fascia est un tissu conjonctif dont la composition évolue en permanence en fonction des mouvements, des tensions et des compressions, selon le principe de tenségrité.
+        </p>
+        <p>
+          C’est un organe très innervé (ce qui explique les douleurs), et il reste encore beaucoup à découvrir à son sujet.
+        </p>
+        <p>
+          L’équipe Dos-Remis espère contribuer à améliorer les connaissances sur les fascias.
+        </p>
+      </div>
+    ),
+  },
 ];
 
 // Vidéo supplémentaire sous "Et les techniques non médicamenteuses ?"
