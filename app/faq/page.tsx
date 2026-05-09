@@ -5,34 +5,50 @@ import { Info } from "lucide-react";
 const faqItems = [
   {
     question: "Mal de dos brutal ?",
-    answer:
-      "Vous avez probablement un lumbago, aussi appelé « tour de rein » ou lombalgie aiguë non spécifique par les médecins. C'est une douleur soudaine dans le bas du dos qui peut survenir lors d'un effort, après un faux mouvement, ou parfois sans raison apparente.",
+    answer: (
+      <p>
+        Vous avez probablement un lumbago, aussi appelé <span className="font-bold">« tour de rein »</span> ou lombalgie aiguë non spécifique par les médecins. C&apos;est une douleur soudaine dans le bas du dos qui peut survenir lors d&apos;un effort, après un faux mouvement, ou parfois sans raison apparente.
+      </p>
+    ),
   },
   {
     question: "C'est grave docteur ?",
-    answer:
-      "Rassurez-vous, ce n'est pas grave et vous allez guérir naturellement. Le lumbago est un exces de tension et d'inflammation dans le fascia. La douleur peut irradier dans la fesse sans qu'il s'agisse d'une compression nerveuse (sciatique) car c'est le trajet des fascias.",
+    answer: (
+      <p>
+        Rassurez-vous, <span className="font-bold">ce n&apos;est pas grave</span> et vous allez guérir naturellement. Le lumbago est un exces de tension et d&apos;inflammation dans le fascia. La douleur peut irradier dans la fesse et dans l&apos;arrière de la jambe sans qu&apos;il s&apos;agisse d&apos;une compression nerveuse (sciatique) car il s&apos;agit du trajet des fascias.
+      </p>
+    ),
   },
   {
     question: "Faut-il faire des examens d'imagerie ?",
-    answer: "Non, sauf en cas de signes d'alerte (drapeaux rouges) : fièvre, perte de poids inexpliquée, antécédents de cancer, troubles urinaires ou fécaux, faiblesse musculaire importante, ou traumatisme violent. Dans ces cas, consultez en urgence.",
+    answer: (
+      <p>
+        <span className="font-bold">Non</span>, sauf en cas de signes d&apos;alerte (drapeaux rouges) : fièvre, perte de poids inexpliquée, antécédents de cancer, troubles urinaires ou fécaux, faiblesse musculaire importante, ou traumatisme violent. Dans ces cas, consultez en urgence.
+      </p>
+    ),
   },
   {
     question: "Combien de temps ça va durer ?",
-    answer:
-      "La guérison naturelle peut prendre entre 1 et 6 semaines. Mais avec la prise en charge SOS lumbago, nous pouvons accélérer ce processus et soulager rapidement votre douleur.",
+    answer: (
+      <p>
+        La guérison naturelle peut prendre entre <span className="font-bold">1 et 6 semaines</span>. Mais avec la prise en charge SOS lumbago, nous pouvons accélérer ce processus et soulager rapidement votre douleur.
+      </p>
+    ),
   },
   {
     question: "Comment guérir plus vite ?",
-    answer:
-      "Les études scientifiques prouvent que le traitement de la lombalgie aigüe c'est le mouvement. Facile à dire quand on est bloqué.",
+    answer: (
+      <p>
+        Les études scientifiques prouvent que le traitement de la lombalgie aigüe c&apos;est <span className="font-bold">le mouvement</span>. Facile à dire quand on est bloqué.
+      </p>
+    ),
   },
   {
     question: "Et que pouvez vous me prescrire pour avoir moins mal ?",
     answer: (
       <div className="space-y-4">
         <p>
-          Primum non nocere : les médicaments sont quasiment inefficaces et font
+          Primum non nocere : <span className="font-bold">les médicaments sont quasi inefficaces</span> et font
           plus de mal que de bien.
         </p>
         <ul className="space-y-2"></ul>
