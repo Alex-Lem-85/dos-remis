@@ -1,6 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mail, MapPin, Clock } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact | Prise de RDV - Dos-Remis Sète & Montpellier",
+  description: "Contactez Dos-Remis pour une prise en charge rapide de votre lumbago à Sète ou Montpellier. Adresse, téléphone et formulaire de contact.",
+};
 
 export default function Contact() {
   return (

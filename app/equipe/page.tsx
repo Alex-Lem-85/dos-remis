@@ -1,5 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Award, BookOpen, Stethoscope, Users } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Notre Équipe | Médecins spécialistes - Dos-Remis Sète & Montpellier",
+  description: "Découvrez notre équipe de médecins anesthésistes spécialisés dans la prise en charge des lombalgies à Sète et Montpellier. Expertise et professionnalisme à votre service.",
+};
 
 const doctors = [
   {
