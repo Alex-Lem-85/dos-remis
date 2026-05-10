@@ -58,6 +58,14 @@ const steps = [
 
 const reviews = [
   {
+    name: "Cathy",
+    text: "Prise en charge rapide et efficace de la douleur. Le Personnel a fait preuve d'une réelle empathie, et de beaucoup de professionnalisme, en passant par la secrétaire, le medecin et radiologie. C'est malheureusement tellement rare de constater autant de gentillesse. Merci infiniment et surtout j'espère que cela ne changera pas.",
+  },
+  {
+    name: "Cessy",
+    text: "Je tiens à remercier toute l'équipe le site, les secrétaires les anesthésistes au bureau et au bloc les infirmières bref MERCI. Bloquée du dos la veille: 8 h aux urgences à Montpellier sorti avec 1 Doliprane. Ici une écoute, une compréhension et un soulagement immédiat bon pour moi en 2 fois mais un suivi exceptionnel! Bref vous êtes des MAGICIENS du lumbago !!!!!!!!!!!!! MERCI !",
+  },
+  {
     name: "Evelyne",
     text: "Prise en charge rapide (le jour même de l'appel) et efficace. Cela m’a évité un arrêt de travail et des douleurs inutiles. Merci.",
   },
