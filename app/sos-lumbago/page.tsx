@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Metadata } from "next";
 import {
   CheckCircle,
   Clock,
@@ -9,6 +10,11 @@ import {
   Stethoscope,
   Syringe,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Parcours SOS Lumbago | Traitement urgent - Dos-Remis Sète & Montpellier",
+  description: "Parcours de soins accéléré pour les lombalgies aiguës. Prise en charge en urgence avec infiltration écho-guidée et suivi médical à Sète et Montpellier.",
+};
 
 export default function SOSLumbago() {
   return (

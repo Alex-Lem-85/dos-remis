@@ -1,5 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Target, Heart, Brain, Shield, Activity } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Notre Approche | Méthode innovante - Dos-Remis Sète & Montpellier",
+  description: "Découvrez notre approche innovante pour traiter les lombalgies. Infiltration myo-fasciale écho-guidée et suivi médical personnalisé à Sète et Montpellier.",
+};
 
 export default function Approche() {
   return (
