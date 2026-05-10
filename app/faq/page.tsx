@@ -28,101 +28,10 @@ const faqItems = [
     ),
   },
   {
-    question: "Au bout de combien de temps c'est efficace ?",
-    answer: (
-      <p>
-        L&apos;efficacité est <span className="font-bold">immédiate et progressive sur quelques jours</span>. Pour optimiser les résultats, nous vous conseillons de suivre les recommandations post-infiltration. Nous ne pouvons garantir une disparition totale de la douleur, mais une réduction qui vous permettra de reprendre vos activités en douceur.
-      </p>
-    ),
-  },
-  {
-    question: "Est-ce que c'est magique ?",
-    answer: (
-      <div className="space-y-4">
-        <p>
-          Malheureusement, <span className="font-bold">aucun de nous n&apos;a étudié à Poudlard</span>. Bien que certains patients emploient ce terme, nous privilégions une <span className="font-bold">approche scientifique</span>. Ainsi, en totale transparence, nous affichons nos résultats cliniques en direct sur la page d&apos;accueil depuis le 1er janvier 2026. Il se dessine une <span className="font-bold">diminution d&apos;environ 50% de l&apos;EVA et du score d&apos;handicap EIFEL</span> *. Le reste, est entre vos mains, c&apos;est votre corps qui va le faire si vous appliquez les recommandations qui vous seront données. *Ces résultats ne sont pas encore publiés dans une revue à relecture.*
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "C'est une péridurale ?",
-    answer: (
-      <p>
-        <span className="font-bold">Pas du tout</span>. Ce n&apos;est pas non plus une ponction lombaire ou une anesthésie loco-régionale tronculaire. Ces techniques sont sans danger pour la colonne vertébrale ou les nerfs : nous ne touchons ni à la colonne, ni au liquide céphalo-rachidien, ni aux racines nerveuses. Nous ciblons uniquement les muscles et les fascias, avec une précision garantie par l&apos;échographie.
-      </p>
-    ),
-  },
-  {
     question: "Combien de temps ça va durer ?",
     answer: (
       <p>
-        L&apos;effet anesthésiant dure environ <span className="font-bold">24 heures</span>. Ensuite, la <span className="font-bold">reprise du mouvement</span> permet à votre système myo-fascial de se réorganiser, ce qui favorise la résolution de l&apos;épisode aigu et une amélioration durable.
-      </p>
-    ),
-  },
-  {
-    question: "J'ai déjà pris RDV avec mon kiné/ostéo, je dois annuler ?",
-    answer: (
-      <p>
-        <span className="font-bold">Absolument pas, notre infiltration est complémentaire.</span> Elle va permettre au professionnel de pouvoir travailler plus efficacement car la douleur aiguë aura diminuée.
-      </p>
-    ),
-  },
-  {
-    question: "Que faire juste après l'infiltration ?",
-    answer: (
-      <p>
-        <span className="font-bold">Bouger !!!</span> Profitez de la baisse de douleur pour aller marcher, vous étirer, consulter votre kiné ou ostéo, et faire tout ce qui vous met en mouvement, dans la limite de vos capacités.
-      </p>
-    ),
-  },
-  {
-    question: "Une seule injection suffit ?",
-    answer: (
-      <p>
-        Une seule injection suffit dans la plupart des cas. Cependant, <span className="font-bold">5 à 10 % des patients peuvent nécessiter une seconde infiltration</span>, si la première a été partiellement efficace ou si la douleur réapparaît. Nos secrétaires vous appelleront systématiquement pour faire le point. Si besoin, n&apos;hésitez pas à reprendre un RDV en ligne. La balance bénéfices/risques est largement en faveur de cette seconde.
-      </p>
-    ),
-  },
-  {
-    question: "Quels sont les risques ?",
-    answer: (
-      <div className="space-y-4">
-        <p>
-          Les infiltrations myo-fasciales que nous pratiquons sont sûres et très bien tolérées dans l&apos;immense majorité des cas. Toute technique comporte des risques, mais ceux-ci sont <span className="font-bold">extrêmement rares et/ou bénins</span>. Nous maîtrisons parfaitement les infiltrations écho-guidées, que nous réalisons quotidiennement au bloc opératoire.
-        </p>
-        <p>
-          Effets temporaires fréquents :
-        </p>
-        <ul className="list-disc list-inside space-y-1 ml-4">
-          <li>Légère douleur au point d&apos;injection (normale, le fascia est très innervé).</li>
-          <li>Pesanteur ou tension dans le bas du dos (liée au volume injecté).</li>
-          <li>Malaise vagal, bouffées de chaleur.</li>
-          <li>Très rarement : anesthésie temporaire d&apos;une jambe (moins de 24h) en cas de diffusion du produit au-delà du fascia thoraco-lombaire. L&apos;échographie réduit fortement ce risque.</li>
-        </ul>
-        <p>
-          Effets exceptionnels : Infection, réaction allergique, saignement.
-        </p>
-        <p>
-          L&apos;absence totale d&apos;efficacité est possible mais rare.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "Combien cela va me coûter ?",
-    answer: (
-      <p>
-        Nous ne pratiquons <span className="font-bold">aucun dépassement d&apos;honoraires sur l&apos;ensemble du parcours</span>. Vous serez remboursé à 70 % par la Sécurité sociale sur la base tarifaire conventionnée, hors participation forfaitaire de 2 € à votre charge (sauf exonération). Votre mutuelle prendra en charge le reste selon votre contrat.
-      </p>
-    ),
-  },
-  {
-    question: "Quels sont les sources de ces recommandations ?",
-    answer: (
-      <p>
-        Notre parcours est basé sur les recommandations de la HAS : élimination des drapeaux rouges puis recherche des drapeaux jaunes... La technique SOS lumbago est récente et peu étudiée. Elle fera l&apos;objet de publications scientifiques approfondies pour valider son efficacité. Nous sommes fortement investis dans l&apos;étude des fascias, un domaine en pleine exploration où beaucoup reste à découvrir et à comprendre. À l&apos;avenir, nous sommes convaincus que cette technique s&apos;intégrera dans les recommandations et que de nombreux centres SOS lumbago se développeront.
+        La guérison naturelle peut prendre entre <span className="font-bold">1 et 6 semaines</span>. Mais avec la prise en charge SOS lumbago, nous pouvons accélérer ce processus et soulager rapidement votre douleur.
       </p>
     ),
   },
@@ -139,10 +48,10 @@ const faqItems = [
     answer: (
       <div className="space-y-4">
         <p>
-          <span className="font-bold">Surtout pas</span>. Le repos, parfois « forcé », va <span className="font-bold">enraidir vos fascias</span> (lors d’une immobilisation, les fibroblastes synthétisent trop de fibres de collage) et d'entrainer une <span className="font-bold">amyotrophie</span> (diminution du volume des muscles).
+          <span className="font-bold">Surtout pas</span>. Le repos, parfois « forcé », va <span className="font-bold">enraidir vos fascias</span> (lors d&apos;une immobilisation, les fibroblastes synthétisent trop de fibres de collage) et d&apos;entrainer une <span className="font-bold">amyotrophie</span> (diminution du volume des muscles).
         </p>
         <p>
-          Ces mécanismes risquent de provoquer et entretenir les douleurs lombaires : c’est le <span className="font-bold">cercle vicieux de la lombalgie</span>.
+          Ces mécanismes risquent de provoquer et entretenir les douleurs lombaires : c&apos;est le <span className="font-bold">cercle vicieux de la lombalgie</span>.
         </p>
       </div>
     ),
@@ -187,16 +96,16 @@ const faqItems = [
     answer: (
       <div className="space-y-4">
         <p>
-          L’injection se fait dans le <span className="font-bold">fascia thoraco-lombaire</span>. Elle est guidée par échographie pour une précision parfaite.
+          L&apos;injection se fait dans le <span className="font-bold">fascia thoraco-lombaire</span>. Elle est guidée par échographie pour une précision parfaite.
         </p>
         <p>
           Le fascia est un tissu conjonctif dont la composition évolue en permanence en fonction des mouvements, des tensions et des compressions, selon le principe de tenségrité.
         </p>
         <p>
-          C’est un <span className="font-bold">organe très innervé</span> (ce qui explique les douleurs), et il reste encore beaucoup à découvrir à son sujet.
+          C&apos;est un <span className="font-bold">organe très innervé</span> (ce qui explique les douleurs), et il reste encore beaucoup à découvrir à son sujet.
         </p>
         <p>
-          L’équipe Dos-Remis espère contribuer à améliorer les connaissances sur les fascias.
+          L&apos;équipe Dos-Remis espère contribuer à améliorer les connaissances sur les fascias.
         </p>
         <div className="aspect-video w-full max-w-4xl mx-auto pt-4">
           <iframe
@@ -209,6 +118,108 @@ const faqItems = [
           ></iframe>
         </div>
       </div>
+    ),
+  },
+  {
+    question: "Au bout de combien de temps c'est efficace ?",
+    answer: (
+      <p>
+        L&apos;efficacité est <span className="font-bold">immédiate et progressive sur quelques jours</span>. Pour optimiser les résultats, nous vous conseillons de suivre les recommandations post-infiltration. Nous ne pouvons garantir une disparition totale de la douleur, mais une réduction qui vous permettra de reprendre vos activités en douceur.
+      </p>
+    ),
+  },
+  {
+    question: "Est-ce que c'est magique ?",
+    answer: (
+      <div className="space-y-4">
+        <p>
+          Malheureusement, <span className="font-bold">aucun de nous n&apos;a étudié à Poudlard</span>. Bien que certains patients emploient ce terme, nous privilégions une <span className="font-bold">approche scientifique</span>. Ainsi, en totale transparence, nous affichons nos résultats cliniques en direct sur la page d&apos;accueil depuis le 1er janvier 2026. Il se dessine une <span className="font-bold">diminution d&apos;environ 50% de l&apos;EVA et du score d&apos;handicap EIFEL*</span>. Le reste, est entre vos mains, c&apos;est votre corps qui va le faire si vous appliquez les recommandations qui vous seront données.
+        </p>
+        <p>
+          *Ces résultats ne sont pas encore publiés dans une revue à relecture.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "C'est une péridurale ?",
+    answer: (
+      <p>
+        <span className="font-bold">Pas du tout</span>. Ce n&apos;est pas non plus une ponction lombaire ou une anesthésie loco-régionale tronculaire. <span className="font-bold">Cette technique est sans danger pour la colonne vertébrale ou les nerfs</span> : nous ne touchons ni à la colonne, ni au liquide céphalo-rachidien, ni aux racines nerveuses. Nous ciblons uniquement les muscles et les fascias, avec une précision garantie par l&apos;échographie.
+      </p>
+    ),
+  },
+  {
+    question: "combien de temps ça agit ?",
+    answer: (
+      <p>
+        L&apos;effet anesthésiant dure environ <span className="font-bold">24 heures</span>. Ensuite, la <span className="font-bold">reprise du mouvement</span> permet à votre système myo-fascial de se réorganiser, ce qui favorise la résolution de l&apos;épisode aigu et une amélioration durable.
+      </p>
+    ),
+  },
+  {
+    question: "Que faire juste après l'infiltration ?",
+    answer: (
+      <p>
+        <span className="font-bold">Bouger !!!</span> Profitez de la baisse de douleur pour aller marcher, vous étirer, consulter votre kiné ou ostéo, et faire tout ce qui vous met en mouvement, dans la limite de vos capacités.
+      </p>
+    ),
+  },
+  {
+    question: "J'ai déjà pris RDV avec mon kiné/ostéo, je dois annuler ?",
+    answer: (
+      <p>
+        <span className="font-bold">Absolument pas, notre infiltration est complémentaire.</span> Elle va permettre au professionnel de pouvoir travailler plus efficacement car la douleur aiguë aura diminuée.
+      </p>
+    ),
+  },
+  {
+    question: "Une seule injection suffit ?",
+    answer: (
+      <p>
+        Une seule injection suffit dans la plupart des cas. Cependant, <span className="font-bold">5 à 10 % des patients peuvent nécessiter une seconde infiltration</span>, si la première a été partiellement efficace ou si la douleur réapparaît. Nos secrétaires vous appelleront systématiquement pour faire le point. Si besoin, n&apos;hésitez pas à reprendre un RDV en ligne. La balance bénéfices/risques est largement en faveur de cette seconde infiltration.
+      </p>
+    ),
+  },
+  {
+    question: "Quels sont les risques ?",
+    answer: (
+      <div className="space-y-4">
+        <p>
+          Les infiltrations myo-fasciales que nous pratiquons sont sûres et très bien tolérées dans l&apos;immense majorité des cas. Toute technique comporte des risques, mais ceux-ci sont <span className="font-bold">extrêmement rares et/ou bénins</span>. Nous maîtrisons parfaitement les infiltrations écho-guidées, que nous réalisons quotidiennement au bloc opératoire.
+        </p>
+        <p>
+          Effets temporaires
+        </p>
+        <ul className="list-disc list-inside space-y-1 ml-4">
+          <li>Légère douleur au point d&apos;injection (normale, le fascia est très innervé).</li>
+          <li>Pesanteur ou tension dans le bas du dos (liée au volume injecté).</li>
+          <li>Malaise vagal, bouffées de chaleur.</li>
+          <li>Très rarement : anesthésie temporaire d&apos;une jambe (moins de 24h) en cas de diffusion du produit au-delà du fascia thoraco-lombaire. L&apos;échographie réduit fortement ce risque.</li>
+        </ul>
+        <p>
+          Effets exceptionnels : Infection, réaction allergique, saignement.
+        </p>
+        <p>
+          L&apos;absence totale d&apos;efficacité est possible mais rare.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Combien cela va me coûter ?",
+    answer: (
+      <p>
+        Nous ne pratiquons <span className="font-bold">aucun dépassement d&apos;honoraires sur l&apos;ensemble du parcours</span>. Vous serez remboursé à 70 % par la Sécurité sociale sur la base tarifaire conventionnée, hors participation forfaitaire de 2 € à votre charge (sauf exonération). Votre mutuelle prendra en charge le reste selon votre contrat.
+      </p>
+    ),
+  },
+  {
+    question: "Quels sont les sources de ces recommandations ?",
+    answer: (
+      <p>
+        Notre parcours est basé sur les recommandations de la HAS : élimination des drapeaux rouges puis recherche des drapeaux jaunes... La technique SOS lumbago est récente et peu étudiée. Elle fera l&apos;objet de publications scientifiques approfondies pour valider son efficacité. Nous sommes fortement investis dans l&apos;étude des fascias, un domaine en pleine exploration où beaucoup reste à découvrir et à comprendre. À l&apos;avenir, nous sommes convaincus que cette technique s&apos;intégrera dans les recommandations et que de nombreux centres SOS lumbago se développeront.
+      </p>
     ),
   },
 ];
