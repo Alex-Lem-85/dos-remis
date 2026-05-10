@@ -48,8 +48,8 @@ export default function SchemaMarkup() {
     "url": websiteUrl,
     "openingHours": openingHours,
     "priceRange": "€€",
-    "logo": "https://dos-remis.com/Logo Dos-remis transparent.png",
-    "image": "https://dos-remis.com/Image OpenGraph .001.jpeg",
+    "logo": "https://dos-remis.com/Logo-Dos-remis-transparent.png",
+    "image": "https://dos-remis.com/ImageOpenGraph.jpeg",
     "hasMap": "https://www.google.com/maps/place/Cabinet+Anesthau7,+Pôle+Santé+Thau,+310+Av.+du+Maréchal+Juin,+34200+Sète",
     "areaServed": serviceAreas
   };
@@ -131,6 +131,8 @@ export default function SchemaMarkup() {
     "telephone": phone,
     "url": websiteUrl,
     "openingHours": openingHours,
+    "logo": "https://dos-remis.com/Logo-Dos-remis-transparent.png",
+    "image": "https://dos-remis.com/ImageOpenGraph.jpeg",
     "hasMedicalSpecialty": medicalClinicSchema.hasMedicalSpecialty,
     "member": doctors.map(doctor => ({
       "@type": "Person",
