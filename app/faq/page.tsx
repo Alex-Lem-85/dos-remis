@@ -15,7 +15,7 @@ const faqItems = [
     question: "C'est grave docteur ?",
     answer: (
       <p>
-        Rassurez-vous, ce n&apos;est pas grave et vous allez guérir naturellement. Le lumbago est un excès de tension et d&apos;inflammation dans le fascia. La douleur peut irradier dans la fesse et dans l&apos;arrière de la jambe sans qu&apos;il s&apos;agisse d&apos;une compression nerveuse (sciatique) car il s&apos;agit du trajet des fascias. Il y a une inadéquation entre l&apos;intensité de la douleur (forte) et la gravité (faible).
+        Rassurez-vous, ce n&apos;est <span className="font-bold">pas grave</span> et vous allez guérir naturellement. Le lumbago est un excès de tension et d&apos;inflammation dans le fascia. <span className="font-bold">La douleur peut irradier dans la fesse et dans l&apos;arrière de la jambe sans qu&apos;il s&apos;agisse d&apos;une compression nerveuse (sciatique)</span> car il s&apos;agit du trajet des fascias. Il y a une inadéquation entre l&apos;intensité de la douleur (forte) et la gravité (faible).
       </p>
     ),
   },
@@ -61,8 +61,7 @@ const faqItems = [
     answer: (
       <div className="space-y-4">
         <p>
-          Primum non nocere : <span className="font-bold">les médicaments sont quasi inefficaces</span> et font
-          plus de mal que de bien.
+          Primum non nocere : <span className="font-bold">les médicaments sont quasi inefficaces et font souvent plus de mal que de bien</span>. Seuls les AINS ont démontrés une baisse de 1 point d&apos;EVA mais la prise répétée augmente de risque de chronicisation des lombalgies. Tous les autres sont inefficaces, y compris les opioides qui ne font pas mieux que le placebo, mais sont source d&apos;addiction.
         </p>
         <ul className="space-y-2"></ul>
       </div>
@@ -136,7 +135,7 @@ const faqItems = [
           Malheureusement, <span className="font-bold">aucun de nous n&apos;a étudié à Poudlard</span>. Bien que certains patients emploient ce terme, nous privilégions une <span className="font-bold">approche scientifique</span>. Ainsi, en totale transparence, nous affichons nos résultats cliniques en direct sur la page d&apos;accueil depuis le 1er janvier 2026. Il se dessine une <span className="font-bold">diminution d&apos;environ 50% de l&apos;EVA et du score d&apos;handicap EIFEL*</span>. Le reste, est entre vos mains, c&apos;est votre corps qui va le faire si vous appliquez les recommandations qui vous seront données.
         </p>
         <p>
-          *Ces résultats ne sont pas encore publiés dans une revue à relecture.
+          *Ces résultats ne sont pas encore publiés dans une revue à comité de relecture.
         </p>
       </div>
     ),
@@ -189,14 +188,16 @@ const faqItems = [
           Les infiltrations myo-fasciales que nous pratiquons sont sûres et très bien tolérées dans l&apos;immense majorité des cas. Toute technique comporte des risques, mais ceux-ci sont <span className="font-bold">extrêmement rares et/ou bénins</span>. Nous maîtrisons parfaitement les infiltrations écho-guidées, que nous réalisons quotidiennement au bloc opératoire.
         </p>
         <p>
-          Effets temporaires
+          Effets temporaires :
         </p>
         <ul className="list-disc list-inside space-y-1 ml-4">
           <li>Légère douleur au point d&apos;injection (normale, le fascia est très innervé).</li>
           <li>Pesanteur ou tension dans le bas du dos (liée au volume injecté).</li>
           <li>Malaise vagal, bouffées de chaleur.</li>
-          <li>Très rarement : anesthésie temporaire d&apos;une jambe (moins de 24h) en cas de diffusion du produit au-delà du fascia thoraco-lombaire. L&apos;échographie réduit fortement ce risque.</li>
         </ul>
+        <p>
+          Très rarement : anesthésie temporaire d&apos;une jambe (moins de 24h) en cas de diffusion du produit au-delà du fascia thoraco-lombaire. L&apos;échographie réduit fortement ce risque.
+        </p>
         <p>
           Effets exceptionnels : Infection, réaction allergique, saignement.
         </p>
