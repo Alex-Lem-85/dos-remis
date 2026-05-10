@@ -150,7 +150,7 @@ const faqItems = [
     ),
   },
   {
-    question: "combien de temps ça agit ?",
+    question: "Combien de temps ça agit ?",
     answer: (
       <p>
         L&apos;effet anesthésiant dure environ <span className="font-bold">24 heures</span>. Ensuite, la <span className="font-bold">reprise du mouvement</span> permet à votre système myo-fascial de se réorganiser, ce qui favorise la résolution de l&apos;épisode aigu et une amélioration durable.
