@@ -219,7 +219,7 @@ const faqItems = [
     question: "Quels sont les sources de ces recommandations ?",
     answer: (
       <p>
-        Notre parcours est basé sur les <a href="https://www.has-sante.fr/jcms/c_272754/fr/prise-en-charge-du-patient-adulte-atteint-de-lombalgie-commune" className="text-primary underline hover:text-primary/80" target="_blank" rel="noopener noreferrer">recommandations de la HAS</a> : élimination des drapeaux rouges puis recherche des drapeaux jaunes... La technique SOS lumbago est récente et peu étudiée. Elle fera l&apos;objet de publications scientifiques approfondies pour valider son efficacité. Nous sommes fortement investis dans l&apos;étude des fascias, un domaine en pleine exploration où beaucoup reste à découvrir et à comprendre. À l&apos;avenir, nous sommes convaincus que cette technique s&apos;intégrera dans les recommandations et que de nombreux centres SOS lumbago se développeront.
+        Notre parcours est basé sur les <a href="https://www.has-sante.fr/upload/docs/application/pdf/2019-04/reco315_rapport_lombalgie_2019_04_02.pdf" className="text-primary underline hover:text-primary/80" target="_blank" rel="noopener noreferrer">recommandations de la HAS</a> : élimination des drapeaux rouges puis recherche des drapeaux jaunes... La technique SOS lumbago est récente et peu étudiée. Elle fera l&apos;objet de publications scientifiques approfondies pour valider son efficacité. Nous sommes fortement investis dans l&apos;étude des fascias, un domaine en pleine exploration où beaucoup reste à découvrir et à comprendre. À l&apos;avenir, nous sommes convaincus que cette technique s&apos;intégrera dans les recommandations et que de nombreux centres SOS lumbago se développeront.
       </p>
     ),
   },
