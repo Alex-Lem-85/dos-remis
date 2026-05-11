@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://dos-remis.com/sitemap-index.xml
-Sitemap: https://dos-remis.com/server-sitemap.xml
