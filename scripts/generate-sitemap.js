@@ -117,7 +117,46 @@ function generateSitemapIndex() {
     <loc>${SITE_URL}/sitemap.xml</loc>
     <lastmod>${today}</lastmod>
   </sitemap>
+  <sitemap>
+    <loc>${SITE_URL}/server-sitemap.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>
 </sitemapindex>`;
+}
+
+/**
+ * Génère le server-sitemap.xml (à la racine du projet)
+ */
+function generateServerSitemapXml() {
+  const today = new Date().toISOString().split('T')[0];
+  
+  // Récupérer les pages
+  const pages = getPagesFromAppDir();
+  
+  let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+  
+  pages.forEach(url => {
+    const cleanUrl = url.replace(/\/$/, '');
+    const pathKey = cleanUrl.replace(/^\//, '');
+    const priority = DEFAULT_PRIORITIES[pathKey] !== undefined ? DEFAULT_PRIORITIES[pathKey] : 0.5;
+    const changeFreq = DEFAULT_CHANGE_FREQ;
+    
+    const finalUrl = cleanUrl === '/' ? SITE_URL : `${SITE_URL}${cleanUrl}`;
+    
+    xml += `
+  <url>
+    <loc>${finalUrl}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${changeFreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
+  });
+  
+  xml += `
+</urlset>`;
+  
+  return xml;
 }
 
 /**
@@ -145,16 +184,14 @@ function main() {
   const sitemapXml = generateSitemapXml(pages);
   writeFile(path.join(OUTPUT_DIR, 'sitemap.xml'), sitemapXml);
   
+  // Générer server-sitemap.xml à la racine du projet
+  const serverSitemapXml = generateServerSitemapXml();
+  const serverSitemapPath = path.join(__dirname, '..', 'server-sitemap.xml');
+  writeFile(serverSitemapPath, serverSitemapXml);
+  
   // Générer sitemap-index.xml
   const sitemapIndex = generateSitemapIndex();
   writeFile(path.join(OUTPUT_DIR, 'sitemap-index.xml'), sitemapIndex);
-  
-  // Supprimer l'ancien server-sitemap.xml (obsolète)
-  const serverSitemapPath = path.join(OUTPUT_DIR, 'server-sitemap.xml');
-  if (fs.existsSync(serverSitemapPath)) {
-    fs.unlinkSync(serverSitemapPath);
-    console.log(`❌ Fichier supprimé : ${serverSitemapPath} (obsolète)`);
-  }
   
   console.log('\n✨ Génération des sitemaps terminée !');
 }
