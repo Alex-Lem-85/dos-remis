@@ -184,10 +184,16 @@ function main() {
   const sitemapXml = generateSitemapXml(pages);
   writeFile(path.join(OUTPUT_DIR, 'sitemap.xml'), sitemapXml);
   
-  // Générer server-sitemap.xml à la racine du projet
+  // Générer server-sitemap.xml
   const serverSitemapXml = generateServerSitemapXml();
-  const serverSitemapPath = path.join(__dirname, '..', 'server-sitemap.xml');
-  writeFile(serverSitemapPath, serverSitemapXml);
+  
+  // Écrire à la racine du projet
+  const serverSitemapRootPath = path.join(__dirname, '..', 'server-sitemap.xml');
+  writeFile(serverSitemapRootPath, serverSitemapXml);
+  
+  // Écrire aussi dans public/ pour Next.js static export
+  const serverSitemapPublicPath = path.join(OUTPUT_DIR, 'server-sitemap.xml');
+  writeFile(serverSitemapPublicPath, serverSitemapXml);
   
   // Générer sitemap-index.xml
   const sitemapIndex = generateSitemapIndex();
