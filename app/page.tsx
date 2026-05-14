@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import { Metadata } from "next";
+import Image from "next/image";
 import NPSBlock from "@/components/NPSBlock";
 import ClinicalResultsBlock from "@/components/ClinicalResultsBlock";
 
@@ -15,6 +16,22 @@ export const metadata: Metadata = {
   description: "Lumbago ou dos bloqué à Sète ou Montpellier ? Dos-Remis propose une prise en charge rapide avec infiltration ciblée et suivi médical personnalisé.",
   alternates: {
     canonical: "https://dos-remis.com/",
+  },
+  openGraph: {
+    title: "SOS Lumbago à Sète & Montpellier | Soulagement urgent des douleurs lombaires",
+    description: "Médecins spécialistes du dos bloqué et des lombalgies aiguës. Prise en charge rapide avec infiltration écho-guidée pour un soulagement immédiat.",
+    url: "https://dos-remis.com/",
+    siteName: "Dos-Remis",
+    images: [
+      {
+        url: "https://dos-remis.com/ImageOpenGraph.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Dos-Remis - Médecins spécialistes SOS Lumbago à Sète et Montpellier",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
   },
 };
 
@@ -224,10 +241,13 @@ export default function Home() {
                 className="group rounded-3xl bg-white p-6 text-center shadow-sm border border-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 <div className="mx-auto w-full max-w-[180px] overflow-hidden rounded-2xl border-2 border-black bg-white">
-                  <img
+                  <Image
                     src={doctor.image}
-                    alt={doctor.name}
+                    alt={`${doctor.name} - Médecin Anesthésiste Réanimateur spécialiste du dos bloqué et des lombalgies à Sète et Montpellier`}
+                    width={180}
+                    height={220}
                     className="h-[220px] w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                    priority={true}
                   />
                 </div>
 
@@ -308,10 +328,13 @@ export default function Home() {
                       />
                     </div>
                   ) : (
-                    <img
+                    <Image
                       src={item.image}
-                      alt={item.title}
+                      alt={`${item.title} - Dos-Remis spécialistes SOS Lumbago à Sète, Montpellier et Béziers`}
+                      width={400}
+                      height={250}
                       className="w-full h-auto object-cover"
+                      priority={index < 2}
                     />
                   )}
                 </div>

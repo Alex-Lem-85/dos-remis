@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Info } from "lucide-react";
 import { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "FAQ Lumbago | Questions fréquentes - Dos-Remis Sète & Montpellier",
@@ -9,6 +10,110 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dos-remis.com/faq/",
   },
+  openGraph: {
+    title: "FAQ Lumbago - Réponses des spécialistes Dos-Remis à Sète et Montpellier",
+    description: "Tout savoir sur le lumbago, les traitements par infiltration, la durée et les risques. Conseils de médecins spécialistes.",
+    url: "https://dos-remis.com/faq/",
+    siteName: "Dos-Remis",
+    images: [
+      {
+        url: "https://dos-remis.com/ImageOpenGraph.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "FAQ Lumbago - Médecins spécialistes Dos-Remis à Sète et Montpellier",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
+};
+
+// Structured Data pour FAQPage (Rich Snippets)
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Mal de dos brutal ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vous avez probablement un lumbago, aussi appelé « tour de rein » ou lombalgie aiguë non spécifique. C'est une douleur soudaine dans le bas du dos qui peut survenir lors d'un effort, après un faux mouvement, ou parfois sans raison apparente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "C'est grave docteur ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rassurez-vous, ce n'est pas grave et vous allez guérir naturellement. Le lumbago est un excès de tension et d'inflammation dans le fascia. La douleur peut irradier dans la fesse et dans l'arrière de la jambe sans qu'il s'agisse d'une compression nerveuse (sciatique)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Faut-il faire des examens d'imagerie ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non, sauf en cas de signes d'alerte (drapeaux rouges) : fièvre, perte de poids inexpliquée, antécédents de cancer, troubles urinaires ou fécaux, faiblesse musculaire importante, ou traumatisme violent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps ça va durer ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La guérison naturelle peut prendre entre 1 et 6 semaines. Avec la prise en charge SOS lumbago, nous pouvons accélérer ce processus et soulager rapidement votre douleur."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment guérir plus vite ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les études scientifiques prouvent que le traitement de la lombalgie aiguë c'est le mouvement. Facile à dire quand on est bloqué."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Donc pas de repos ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Surtout pas. Le repos va enraidir vos fascias et entraîner une amyotrophie (diminution du volume des muscles). Ces mécanismes risquent de provoquer et entretenir les douleurs lombaires."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Au bout de combien de temps c'est efficace ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'efficacité est immédiate et progressive sur quelques jours. Pour optimiser les résultats, nous vous conseillons de suivre les recommandations post-infiltration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Une seule injection suffit ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Une seule injection suffit dans la plupart des cas. Cependant, 5 à 10% des patients peuvent nécessiter une seconde infiltration si la première a été partiellement efficace."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont les risques ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les infiltrations myo-fasciales sont sûres et très bien tolérées. Effets temporaires possibles : légère douleur au point d'injection, pesanteur dans le bas du dos, malaise vagal. Risques exceptionnels : infection, réaction allergique."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien cela va me coûter ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nous ne pratiquons aucun dépassement d'honoraires. Vous serez remboursé à 70% par la Sécurité sociale, hors participation forfaitaire de 2€."
+      }
+    }
+  ]
 };
 
 const faqItems = [
@@ -237,6 +342,11 @@ const faqItems = [
 export default function FAQ() {
   return (
     <div className="flex flex-col min-h-screen">
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-primary/10 to-primary/5 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

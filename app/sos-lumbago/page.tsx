@@ -17,6 +17,22 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dos-remis.com/sos-lumbago/",
   },
+  openGraph: {
+    title: "SOS Lumbago URGENT à Sète & Montpellier | Traitement en 24h",
+    description: "Dos bloqué ? Lombalgie aiguë ? Nos médecins spécialistes vous soulagent en urgence avec infiltration écho-guidée. Prise en charge rapide et efficace.",
+    url: "https://dos-remis.com/sos-lumbago/",
+    siteName: "Dos-Remis",
+    images: [
+      {
+        url: "https://dos-remis.com/ImageOpenGraph.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "SOS Lumbago - Médecins spécialistes du dos bloqué à Sète et Montpellier",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
 };
 
 export default function SOSLumbago() {

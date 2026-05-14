@@ -6,6 +6,22 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dos-remis.com/mentions-legales/",
   },
+  openGraph: {
+    title: "Mentions légales - Dos-Remis SOS Lumbago",
+    description: "Informations légales et conditions d'utilisation du site Dos-Remis, spécialistes du lumbago à Sète et Montpellier.",
+    url: "https://dos-remis.com/mentions-legales/",
+    siteName: "Dos-Remis",
+    images: [
+      {
+        url: "https://dos-remis.com/Logo-Dos-remis-transparent.png",
+        width: 400,
+        height: 400,
+        alt: "Logo Dos-Remis - Médecins spécialistes SOS Lumbago",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
 };
 
 export default function MentionsLegales() {
