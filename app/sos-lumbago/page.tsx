@@ -14,6 +14,9 @@ import {
 export const metadata: Metadata = {
   title: "Parcours SOS Lumbago | Traitement urgent - Dos-Remis Sète & Montpellier",
   description: "Parcours de soins accéléré pour les lombalgies aiguës. Prise en charge en urgence avec infiltration écho-guidée et suivi médical à Sète et Montpellier.",
+  alternates: {
+    canonical: "https://dos-remis.com/sos-lumbago/",
+  },
 };
 
 export default function SOSLumbago() {

@@ -1,6 +1,16 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Suivi médical | Prévention et accompagnement - Dos-Remis",
+  description: "Suivi médical personnalisé pour prévenir les récidives de lumbago. Conseils, exercices et accompagnement à long terme.",
+  alternates: {
+    canonical: "https://dos-remis.com/suivi/",
+  },
+};
+
 import {
   Activity,
   BedDouble,

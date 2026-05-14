@@ -6,6 +6,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "FAQ Lumbago | Questions fréquentes - Dos-Remis Sète & Montpellier",
   description: "Réponses à toutes vos questions sur le lumbago, les traitements, la durée et les risques. Informations claires par nos médecins spécialistes à Sète et Montpellier.",
+  alternates: {
+    canonical: "https://dos-remis.com/faq/",
+  },
 };
 
 const faqItems = [

@@ -6,6 +6,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact | Prise de RDV - Dos-Remis Sète & Montpellier",
   description: "Contactez Dos-Remis pour une prise en charge rapide de votre lumbago à Sète ou Montpellier. Adresse, téléphone et formulaire de contact.",
+  alternates: {
+    canonical: "https://dos-remis.com/contact/",
+  },
 };
 
 export default function Contact() {
