@@ -1,44 +1,44 @@
-[[redirige]]
-  de = "/faq"
-  à = "/faq/"
-  statuter = 301
+[[redirects]]
+  from = "/faq"
+  to = "/faq/"
+  status = 301
 
-[[redirige]]
-  de = "/politique-confidentialité"
-  à = "/politique-confidentiel/"
-  statère = 301
+[[redirects]]
+  from = "/politique-confidentialite"
+  to = "/politique-confidentialite/"
+  status = 301
 
-[[redirige]]
-  de = "/mentions-légales"
-  à = "/mentions-légales/"
-  statère = 301
+[[redirects]]
+  from = "/mentions-legales"
+  to = "/mentions-legales/"
+  status = 301
 
-[[redirige]]
-  de = "/accessibilité"
-  à = "/accessibilité/"
-  statère = 301
+[[redirects]]
+  from = "/accessibilite"
+  to = "/accessibilite/"
+  status = 301
 
-[[redirige]]
-  de = "/sos-lumbago"
-  à = "/sos-lumbago/"
-  statère = 301
+[[redirects]]
+  from = "/sos-lumbago"
+  to = "/sos-lumbago/"
+  status = 301
 
-[[redirige]]
-  de = "/approche"
-  à = "/approche/"
-  statère = 301
+[[redirects]]
+  from = "/approche"
+  to = "/approche/"
+  status = 301
 
-[[redirige]]
-  de = "/contact"
-  à = "/contact/"
-  statère = 301
+[[redirects]]
+  from = "/contact"
+  to = "/contact/"
+  status = 301
 
-[[redirige]]
-  de = "/équipe"
-  à = "/équipe/"
-  statère = 301
+[[redirects]]
+  from = "/equipe"
+  to = "/equipe/"
+  status = 301
 
-[[redirige]]
-  de = "/suivi"
-  à = "/suivi/"
-  statère = 301
+[[redirects]]
+  from = "/suivi"
+  to = "/suivi/"
+  status = 301
