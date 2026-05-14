@@ -1,3 +1,13 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Mentions légales - Dos-Remis",
+  description: "Mentions légales du site Dos-Remis. Informations légales et conditions d'utilisation.",
+  alternates: {
+    canonical: "https://dos-remis.com/mentions-legales/",
+  },
+};
+
 export default function MentionsLegales() {
   return (
     <div className="flex flex-col min-h-screen">

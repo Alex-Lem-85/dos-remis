@@ -1,3 +1,13 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Politique de confidentialité - Dos-Remis",
+  description: "Politique de confidentialité du site Dos-Remis. Comment nous protégeons vos données personnelles.",
+  alternates: {
+    canonical: "https://dos-remis.com/politique-confidentialite/",
+  },
+};
+
 export default function PolitiqueConfidentialite() {
   return (
     <div className="flex flex-col min-h-screen">

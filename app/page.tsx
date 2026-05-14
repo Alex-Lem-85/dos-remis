@@ -13,6 +13,9 @@ import ClinicalResultsBlock from "@/components/ClinicalResultsBlock";
 export const metadata: Metadata = {
   title: "Mal au dos | SOS Lumbago à Sète & Montpellier",
   description: "Lumbago ou dos bloqué à Sète ou Montpellier ? Dos-Remis propose une prise en charge rapide avec infiltration ciblée et suivi médical personnalisé.",
+  alternates: {
+    canonical: "https://dos-remis.com/",
+  },
 };
 
 const doctors = [
