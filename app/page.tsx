@@ -241,14 +241,16 @@ export default function Home() {
                 className="group rounded-3xl bg-white p-6 text-center shadow-sm border border-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 <div className="mx-auto w-full max-w-[180px] overflow-hidden rounded-2xl border-2 border-black bg-white">
-                  <Image
-                    src={doctor.image}
-                    alt={`${doctor.name} - Médecin Anesthésiste Réanimateur spécialiste du dos bloqué et des lombalgies à Sète et Montpellier`}
-                    width={180}
-                    height={220}
-                    className="h-[220px] w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
-                    priority={true}
-                  />
+                  {doctor.image && (
+                    <Image
+                      src={doctor.image}
+                      alt={`${doctor.name} - Médecin Anesthésiste Réanimateur spécialiste du dos bloqué et des lombalgies à Sète et Montpellier`}
+                      width={180}
+                      height={220}
+                      className="h-[220px] w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                      priority={true}
+                    />
+                  )}
                 </div>
 
                 <div className="mt-6">
@@ -327,7 +329,7 @@ export default function Home() {
                         allowFullScreen
                       />
                     </div>
-                  ) : (
+                  ) : item.image ? (
                     <Image
                       src={item.image}
                       alt={`${item.title} - Dos-Remis spécialistes SOS Lumbago à Sète, Montpellier et Béziers`}
@@ -336,7 +338,7 @@ export default function Home() {
                       className="w-full h-auto object-cover"
                       priority={index < 2}
                     />
-                  )}
+                  ) : null}
                 </div>
 
                 <CardHeader>
