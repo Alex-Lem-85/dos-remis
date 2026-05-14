@@ -1,0 +1,44 @@
+[[redirige]]
+  de = "/faq"
+  à = "/faq/"
+  statuter = 301
+
+[[redirige]]
+  de = "/politique-confidentialité"
+  à = "/politique-confidentiel/"
+  statère = 301
+
+[[redirige]]
+  de = "/mentions-légales"
+  à = "/mentions-légales/"
+  statère = 301
+
+[[redirige]]
+  de = "/accessibilité"
+  à = "/accessibilité/"
+  statère = 301
+
+[[redirige]]
+  de = "/sos-lumbago"
+  à = "/sos-lumbago/"
+  statère = 301
+
+[[redirige]]
+  de = "/approche"
+  à = "/approche/"
+  statère = 301
+
+[[redirige]]
+  de = "/contact"
+  à = "/contact/"
+  statère = 301
+
+[[redirige]]
+  de = "/équipe"
+  à = "/équipe/"
+  statère = 301
+
+[[redirige]]
+  de = "/suivi"
+  à = "/suivi/"
+  statère = 301
