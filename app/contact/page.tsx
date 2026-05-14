@@ -2,12 +2,29 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mail, MapPin, Clock } from "lucide-react";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Contact | Prise de RDV - Dos-Remis Sète & Montpellier",
   description: "Contactez Dos-Remis pour une prise en charge rapide de votre lumbago à Sète ou Montpellier. Adresse, téléphone et formulaire de contact.",
   alternates: {
     canonical: "https://dos-remis.com/contact/",
+  },
+  openGraph: {
+    title: "Contactez nos spécialistes SOS Lumbago à Sète et Montpellier",
+    description: "Prise de rendez-vous rapide pour les urgences dos bloqué et lombalgies. Équipe médicale spécialisée.",
+    url: "https://dos-remis.com/contact/",
+    siteName: "Dos-Remis",
+    images: [
+      {
+        url: "https://dos-remis.com/equipe.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Équipe médicale Dos-Remis - Médecins spécialistes du lumbago à Sète",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
   },
 };
 
@@ -28,10 +45,13 @@ export default function Contact() {
       {/* Photo équipe */}
       <div className="mt-12 flex justify-center">
         <div className="w-full max-w-4xl overflow-hidden rounded-2xl shadow-lg">
-          <img
+          <Image
             src="/equipe.jpg"
-            alt="Équipe Anesthau7"
+            alt="Équipe médicale Dos-Remis - Médecins spécialistes SOS Lumbago pour les urgences dos bloqué et lombalgies à Sète et Montpellier"
+            width={1200}
+            height={600}
             className="w-full h-auto object-cover"
+            priority={true}
           />
         </div>
       </div>

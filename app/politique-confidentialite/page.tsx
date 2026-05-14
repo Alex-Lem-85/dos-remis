@@ -6,6 +6,22 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dos-remis.com/politique-confidentialite/",
   },
+  openGraph: {
+    title: "Politique de confidentialité - Dos-Remis SOS Lumbago",
+    description: "Comment nous protégeons vos données personnelles. Médecins spécialistes du lumbago à Sète et Montpellier.",
+    url: "https://dos-remis.com/politique-confidentialite/",
+    siteName: "Dos-Remis",
+    images: [
+      {
+        url: "https://dos-remis.com/Logo-Dos-remis-transparent.png",
+        width: 400,
+        height: 400,
+        alt: "Logo Dos-Remis - Médecins spécialistes SOS Lumbago",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
 };
 
 export default function PolitiqueConfidentialite() {

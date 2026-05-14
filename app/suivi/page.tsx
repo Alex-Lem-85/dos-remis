@@ -2,12 +2,29 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Suivi médical | Prévention et accompagnement - Dos-Remis",
   description: "Suivi médical personnalisé pour prévenir les récidives de lumbago. Conseils, exercices et accompagnement à long terme.",
   alternates: {
     canonical: "https://dos-remis.com/suivi/",
+  },
+  openGraph: {
+    title: "Prévention des récidives de lumbago | Suivi médical Dos-Remis",
+    description: "Médecins spécialistes du dos bloqué à Sète et Montpellier. Conseils et accompagnement pour éviter les récidives de lombalgie.",
+    url: "https://dos-remis.com/suivi/",
+    siteName: "Dos-Remis",
+    images: [
+      {
+        url: "https://dos-remis.com/iceberg-etapes-levrai.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Schéma iceberg lombalgie - Comprendre les causes profondes avec Dos-Remis",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
   },
 };
 
@@ -268,10 +285,13 @@ export default function Suivi() {
       {/* Image iceberg */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <img
+          <Image
             src="/iceberg-etapes-levrai.jpeg"
-            alt="Schéma iceberg lombalgie"
+            alt="Schéma iceberg lombalgie - Comprendre les causes profondes du mal de dos avec les médecins spécialistes Dos-Remis à Sète et Montpellier"
+            width={1200}
+            height={800}
             className="w-full h-auto"
+            priority={true}
           />
         </div>
       </section>
