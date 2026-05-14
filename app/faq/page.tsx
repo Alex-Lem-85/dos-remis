@@ -35,7 +35,7 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Mal de dos brutal ?",
+      "name": "Qu'est-ce qu'un lumbago ou mal de dos brutal ?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Vous avez probablement un lumbago, aussi appelé « tour de rein » ou lombalgie aiguë non spécifique. C'est une douleur soudaine dans le bas du dos qui peut survenir lors d'un effort, après un faux mouvement, ou parfois sans raison apparente."
@@ -43,7 +43,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "C'est grave docteur ?",
+      "name": "Un lumbago, est-ce grave docteur ?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Rassurez-vous, ce n'est pas grave et vous allez guérir naturellement. Le lumbago est un excès de tension et d'inflammation dans le fascia. La douleur peut irradier dans la fesse et dans l'arrière de la jambe sans qu'il s'agisse d'une compression nerveuse (sciatique)."
@@ -51,7 +51,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "Faut-il faire des examens d'imagerie ?",
+      "name": "Faut-il faire des examens d'imagerie pour un lumbago ?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Non, sauf en cas de signes d'alerte (drapeaux rouges) : fièvre, perte de poids inexpliquée, antécédents de cancer, troubles urinaires ou fécaux, faiblesse musculaire importante, ou traumatisme violent."
@@ -59,7 +59,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "Combien de temps ça va durer ?",
+      "name": "Combien de temps dure une lombalgie aiguë ?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "La guérison naturelle peut prendre entre 1 et 6 semaines. Avec la prise en charge SOS lumbago, nous pouvons accélérer ce processus et soulager rapidement votre douleur."
@@ -67,7 +67,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "Comment guérir plus vite ?",
+      "name": "Comment guérir plus vite d'un lumbago ?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Les études scientifiques prouvent que le traitement de la lombalgie aiguë c'est le mouvement. Facile à dire quand on est bloqué."
@@ -75,7 +75,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "Donc pas de repos ?",
+      "name": "Faut-il se reposer en cas de lumbago ?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Surtout pas. Le repos va enraidir vos fascias et entraîner une amyotrophie (diminution du volume des muscles). Ces mécanismes risquent de provoquer et entretenir les douleurs lombaires."
@@ -83,7 +83,31 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "Au bout de combien de temps c'est efficace ?",
+      "name": "Quels médicaments pour soulager un lumbago ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Primum non nocere : les médicaments sont quasi inefficaces et font souvent plus de mal que de bien. Seuls les AINS ont démontrés une baisse de 1 point d'EVA mais la prise répétée augmente de risque de chronicisation des lombalgies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles techniques non médicamenteuses pour le lumbago ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Celles qui ne sont pas recommandées : ultrasons, tractions lombaires, semelles orthopédiques, acupuncture. En l'absence d'étude de bonne qualité, il n'est pas possible de statuer sur l'efficacité de la sophrologie, de la relaxation, ou de l'hypnose."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "SOS lumbago : Où injectez-vous pour traiter le lumbago ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'injection se fait dans le fascia thoraco-lombaire. Elle est guidée par échographie pour une précision parfaite. Le fascia est un tissu conjonctif très innervé, ce qui explique les douleurs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Au bout de combien de temps l'infiltration SOS lumbago est-elle efficace ?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "L'efficacité est immédiate et progressive sur quelques jours. Pour optimiser les résultats, nous vous conseillons de suivre les recommandations post-infiltration."
@@ -91,7 +115,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "Une seule injection suffit ?",
+      "name": "Une seule infiltration SOS lumbago suffit-elle pour un lumbago ?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Une seule injection suffit dans la plupart des cas. Cependant, 5 à 10% des patients peuvent nécessiter une seconde infiltration si la première a été partiellement efficace."
@@ -99,7 +123,15 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "Quels sont les risques ?",
+      "name": "SOS lumbago est compatible avec kiné ou ostéo ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Notre infiltration est complémentaire. Elle va permettre au professionnel de pouvoir travailler plus efficacement car la douleur aiguë aura diminuée."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont les risques de l'infiltration SOS lumbago ?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Les infiltrations myo-fasciales sont sûres et très bien tolérées. Effets temporaires possibles : légère douleur au point d'injection, pesanteur dans le bas du dos, malaise vagal. Risques exceptionnels : infection, réaction allergique."
@@ -107,7 +139,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "Combien cela va me coûter ?",
+      "name": "Combien coûte le traitement SOS lumbago ?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Nous ne pratiquons aucun dépassement d'honoraires. Vous serez remboursé à 70% par la Sécurité sociale, hors participation forfaitaire de 2€."
