@@ -6,7 +6,7 @@ export default function SchemaMarkup() {
   const phone = "+33467800117";
 
   const mainAddress = {
-    street: "Cabinet Anesthau7, Pôle Santé Thau, 310 avenue du Maréchal Juin",
+    street: "Dos-Remis (cabinet anesthau 7), Pôle Santé Thau, 310 avenue du Maréchal Juin",
     city: "Sète",
     region: "Occitanie",
     postalCode: "34200",
@@ -28,7 +28,7 @@ export default function SchemaMarkup() {
     "Clermont-l'Hérault"
   ];
 
-  const openingHours = "Mo,Tu,We,Th,Fr 10:00-16:00";
+  const openingHours = "Mo,Tu,We,Th,Fr 10:00-12:00,13:30-16:00";
   const clinicDescription = "Centre spécialisé dans la prise en charge URGENTE des lombalgies aiguës (dos bloqué, lumbago) par infiltration myo-fasciale écho-guidée.";
 
   const localBusinessSchema = {
@@ -50,7 +50,7 @@ export default function SchemaMarkup() {
     "priceRange": "€€",
     "logo": "https://dos-remis.com/Logo-Dos-remis-transparent.png",
     "image": "https://dos-remis.com/ImageOpenGraph.jpeg",
-    "hasMap": "https://www.google.com/maps/place/Cabinet+Anesthau7,+Pôle+Santé+Thau,+310+Av.+du+Maréchal+Juin,+34200+Sète",
+    "hasMap": "https://www.google.com/maps/place/Dos-Remis+(cabinet+anesthau+7),+Pôle+Santé+Thau,+310+Av.+du+Maréchal+Juin,+34200+Sète",
     "areaServed": serviceAreas
   };
 

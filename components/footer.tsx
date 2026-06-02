@@ -32,12 +32,12 @@ export function Footer() {
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <Mail className="h-4 w-4 mr-3 text-primary" />
-                  <span>anesthau7@gmail.com</span>
+                  <span>contact@dos-remis.com</span>
                 </li>
                 <li className="flex items-start text-sm text-gray-600">
                   <MapPin className="h-4 w-4 mr-3 text-primary mt-1" />
                   <div>
-                    <p className="font-medium">Cabinet Anesthau7</p>
+                    <p className="font-medium">Dos-Remis (cabinet anesthau 7)</p>
                     <p>3ème étage du Pôle Santé Thau</p>
                     <p>310 avenue du Maréchal Juin</p>
                     <p>34200 Sète</p>
@@ -54,7 +54,7 @@ export function Footer() {
                   <Clock className="h-4 w-4 mr-3 text-primary mt-1" />
                   <div>
                     <p className="font-medium">Lundi - Vendredi</p>
-                    <p>10h00 - 16h00</p>
+                    <p>10h-12h et 13h30-16h</p>
                   </div>
                 </div>
                 <div className="mt-4 p-4 bg-white rounded-lg border border-gray-200">

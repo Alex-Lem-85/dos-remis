@@ -72,14 +72,14 @@ export default function Contact() {
                   <Mail className="h-6 w-6 text-primary mt-1" />
                   <div>
                     <h3 className="font-semibold text-lg">Email</h3>
-                    <p className="text-gray-600">anesthau7@gmail.com</p>
+                    <p className="text-gray-600">contact@dos-remis.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <MapPin className="h-6 w-6 text-primary mt-1" />
                   <div>
                     <h3 className="font-semibold text-lg">Adresse</h3>
-                    <p className="text-gray-600">Cabinet Anesthau7</p>
+                    <p className="text-gray-600">Dos-Remis (cabinet anesthau 7)</p>
                     <p className="text-gray-600">3ème étage du Pôle Santé Thau</p>
                     <p className="text-gray-600">310 avenue du Maréchal Juin</p>
                     <p className="text-gray-600">34200 Sète</p>
@@ -90,7 +90,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-lg">Horaires</h3>
                     <ul className="text-gray-600 space-y-1">
-                      <li>Lundi - Vendredi : 10h00 - 16h00</li>
+                      <li>Lundi - Vendredi : 10h-12h et 13h30-16h</li>
                       <li>Samedi : Fermé</li>
                       <li>Dimanche : Fermé</li>
                     </ul>

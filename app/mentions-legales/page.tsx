@@ -42,7 +42,7 @@ export default function MentionsLegales() {
           <div className="prose prose-lg">
             <h2>Éditeur du site</h2>
             <p>
-              Cabinet Anesthau7<br />
+              Dos-Remis (cabinet anesthau 7)<br />
               3ème étage du Pôle Santé Thau<br />
               310 avenue du Maréchal Juin<br />
               34200 Sète
