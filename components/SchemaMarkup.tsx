@@ -30,6 +30,7 @@ export default function SchemaMarkup() {
 
   const openingHours = "Mo,Tu,We,Th,Fr 10:00-12:00,13:30-16:00";
   const clinicDescription = "Centre spécialisé dans la prise en charge URGENTE des lombalgies aiguës (dos bloqué, lumbago) par infiltration myo-fasciale écho-guidée.";
+  const clinicImage = "https://dos-remis.com/ImageOpenGraph.jpeg";
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
@@ -47,9 +48,9 @@ export default function SchemaMarkup() {
     "telephone": phone,
     "url": websiteUrl,
     "openingHours": openingHours,
-    "priceRange": "€€",
+    "priceRange": "Conventionné Sécurité Sociale",
     "logo": "https://dos-remis.com/Logo-Dos-remis-transparent.png",
-    "image": "https://dos-remis.com/ImageOpenGraph.jpeg",
+    "image": clinicImage,
     "hasMap": "https://www.google.com/maps/place/Dos-Remis+(cabinet+anesthau+7),+Pôle+Santé+Thau,+310+Av.+du+Maréchal+Juin,+34200+Sète",
     "areaServed": serviceAreas
   };
@@ -59,6 +60,8 @@ export default function SchemaMarkup() {
     "@type": "MedicalClinic",
     "name": clinicName,
     "description": clinicDescription,
+    "image": clinicImage,
+    "priceRange": "Conventionné Sécurité Sociale",
     "medicalSpecialty": ["Pain Management", "Anesthesiology"],
     "hasMedicalSpecialty": [
       {
@@ -132,7 +135,7 @@ export default function SchemaMarkup() {
     "url": websiteUrl,
     "openingHours": openingHours,
     "logo": "https://dos-remis.com/Logo-Dos-remis-transparent.png",
-    "image": "https://dos-remis.com/ImageOpenGraph.jpeg",
+    "image": clinicImage,
     "hasMedicalSpecialty": medicalClinicSchema.hasMedicalSpecialty,
     "member": doctors.map(doctor => ({
       "@type": "Person",
@@ -153,6 +156,8 @@ export default function SchemaMarkup() {
     "address": localBusinessSchema.address,
     "telephone": phone,
     "url": websiteUrl,
+    "image": clinicImage,
+    "priceRange": "Conventionné Sécurité Sociale",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5",
