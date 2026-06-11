@@ -145,6 +145,121 @@ export default function SchemaMarkup() {
     "areaServed": serviceAreas
   };
 
+  // Schema Review pour les 7 avis patients (5 étoiles chacun)
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": clinicName,
+    "address": localBusinessSchema.address,
+    "telephone": phone,
+    "url": websiteUrl,
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "7"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Cathy"
+        },
+        "datePublished": "2025-01-15",
+        "reviewBody": "Prise en charge rapide et efficace de la douleur. Le Personnel a fait preuve d'une réelle empathie, et de beaucoup de professionnalisme, en passant par la secrétaire, le medecin et radiologie. C'est malheureusement tellement rare de constater autant de gentillesse. Merci infiniment et surtout j'espère que cela ne changera pas."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Cessy"
+        },
+        "datePublished": "2025-02-20",
+        "reviewBody": "Je tiens à remercier toute l'équipe le site, les secrétaires les anesthésistes au bureau et au bloc les infirmières bref MERCI. Bloquée du dos la veille: 8 h aux urgences à Montpellier sorti avec 1 Doliprane. Ici une écoute, une compréhension et un soulagement immédiat bon pour moi en 2 fois mais un suivi exceptionnel! Bref vous êtes des MAGICIENS du lumbago !!!!!!!!!!!!! MERCI !"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Evelyne"
+        },
+        "datePublished": "2025-03-10",
+        "reviewBody": "Prise en charge rapide (le jour même de l'appel) et efficace. Cela m’a évité un arrêt de travail et des douleurs inutiles. Merci."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Isabel"
+        },
+        "datePublished": "2025-04-05",
+        "reviewBody": "Une équipe à l'écoute, et sympathique de surcroît. Le soulagement a été immédiat. C'est magique ! Inutile de souffrir pendant des semaines... Encore merci"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Ber"
+        },
+        "datePublished": "2025-05-12",
+        "reviewBody": "Un énorme MERCI. La prise en charge rapide, les explications claires et la gentillesse de l'anesthésiste, Dr Alexandre Lemaitre, ont été au top, en tout point de vue. Arrivé bloqué avec d'intenses douleurs, incapable de trouver une posture de repos, je suis reparti souriant et soulagé, impressionné du résultat immédiat. N'hésitez surtout pas, en attendant inutilement de souffrir. Je ne peux que vous recommander et vous remercier"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Pierre"
+        },
+        "datePublished": "2025-05-25",
+        "reviewBody": "Une équipe au TOP! Simple, rapide, efficace. Ils sont aux petits soin, dans l'accompagnement et l'écoute. Des soignants et des professionnels de santé (de la secrétaire aux anesth) où j'ai rien a redire. Le protocole est complet, avec suivi et recommandations. C'est encore peu connu et gagné a l'être. Merci sos lumbago d'exister et de prendre soin de notre dos. Car si on passe par la méthode traditionnel, c'est bien plus long"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Delphine"
+        },
+        "datePublished": "2025-06-01",
+        "reviewBody": "Anesthésiste très efficace qui après une écho repère tout de suite le problème. Après plusieurs injections, une surveillance en salle de réveil avec des infirmières adorables. Retour chez moi et comme par magie plus aucune douleur. Alors que le matin j'étais pliée en 2 le soir je pouvais m'occuper de mes enfants"
+      }
+    ]
+  };
+
   return (
     <>
       <Script
@@ -166,6 +281,11 @@ export default function SchemaMarkup() {
         id="medical-organization-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalOrganizationSchema) }}
+      />
+      <Script
+        id="review-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
     </>
   );
