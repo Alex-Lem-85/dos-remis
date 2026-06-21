@@ -128,8 +128,6 @@ const newsItems = [
     description:
       "Dans la continuité de notre démarche autour du parcours lombalgie, nous organisons une soirée d’échange dédiée aux professionnels de santé du bassin de Thau, avec le soutien de la CPTS. L’objectif est clair : présenter concrètement le circuit Dos-Remis / SOS Lumbago, favoriser les échanges interprofessionnels et co-construire une filière locale cohérente, exigeante et multidisciplinaire.",
     image: "/soiree-sos-lumbago-recto.png",
-    link: "https://form.jotform.com/260643154511045",
-    buttonLabel: "Cliquer pour s’inscrire",
   },
   {
     title: "Rencontre autour des fascias avec le Dr Ranoux",
