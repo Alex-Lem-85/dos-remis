@@ -9,6 +9,7 @@ const navigation = [
   { name: "SOS Lumbago", href: "/sos-lumbago" },
   { name: "Suivi", href: "/suivi" },
   { name: "FAQ", href: "/faq" },
+  { name: "Événements", href: "/evenements" },
   { name: "Contact", href: "/contact" },
 ];
 
