@@ -313,15 +313,14 @@ export default function EvenementsPage() {
               </div>
             </div>
 
-            {/* Texte de la soirée */}
+            {/* Texte de la soirée - justifié */}
             <div className="max-w-4xl mx-auto mb-16">
-              <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
+              <div className="text-gray-600 leading-relaxed text-justify">
                 <p className="mb-4">
-                  Et si nous avions ensemble composé les premières mesures d&apos;une symphonie qui s&apos;annonce formidable ?
-                  Avec plus de <strong>60 choristes</strong> réunis pour la soirée Dos-Remis, l&apos;enthousiasme a été palpable : nos échanges ont vibré, et les harmonies trouvées autour de la prise en charge de la lombalgie dessinent déjà une mélodie entraînante !
+                  Et si nous avions ensemble composé les premières mesures d&apos;une symphonie qui s&apos;annonce formidable ? Avec plus de 60 choristes réunis pour la soirée Dos-Remis, l&apos;enthousiasme a été palpable : nos échanges ont vibré, et les harmonies trouvées autour de la prise en charge de la lombalgie dessinent déjà une mélodie entraînante !
                 </p>
                 <p className="mb-4">
-                  Grâce à vous, la partition est posée, le premier accord est joué, et notre orchestre bat la mesure : <strong>soigner plus vite, soigner mieux et soigner durablement la lombalgie</strong>.
+                  Grâce à vous, la partition est posée, le premier accord est joué, et notre orchestre bat la mesure : soigner plus vite, soigner mieux et soigner durablement la lombalgie.
                 </p>
                 <p className="mb-4">
                   Dos-Remis (Do-Ré-Mi) n&apos;est pas un nom anodin. Comme en musique, accorder les pratiques, harmoniser les discours et orchestrer chaque acteur demande justesse et sensibilité, mais c&apos;est la clé pour atteindre l&apos;harmonie thérapeutique 🎶
@@ -329,7 +328,7 @@ export default function EvenementsPage() {
                 <p className="mb-4">
                   Un merci spécial :
                   <br />
-                  - À nos solistes, nos orateurs : les <strong className="text-red-600">Dr. Lemaitre</strong> et <strong className="text-red-600">Swisser</strong> (anesthésistes), le <strong className="text-red-600">Dr Coste</strong> (chirurgien spécialiste de l&apos;obésité), le <strong className="text-red-600">Dr. Ranoux</strong> (neurologue à Limoges et à l&apos;APHP, spécialiste des fascias), <strong className="text-red-600">Alizée Lebeau</strong> (APA : activité physique adaptée), <strong className="text-red-600">Jean Christophe Dilhan</strong> (kiné) et <strong className="text-red-600">Virginie Bonomo</strong> (diététicienne)
+                  - À nos solistes, nos orateurs : les Dr. Lemaitre et Swisser (anesthésistes), le Dr Coste (chirurgien spécialiste de l&apos;obésité), le Dr. Ranoux (neurologue à Limoges et à l&apos;APHP, spécialiste des fascias), Alizée Lebeau (APA : activité physique adaptée), Jean Christophe Dilhan (kiné) et Virginie Bonomo (diététicienne)
                   <br />
                   - À la CPTS, pour son soutien logistique et financier.
                 </p>
@@ -351,12 +350,12 @@ export default function EvenementsPage() {
                       key={index}
                       className="bg-white overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
                     >
-                      {/* Miniature cliquable de la 1ère page du PDF - sans cadre */}
+                      {/* Miniature cliquable de la 1ère page du PDF - fond blanc */}
                       <Link
                         href={presentation.file}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block relative aspect-[4/3] bg-gray-50 cursor-pointer"
+                        className="block relative aspect-[4/3] bg-white cursor-pointer"
                       >
                         <Image
                           src={presentation.image}
