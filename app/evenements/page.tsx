@@ -175,7 +175,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/Presentation-1-lemaitre.png",
     description: (
       <>
-        <strong>Le Dr. Lemaitre</strong> introduit la soirée par une belle analogie : le tissu conjonctif vient du latin <em>conjunctivus</em> (qui lie, qui rassemble) ... comme cette soirée
+        <strong className="text-red-600">Le Dr. Lemaitre</strong> introduit la soirée par une belle analogie : le tissu conjonctif vient du latin <em>conjunctivus</em> (qui lie, qui rassemble) ... comme cette soirée
       </>
     ),
   },
@@ -185,7 +185,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-2-etape1-lemaitre.png",
     description: (
       <>
-        <strong>Le Dr. Lemaitre</strong> présente la première étape du parcours : de la prise de RDV à l&apos;infiltration
+        <strong className="text-red-600">Le Dr. Lemaitre</strong> présente la première étape du parcours : de la prise de RDV à l&apos;infiltration
       </>
     ),
   },
@@ -195,7 +195,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-3-swisser.png",
     description: (
       <>
-        <strong>Le Dr. Swisser</strong> explique la technique d&apos;infiltration, ses origines, ses résultats et les risques (rarissimes et bénins). La balance bénéfice/risque penche largement du bon coté
+        <strong className="text-red-600">Le Dr. Swisser</strong> explique la technique d&apos;infiltration, ses origines, ses résultats et les risques (rarissimes et bénins). La balance bénéfice/risque penche largement du bon coté
       </>
     ),
   },
@@ -205,7 +205,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-4-kine-dilhan.png",
     description: (
       <>
-        <strong>Jean-Christophe Dilhan</strong>, kinésithérapeute, explique la place centrale du mouvement et les options pour s&apos;adapter à chaque patient
+        <strong className="text-red-600">Jean-Christophe Dilhan</strong>, kinésithérapeute, explique la place centrale du mouvement et les options pour s&apos;adapter à chaque patient
       </>
     ),
   },
@@ -215,7 +215,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-5-etape2-lemaitre.png",
     description: (
       <>
-        <strong>Le Dr. Lemaitre</strong> présente la seconde étape du parcours, qui comprend l&apos;analyse. Objectif : orienter chaque patient vers les bons professionnels, de manière personnalisée et dans un respect total des recommandations de la HAS
+        <strong className="text-red-600">Le Dr. Lemaitre</strong> présente la seconde étape du parcours, qui comprend l&apos;analyse. Objectif : orienter chaque patient vers les bons professionnels, de manière personnalisée et dans un respect total des recommandations de la HAS
       </>
     ),
   },
@@ -225,7 +225,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-6-APA-lebeau.png",
     description: (
       <>
-        <strong>Alizée Lebeau</strong>, enseignante en activité physique adaptée, nous présente son approche innovante pour que le patient retrouve son équilibre
+        <strong className="text-red-600">Alizée Lebeau</strong>, enseignante en activité physique adaptée, nous présente son approche innovante pour que le patient retrouve son équilibre
       </>
     ),
   },
@@ -235,7 +235,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-7-diet-bonomo.png",
     description: (
       <>
-        <strong>Virginie Bonomo</strong>, diététicienne, rappelle l&apos;importance de bien manger pour lutter contre l&apos;inflammation de bas grade et s&apos;engager vers une perte de poids durable
+        <strong className="text-red-600">Virginie Bonomo</strong>, diététicienne, rappelle l&apos;importance de bien manger pour lutter contre l&apos;inflammation de bas grade et s&apos;engager vers une perte de poids durable
       </>
     ),
   },
@@ -245,7 +245,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-8-coste-obesite.png",
     description: (
       <>
-        <strong>Le Dr. Coste</strong>, spécialiste de l&apos;obésité, démontre le lien clair entre lombalgie et obésité et nous présente les parcours de soins en place ainsi que les solutions (non médicamenteuses, médicamenteuses et chirurgicales) qu&apos;il propose aux patients
+        <strong className="text-red-600">Le Dr. Coste</strong>, spécialiste de l&apos;obésité, démontre le lien clair entre lombalgie et obésité et nous présente les parcours de soins en place ainsi que les solutions (non médicamenteuses, médicamenteuses et chirurgicales) qu&apos;il propose aux patients
       </>
     ),
   },
@@ -255,7 +255,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-9-ranoux.png",
     description: (
       <>
-        <strong>Dr. Ranoux</strong> cloture ces présentations en nous transmettant sa passion pour cet organe oublié qu&apos;elle connait parfaitement
+        <strong className="text-red-600">Dr. Ranoux</strong> cloture ces présentations en nous transmettant sa passion pour cet organe oublié qu&apos;elle connait parfaitement
       </>
     ),
   },
@@ -317,18 +317,18 @@ export default function EvenementsPage() {
             <div className="max-w-4xl mx-auto mb-16">
               <div className="text-gray-600 leading-relaxed text-justify">
                 <p className="mb-4">
-                  Et si nous avions ensemble composé les premières mesures d&apos;une symphonie qui s&apos;annonce formidable ? Avec plus de 60 choristes réunis pour la soirée Dos-Remis, l&apos;enthousiasme a été palpable : nos échanges ont vibré, et les harmonies trouvées autour de la prise en charge de la lombalgie dessinent déjà une mélodie entraînante !
+                  Et si nous avions ensemble composé les premières mesures d&apos;une <strong>symphonie</strong> qui s&apos;annonce formidable ? Avec plus de <strong>60 choristes</strong> réunis pour la soirée Dos-Remis, l&apos;enthousiasme a été palpable : nos échanges ont vibré, et les harmonies trouvées autour de la prise en charge de la lombalgie dessinent déjà une mélodie entraînante !
                 </p>
                 <p className="mb-4">
                   Grâce à vous, la partition est posée, le premier accord est joué, et notre orchestre bat la mesure : soigner plus vite, soigner mieux et soigner durablement la lombalgie.
                 </p>
                 <p className="mb-4">
-                  Dos-Remis (Do-Ré-Mi) n&apos;est pas un nom anodin. Comme en musique, accorder les pratiques, harmoniser les discours et orchestrer chaque acteur demande justesse et sensibilité, mais c&apos;est la clé pour atteindre l&apos;harmonie thérapeutique 🎶
+                  <strong>Do, ré, mi</strong> 🎵 n&apos;est pas un nom anodin. Comme en musique, <strong>accorder</strong> les pratiques, <strong>harmoniser</strong> les discours et <strong>orchestrer</strong> chaque acteur demande justesse et sensibilité, mais c&apos;est la clé pour atteindre <strong>l&apos;harmonie thérapeutique 🎶</strong>
                 </p>
                 <p className="mb-4">
                   Un merci spécial :
                   <br />
-                  - À nos solistes, nos orateurs : les Dr. Lemaitre et Swisser (anesthésistes), le Dr Coste (chirurgien spécialiste de l&apos;obésité), le Dr. Ranoux (neurologue à Limoges et à l&apos;APHP, spécialiste des fascias), Alizée Lebeau (APA : activité physique adaptée), Jean Christophe Dilhan (kiné) et Virginie Bonomo (diététicienne)
+                  - À nos solistes, nos orateurs : les <strong className="text-red-600">Dr. Lemaitre</strong> et <strong className="text-red-600">Swisser</strong> (anesthésistes), le <strong className="text-red-600">Dr Coste</strong> (chirurgien spécialiste de l&apos;obésité), le <strong className="text-red-600">Dr. Ranoux</strong> (neurologue à Limoges et à l&apos;APHP, spécialiste des fascias), <strong className="text-red-600">Alizée Lebeau</strong> (APA : activité physique adaptée), <strong className="text-red-600">Jean Christophe Dilhan</strong> (kiné) et <strong className="text-red-600">Virginie Bonomo</strong> (diététicienne)
                   <br />
                   - À la CPTS, pour son soutien logistique et financier.
                 </p>
