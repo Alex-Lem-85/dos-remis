@@ -156,12 +156,12 @@ const soireePhotos = [
 // Type pour les présentations PDF (avec miniature)
 type Presentation = {
   title: string;
-  file: string;       // Chemin vers le PDF
-  image: string;     // Chemin vers la miniature (1ère page)
-  description: React.ReactNode;  // Permet d'utiliser du JSX
+  file: string;
+  image: string;
+  description: React.ReactNode;
 };
 
-// Liste des présentations PDF (appariement avec les noms exacts des fichiers sur GitHub)
+// Liste des présentations PDF
 const presentations: Presentation[] = [
   {
     title: "Introduction de la soirée",
@@ -169,8 +169,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/Presentation-1-lemaitre.png",
     description: (
       <>
-        <strong>Dr. Lemaitre</strong> introduit la soirée par une belle analogie : le tissu conjonctif vient du latin{" "}
-        <em>conjunctivus</em> (qui lie, qui rassemble), comme ce soir.
+        Le Dr. Lemaitre introduit la soirée par une belle analogie : le tissu conjonctif vient du latin <em>conjunctivus</em> (qui lie, qui rassemble) ... comme cette soirée
       </>
     ),
   },
@@ -180,7 +179,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-2-etape1-lemaitre.png",
     description: (
       <>
-        <strong>Dr. Lemaitre</strong> présente la première partie du parcours : de la prise de RDV à l'infiltration.
+        Le Dr. Lemaitre présente la première étape du parcours : de la prise de RDV à l&apos;infiltration
       </>
     ),
   },
@@ -190,7 +189,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-3-swisser.png",
     description: (
       <>
-        <strong>Dr. Swisser</strong> nous explique la technique d'infiltration, ses origines, ses résultats et les risques rarissimes et bénins.
+        Le Dr. Swisser explique la technique d&apos;infiltration, ses origines, ses résultats et les risques (rarissimes et bénins). La balance bénéfice/risque penche largement du bon coté
       </>
     ),
   },
@@ -200,7 +199,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-4-kine-dilhan.png",
     description: (
       <>
-        <strong>Jean-Christophe Dilhan</strong>, kinésithérapeute, explique la place centrale du mouvement et les options pour s'adapter à chaque patient.
+        <strong>Jean-Christophe Dilhan</strong>, kinésithérapeute, explique la place centrale du mouvement et les options pour s&apos;adapter à chaque patient
       </>
     ),
   },
@@ -210,7 +209,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-5-etape2-lemaitre.png",
     description: (
       <>
-        <strong>Dr. Lemaitre</strong> présente la seconde partie du parcours, qui comprend l'analyse pour orienter chaque patient vers les bons professionnels, de manière personnalisée et dans un respect total des recommandations de la HAS.
+        Le Dr. Lemaitre présente la seconde étape du parcours, qui comprend l&apos;analyse. Objectif : orienter chaque patient vers les bons professionnels, de manière personnalisée et dans un respect total des recommandations de la HAS
       </>
     ),
   },
@@ -220,7 +219,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-6-APA-lebeau.png",
     description: (
       <>
-        <strong>Alizée Lebeau</strong>, enseignante en activité physique adaptée, nous présente son approche innovante pour que le patient retrouve son équilibre.
+        <strong>Alizée Lebeau</strong>, enseignante en activité physique adaptée, nous présente son approche innovante pour que le patient retrouve son équilibre
       </>
     ),
   },
@@ -230,7 +229,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-7-diet-bonomo.png",
     description: (
       <>
-        <strong>Virginie Bonomo</strong>, diététicienne, rappelle l'importance de bien manger pour lutter contre l'inflammation de bas grade et s'engager vers une perte de poids durable.
+        <strong>Virginie Bonomo</strong>, diététicienne, rappelle l&apos;importance de bien manger pour lutter contre l&apos;inflammation de bas grade et s&apos;engager vers une perte de poids durable
       </>
     ),
   },
@@ -240,7 +239,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-8-coste-obesite.png",
     description: (
       <>
-        <strong>Dr. Coste</strong>, spécialiste de l'obésité, démontre le lien clair entre lombalgie et obésité et nous présente les parcours de soins ainsi que les techniques non médicamenteuses, médicamenteuses et chirurgicales qu'il propose aux patients.
+        Le Dr. Coste, spécialiste de l&apos;obésité, démontre le lien clair entre lombalgie et obésité et nous présente les parcours de soins en place ainsi que les solutions (non médicamenteuses, médicamenteuses et chirurgicales) qu&apos;il propose aux patients
       </>
     ),
   },
@@ -250,7 +249,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-9-ranoux.png",
     description: (
       <>
-        <strong>Dr. Ranoux</strong> nous explique le rôle des fascias dans la prise en charge de la lombalgie.
+        Dr. Ranoux cloture ces présentations en nous transmettant sa passion pour cet organe oublié qu&apos;elle connait parfaitement
       </>
     ),
   },
@@ -389,17 +388,6 @@ export default function EvenementsPage() {
                 </p>
               </div>
             )}
-          </div>
-        </section>
-
-        {/* Lien vers la page d'accueil */}
-        <section className="py-12 bg-gray-50">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-            <Button asChild variant="outline">
-              <Link href="/">
-                Retour à l&apos;accueil
-              </Link>
-            </Button>
           </div>
         </section>
       </main>
