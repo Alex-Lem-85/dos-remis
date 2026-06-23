@@ -180,17 +180,17 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-2-etape1-lemaitre.png",
     description: (
       <>
-        <strong>Dr. Lemaitre</strong> présente la première partie du parcours : de la prise de RDV à l’infiltration.
+        <strong>Dr. Lemaitre</strong> présente la première partie du parcours : de la prise de RDV à l'infiltration.
       </>
     ),
   },
   {
-    title: "Technique d’infiltration",
+    title: "Technique d'infiltration",
     file: "/presentations/3. Technique infiltration SOS lumbago-Swisser_compressed.pdf",
     image: "/photo-presentations/presentation-3-swisser.png",
     description: (
       <>
-        <strong>Dr. Swisser</strong> nous explique la technique d’infiltration, ses origines, ses résultats et les risques rarissimes et bénins.
+        <strong>Dr. Swisser</strong> nous explique la technique d'infiltration, ses origines, ses résultats et les risques rarissimes et bénins.
       </>
     ),
   },
@@ -200,7 +200,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-4-kine-dilhan.png",
     description: (
       <>
-        <strong>Jean-Christophe Dilhan</strong>, kinésithérapeute, explique la place centrale du mouvement et les options pour s’adapter à chaque patient.
+        <strong>Jean-Christophe Dilhan</strong>, kinésithérapeute, explique la place centrale du mouvement et les options pour s'adapter à chaque patient.
       </>
     ),
   },
@@ -210,7 +210,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-5-etape2-lemaitre.png",
     description: (
       <>
-        <strong>Dr. Lemaitre</strong> présente la seconde partie du parcours, qui comprend l’analyse pour orienter chaque patient vers les bons professionnels, de manière personnalisée et dans un respect total des recommandations de la HAS.
+        <strong>Dr. Lemaitre</strong> présente la seconde partie du parcours, qui comprend l'analyse pour orienter chaque patient vers les bons professionnels, de manière personnalisée et dans un respect total des recommandations de la HAS.
       </>
     ),
   },
@@ -225,12 +225,12 @@ const presentations: Presentation[] = [
     ),
   },
   {
-    title: "Importance de l’alimentation",
+    title: "Importance de l'alimentation",
     file: "/presentations/7. Diet SOS lumbago_compressed.pdf",
     image: "/photo-presentations/presentation-7-diet-bonomo.png",
     description: (
       <>
-        <strong>Virginie Bonomo</strong>, diététicienne, rappelle l’importance de bien manger pour lutter contre l’inflammation de bas grade et s’engager vers une perte de poids durable.
+        <strong>Virginie Bonomo</strong>, diététicienne, rappelle l'importance de bien manger pour lutter contre l'inflammation de bas grade et s'engager vers une perte de poids durable.
       </>
     ),
   },
@@ -240,7 +240,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-8-coste-obesite.png",
     description: (
       <>
-        <strong>Dr. Coste</strong>, spécialiste de l’obésité, démontre le lien clair entre lombalgie et obésité et nous présente les parcours de soins ainsi que les techniques non médicamenteuses, médicamenteuses et chirurgicales qu’il propose aux patients.
+        <strong>Dr. Coste</strong>, spécialiste de l'obésité, démontre le lien clair entre lombalgie et obésité et nous présente les parcours de soins ainsi que les techniques non médicamenteuses, médicamenteuses et chirurgicales qu'il propose aux patients.
       </>
     ),
   },
@@ -278,11 +278,8 @@ export default function EvenementsPage() {
         {/* Soirée interprofessionnelle */}
         <section className="py-16 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            {/* Galerie de photos (d'abord) */}
+            {/* Galerie de photos */}
             <div className="mb-16">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-                Galerie de photos
-              </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {soireePhotos.map((photo, index) => (
                   <div
@@ -302,8 +299,8 @@ export default function EvenementsPage() {
               </div>
             </div>
 
-            {/* Texte de la soirée (ensuite) */}
-            <div className="max-w-4xl mx-auto mb-12">
+            {/* Texte de la soirée - déplacé juste après les photos */}
+            <div className="max-w-4xl mx-auto mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">
                 Soirée interprofessionnelle du 19 juin 2026
               </h2>
@@ -334,54 +331,40 @@ export default function EvenementsPage() {
             {/* Section pour les présentations PDF */}
             {presentations.length > 0 && (
               <div className="mb-16">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-                  Présentations
+                <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+                  les 9 présentations de la soirée
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {presentations.map((presentation, index) => (
                     <div
                       key={index}
-                      className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                      className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
                     >
-                      {/* Miniature de la 1ère page du PDF */}
-                      <div className="relative aspect-[4/3] bg-gray-100">
+                      {/* Miniature cliquable de la 1ère page du PDF */}
+                      <Link
+                        href={presentation.file}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block relative aspect-[4/3] bg-gray-50 cursor-pointer"
+                      >
                         <Image
                           src={presentation.image}
                           alt={`Miniature de ${presentation.title}`}
                           fill
-                          className="object-contain p-4"
+                          className="object-contain p-2"
                           loading="lazy"
                         />
-                      </div>
-                      {/* Texte descriptif */}
-                      <div className="p-6">
-                        <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                          {presentation.title}
-                        </h4>
-                        <p className="text-gray-600 mb-4">{presentation.description}</p>
-                        <Button asChild variant="outline" size="sm" className="w-full">
-                          <a
-                            href={presentation.file}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center gap-2"
-                          >
-                            <svg
-                              className="h-4 w-4"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                              />
-                            </svg>
-                            Voir le PDF
-                          </a>
-                        </Button>
+                        {/* Texte de survol */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                          <span className="bg-white bg-opacity-90 px-3 py-1 rounded-full text-sm font-medium text-gray-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Cliquez pour voir la présentation
+                          </span>
+                        </div>
+                      </Link>
+                      
+                      {/* Description sous l'image */}
+                      <div className="p-4">
+                        <p className="text-sm text-gray-600">{presentation.description}</p>
                       </div>
                     </div>
                   ))}
