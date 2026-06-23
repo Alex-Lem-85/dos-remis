@@ -160,15 +160,56 @@ type Presentation = {
   description: string;
 };
 
-// Liste des présentations PDF (à compléter avec tes fichiers)
+// Liste des présentations PDF (appariement automatique par numéro)
 const presentations: Presentation[] = [
-  // Exemple :
-  // {
-  //   title: "Présentation du parcours Dos-Remis",
-  //   file: "/presentations/parcours-dos-remis.pdf",
-  //   image: "/photo-presentations/parcours-dos-remis-page1.jpg",
-  //   description: "Découvrez les étapes clés de notre prise en charge.",
-  // },
+  {
+    title: "Introduction de la soirée",
+    file: "/presentations/1.pdf",
+    image: "/photo-presentations/1.jpg",
+    description: "Le Dr. Lemaitre introduit la soirée par une belle analogie : le tissu conjonctif vient du latin *conjunctivus* (qui lie, qui rassemble), comme ce soir.",
+  },
+  {
+    title: "Première partie du parcours Dos-Remis",
+    file: "/presentations/2.pdf",
+    image: "/photo-presentations/2.jpg",
+    description: "Le Dr. Lemaitre présente la première partie du parcours : de la prise de RDV à l’infiltration.",
+  },
+  {
+    title: "Technique d’infiltration",
+    file: "/presentations/3.pdf",
+    image: "/photo-presentations/3.jpg",
+    description: "Le Dr. Swisser nous explique la technique d’infiltration, ses origines, ses résultats et les risques rarissimes et bénins.",
+  },
+  {
+    title: "Rôle du mouvement dans la prise en charge",
+    file: "/presentations/4.pdf",
+    image: "/photo-presentations/4.jpg",
+    description: "Jean-Christophe Dilhan, kinésithérapeute, explique la place centrale du mouvement et les options pour s’adapter à chaque patient.",
+  },
+  {
+    title: "Seconde partie du parcours Dos-Remis",
+    file: "/presentations/5.pdf",
+    image: "/photo-presentations/5.jpg",
+    description: "Le Dr. Lemaitre présente la seconde partie du parcours, qui comprend l’analyse pour orienter chaque patient vers les bons professionnels, de manière personnalisée et dans un respect total des recommandations de la HAS.",
+  },
+  {
+    title: "Activité physique adaptée",
+    file: "/presentations/6.pdf",
+    image: "/photo-presentations/6.jpg",
+    description: "Alizée Lebeau, enseignante en activité physique adaptée, nous présente son approche innovante pour que le patient retrouve son équilibre.",
+  },
+  {
+    title: "Importance de l’alimentation",
+    file: "/presentations/7.pdf",
+    image: "/photo-presentations/7.jpg",
+    description: "Virginie Bonomo, diététicienne, rappelle l’importance de bien manger pour lutter contre l’inflammation de bas grade et s’engager vers une perte de poids durable.",
+  },
+  {
+    title: "Lombalgie et obésité",
+    file: "/presentations/8.pdf",
+    image: "/photo-presentations/8.jpg",
+    description: "Le Dr. Coste, spécialiste de l’obésité, démontre le lien clair entre lombalgie et obésité et nous présente les parcours de soins ainsi que les techniques non médicamenteuses, médicamenteuses et chirurgicales qu’il propose aux patients.",
+  },
 ];
 
 export default function EvenementsPage() {
