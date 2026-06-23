@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import React from "react";
 
 // Métadonnées pour le SEO
 export const metadata: Metadata = {
@@ -150,65 +151,113 @@ const soireePhotos = [
     width: 800,
     height: 600,
   },
+  {
+    src: "/photo-soiree/swisser-lemaitre-paula.jpg",
+    alt: "Dr Swisser, Dr Lemaître et Paula lors de la soirée",
+    width: 800,
+    height: 600,
+  },
 ];
 
 // Type pour les présentations PDF (avec miniature)
 type Presentation = {
   title: string;
-  file: string;       // Chemin vers le PDF
-  image: string;     // Chemin vers la miniature (1ère page)
-  description: string;
+  file: string;
+  image: string;
+  description: React.ReactNode;
 };
 
-// Liste des présentations PDF (appariement automatique par numéro)
+// Liste des présentations PDF
 const presentations: Presentation[] = [
   {
     title: "Introduction de la soirée",
-    file: "/presentations/1.pdf",
-    image: "/photo-presentations/1.jpg",
-    description: "Le Dr. Lemaitre introduit la soirée par une belle analogie : le tissu conjonctif vient du latin *conjunctivus* (qui lie, qui rassemble), comme ce soir.",
+    file: "/presentations/1. Soiree-Dos-Remis intro-compressé.pdf",
+    image: "/photo-presentations/Presentation-1-lemaitre.png",
+    description: (
+      <>
+        <strong className="text-red-600">Le Dr. Lemaitre</strong> introduit la soirée par une belle analogie : le tissu conjonctif vient du latin <em>conjunctivus</em> (qui lie, qui rassemble) ... comme cette soirée
+      </>
+    ),
   },
   {
     title: "Première partie du parcours Dos-Remis",
-    file: "/presentations/2.pdf",
-    image: "/photo-presentations/2.jpg",
-    description: "Le Dr. Lemaitre présente la première partie du parcours : de la prise de RDV à l’infiltration.",
+    file: "/presentations/2. Parcours Dos-Remis-etape-1-compressé.pdf",
+    image: "/photo-presentations/presentation-2-etape1-lemaitre.png",
+    description: (
+      <>
+        <strong className="text-red-600">Le Dr. Lemaitre</strong> présente la première étape du parcours : de la prise de RDV à l&apos;infiltration
+      </>
+    ),
   },
   {
-    title: "Technique d’infiltration",
-    file: "/presentations/3.pdf",
-    image: "/photo-presentations/3.jpg",
-    description: "Le Dr. Swisser nous explique la technique d’infiltration, ses origines, ses résultats et les risques rarissimes et bénins.",
+    title: "Technique d'infiltration",
+    file: "/presentations/3. Technique infiltration SOS lumbago-Swisser_compressed.pdf",
+    image: "/photo-presentations/presentation-3-swisser.png",
+    description: (
+      <>
+        <strong className="text-red-600">Le Dr. Swisser</strong> explique la technique d&apos;infiltration, ses origines, ses résultats et les risques (rarissimes et bénins). La balance bénéfice/risque penche largement du bon coté
+      </>
+    ),
   },
   {
     title: "Rôle du mouvement dans la prise en charge",
-    file: "/presentations/4.pdf",
-    image: "/photo-presentations/4.jpg",
-    description: "Jean-Christophe Dilhan, kinésithérapeute, explique la place centrale du mouvement et les options pour s’adapter à chaque patient.",
+    file: "/presentations/4. KINE SOS LUMBAGO.pdf",
+    image: "/photo-presentations/presentation-4-kine-dilhan.png",
+    description: (
+      <>
+        <strong className="text-red-600">Jean-Christophe Dilhan</strong>, kinésithérapeute, explique la place centrale du mouvement et les options pour s&apos;adapter à chaque patient
+      </>
+    ),
   },
   {
     title: "Seconde partie du parcours Dos-Remis",
-    file: "/presentations/5.pdf",
-    image: "/photo-presentations/5.jpg",
-    description: "Le Dr. Lemaitre présente la seconde partie du parcours, qui comprend l’analyse pour orienter chaque patient vers les bons professionnels, de manière personnalisée et dans un respect total des recommandations de la HAS.",
+    file: "/presentations/5. Parcours Dos-Remis-etape-2_compressed.pdf",
+    image: "/photo-presentations/presentation-5-etape2-lemaitre.png",
+    description: (
+      <>
+        <strong className="text-red-600">Le Dr. Lemaitre</strong> présente la seconde étape du parcours, qui comprend l&apos;analyse. Objectif : orienter chaque patient vers les bons professionnels, de manière personnalisée et dans un respect total des recommandations de la HAS
+      </>
+    ),
   },
   {
     title: "Activité physique adaptée",
-    file: "/presentations/6.pdf",
-    image: "/photo-presentations/6.jpg",
-    description: "Alizée Lebeau, enseignante en activité physique adaptée, nous présente son approche innovante pour que le patient retrouve son équilibre.",
+    file: "/presentations/6. APA Lumbago_compressed.pdf",
+    image: "/photo-presentations/presentation-6-APA-lebeau.png",
+    description: (
+      <>
+        <strong className="text-red-600">Alizée Lebeau</strong>, enseignante en activité physique adaptée, nous présente son approche innovante pour que le patient retrouve son équilibre
+      </>
+    ),
   },
   {
-    title: "Importance de l’alimentation",
-    file: "/presentations/7.pdf",
-    image: "/photo-presentations/7.jpg",
-    description: "Virginie Bonomo, diététicienne, rappelle l’importance de bien manger pour lutter contre l’inflammation de bas grade et s’engager vers une perte de poids durable.",
+    title: "Importance de l'alimentation",
+    file: "/presentations/7. Diet SOS lumbago_compressed.pdf",
+    image: "/photo-presentations/presentation-7-diet-bonomo.png",
+    description: (
+      <>
+        <strong className="text-red-600">Virginie Bonomo</strong>, diététicienne, rappelle l&apos;importance de bien manger pour lutter contre l&apos;inflammation de bas grade et s&apos;engager vers une perte de poids durable
+      </>
+    ),
   },
   {
     title: "Lombalgie et obésité",
-    file: "/presentations/8.pdf",
-    image: "/photo-presentations/8.jpg",
-    description: "Le Dr. Coste, spécialiste de l’obésité, démontre le lien clair entre lombalgie et obésité et nous présente les parcours de soins ainsi que les techniques non médicamenteuses, médicamenteuses et chirurgicales qu’il propose aux patients.",
+    file: "/presentations/8. Obesité et lombalgie-Coste_compressed.pdf",
+    image: "/photo-presentations/presentation-8-coste-obesite.png",
+    description: (
+      <>
+        <strong className="text-red-600">Le Dr. Coste</strong>, spécialiste de l&apos;obésité, démontre le lien clair entre lombalgie et obésité et nous présente les parcours de soins en place ainsi que les solutions (non médicamenteuses, médicamenteuses et chirurgicales) qu&apos;il propose aux patients
+      </>
+    ),
+  },
+  {
+    title: "Les fascias",
+    file: "/presentations/9. Fascias Daniele Ranoux_compressed.pdf",
+    image: "/photo-presentations/presentation-9-ranoux.png",
+    description: (
+      <>
+        <strong className="text-red-600">Dr. Ranoux</strong> cloture ces présentations en nous transmettant sa passion pour cet organe oublié qu&apos;elle connait parfaitement
+      </>
+    ),
   },
 ];
 
@@ -219,11 +268,13 @@ export default function EvenementsPage() {
       <section className="relative bg-gradient-to-r from-primary/10 to-primary/5 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900">
-              Nos Événements
+            <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight">
+              <span className="bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent drop-shadow-sm">
+                Nos Événements
+              </span>
             </h1>
             <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-              Retrouvez les moments forts de nos rencontres et présentations.
+              Retrouvez les moments forts de la construction de ce parcours centré sur le patient
             </p>
           </div>
         </div>
@@ -234,11 +285,15 @@ export default function EvenementsPage() {
         {/* Soirée interprofessionnelle */}
         <section className="py-16 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            {/* Galerie de photos (d'abord) */}
+            {/* Titre au dessus des photos */}
+            <div className="mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">
+                Soirée interprofessionnelle du 19 juin 2026
+              </h2>
+            </div>
+
+            {/* Galerie de photos */}
             <div className="mb-16">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-                Galerie de photos
-              </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {soireePhotos.map((photo, index) => (
                   <div
@@ -258,21 +313,17 @@ export default function EvenementsPage() {
               </div>
             </div>
 
-            {/* Texte de la soirée (ensuite) */}
-            <div className="max-w-4xl mx-auto mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">
-                Soirée interprofessionnelle du 19 juin 2026
-              </h2>
-              <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
+            {/* Texte de la soirée - justifié */}
+            <div className="max-w-4xl mx-auto mb-16">
+              <div className="text-gray-600 leading-relaxed text-justify">
                 <p className="mb-4">
-                  Et si nous avions ensemble composé les premières mesures d&apos;une symphonie qui s&apos;annonce formidable ?
-                  Avec plus de <strong>60 choristes</strong> réunis pour la soirée Dos-Remis, l&apos;enthousiasme a été palpable : nos échanges ont vibré, et les harmonies trouvées autour de la prise en charge de la lombalgie dessinent déjà une mélodie entraînante !
+                  Et si nous avions ensemble composé les premières mesures d&apos;une <strong>symphonie</strong> qui s&apos;annonce formidable ? Avec plus de <strong>60 choristes</strong> réunis pour la soirée Dos-Remis, l&apos;enthousiasme a été palpable : nos échanges ont vibré, et les harmonies trouvées autour de la prise en charge de la lombalgie dessinent déjà une mélodie entraînante !
                 </p>
                 <p className="mb-4">
-                  Grâce à vous, la partition est posée, le premier accord est joué, et notre orchestre bat la mesure : <strong>soigner plus vite, soigner mieux et soigner durablement la lombalgie</strong>.
+                  Grâce à vous, la partition est posée, le premier accord est joué, et notre orchestre bat la mesure : soigner plus vite, soigner mieux et soigner durablement la lombalgie.
                 </p>
                 <p className="mb-4">
-                  Dos-Remis (Do-Ré-Mi) n&apos;est pas un nom anodin. Comme en musique, accorder les pratiques, harmoniser les discours et orchestrer chaque acteur demande justesse et sensibilité, mais c&apos;est la clé pour atteindre l&apos;harmonie thérapeutique 🎶
+                  <strong>Do, ré, mi</strong> 🎵 n&apos;est pas un nom anodin. Comme en musique, <strong>accorder</strong> les pratiques, <strong>harmoniser</strong> les discours et <strong>orchestrer</strong> chaque acteur demande justesse et sensibilité, mais c&apos;est la clé pour atteindre <strong>l&apos;harmonie thérapeutique 🎶</strong>
                 </p>
                 <p className="mb-4">
                   Un merci spécial :
@@ -290,54 +341,40 @@ export default function EvenementsPage() {
             {/* Section pour les présentations PDF */}
             {presentations.length > 0 && (
               <div className="mb-16">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-                  Présentations
+                <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+                  Les 9 partitions de la soirée
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {presentations.map((presentation, index) => (
                     <div
                       key={index}
-                      className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                      className="bg-white overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
                     >
-                      {/* Miniature de la 1ère page du PDF */}
-                      <div className="relative aspect-[4/3] bg-gray-100">
+                      {/* Miniature cliquable de la 1ère page du PDF - fond blanc */}
+                      <Link
+                        href={presentation.file}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block relative aspect-[4/3] bg-white cursor-pointer"
+                      >
                         <Image
                           src={presentation.image}
                           alt={`Miniature de ${presentation.title}`}
                           fill
-                          className="object-contain p-4"
+                          className="object-contain p-2"
                           loading="lazy"
                         />
-                      </div>
-                      {/* Texte descriptif */}
-                      <div className="p-6">
-                        <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                          {presentation.title}
-                        </h4>
-                        <p className="text-gray-600 mb-4">{presentation.description}</p>
-                        <Button asChild variant="outline" size="sm" className="w-full">
-                          <a
-                            href={presentation.file}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center gap-2"
-                          >
-                            <svg
-                              className="h-4 w-4"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                              />
-                            </svg>
-                            Voir le PDF
-                          </a>
-                        </Button>
+                        {/* Texte de survol */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                          <span className="bg-white bg-opacity-90 px-3 py-1 rounded-full text-sm font-medium text-gray-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Cliquez pour voir la présentation
+                          </span>
+                        </div>
+                      </Link>
+                      
+                      {/* Description sous l'image */}
+                      <div className="p-4">
+                        <p className="text-sm text-gray-600">{presentation.description}</p>
                       </div>
                     </div>
                   ))}
@@ -356,17 +393,6 @@ export default function EvenementsPage() {
                 </p>
               </div>
             )}
-          </div>
-        </section>
-
-        {/* Lien vers la page d'accueil */}
-        <section className="py-12 bg-gray-50">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-            <Button asChild variant="outline">
-              <Link href="/">
-                Retour à l&apos;accueil
-              </Link>
-            </Button>
           </div>
         </section>
       </main>
