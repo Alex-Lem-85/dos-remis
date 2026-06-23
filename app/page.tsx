@@ -8,6 +8,7 @@ import {
 import { Star } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import NPSBlock from "@/components/NPSBlock";
 import ClinicalResultsBlock from "@/components/ClinicalResultsBlock";
 
@@ -128,6 +129,8 @@ const newsItems = [
     description:
       "Dans la continuité de notre démarche autour du parcours lombalgie, nous organisons une soirée d’échange dédiée aux professionnels de santé du bassin de Thau, avec le soutien de la CPTS. L’objectif est clair : présenter concrètement le circuit Dos-Remis / SOS Lumbago, favoriser les échanges interprofessionnels et co-construire une filière locale cohérente, exigeante et multidisciplinaire.",
     image: "/soiree-sos-lumbago-recto.png",
+    link: "/evenements",
+    buttonLabel: "Cliquez pour en savoir plus",
   },
   {
     title: "Rencontre autour des fascias avec le Dr Ranoux",
@@ -351,28 +354,36 @@ export default function Home() {
 
                 {item.link && item.buttonLabel && (
                   <div className="px-6 pb-6">
-                    <Button
-                      asChild
-                      size="lg"
-                      className={
-                        item.buttonLabel === "Cliquer pour s’inscrire"
-                          ? "bg-primary text-white hover:bg-primary/90"
-                          : ""
-                      }
-                      variant={
-                        item.buttonLabel === "Cliquer pour s’inscrire"
-                          ? "default"
-                          : "secondary"
-                      }
-                    >
-                      <a
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    {item.buttonLabel === "Cliquez pour en savoir plus" ? (
+                      <Button asChild size="lg" variant="secondary">
+                        <Link href={item.link}>
+                          {item.buttonLabel}
+                        </Link>
+                      </Button>
+                    ) : (
+                      <Button
+                        asChild
+                        size="lg"
+                        className={
+                          item.buttonLabel === "Cliquer pour s’inscrire"
+                            ? "bg-primary text-white hover:bg-primary/90"
+                            : ""
+                        }
+                        variant={
+                          item.buttonLabel === "Cliquer pour s’inscrire"
+                            ? "default"
+                            : "secondary"
+                        }
                       >
-                        {item.buttonLabel}
-                      </a>
-                    </Button>
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {item.buttonLabel}
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 )}
               </Card>
@@ -380,6 +391,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
 
       {/* CTA */}
       <section className="bg-primary py-16">
