@@ -263,11 +263,13 @@ export default function EvenementsPage() {
       <section className="relative bg-gradient-to-r from-primary/10 to-primary/5 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900">
-              Nos Événements
+            <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight">
+              <span className="bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent drop-shadow-sm">
+                Nos Événements
+              </span>
             </h1>
             <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-              Retrouvez les moments forts de nos rencontres et présentations.
+              Retrouvez les moments forts de la construction de ce parcours centré sur le patient
             </p>
           </div>
         </div>
@@ -278,6 +280,13 @@ export default function EvenementsPage() {
         {/* Soirée interprofessionnelle */}
         <section className="py-16 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            {/* Titre au dessus des photos */}
+            <div className="mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">
+                Soirée interprofessionnelle du 19 juin 2026
+              </h2>
+            </div>
+
             {/* Galerie de photos */}
             <div className="mb-16">
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -299,11 +308,8 @@ export default function EvenementsPage() {
               </div>
             </div>
 
-            {/* Texte de la soirée - déplacé juste après les photos */}
+            {/* Texte de la soirée */}
             <div className="max-w-4xl mx-auto mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">
-                Soirée interprofessionnelle du 19 juin 2026
-              </h2>
               <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
                 <p className="mb-4">
                   Et si nous avions ensemble composé les premières mesures d&apos;une symphonie qui s&apos;annonce formidable ?
@@ -332,15 +338,15 @@ export default function EvenementsPage() {
             {presentations.length > 0 && (
               <div className="mb-16">
                 <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-                  les 9 présentations de la soirée
+                  Les 9 partitions de la soirée
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {presentations.map((presentation, index) => (
                     <div
                       key={index}
-                      className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
+                      className="bg-white overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
                     >
-                      {/* Miniature cliquable de la 1ère page du PDF */}
+                      {/* Miniature cliquable de la 1ère page du PDF - sans cadre */}
                       <Link
                         href={presentation.file}
                         target="_blank"
