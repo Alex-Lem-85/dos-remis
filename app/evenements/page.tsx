@@ -165,8 +165,8 @@ type Presentation = {
 const presentations: Presentation[] = [
   {
     title: "Introduction de la soirée",
-    file: "/presentations/1.soiree-dos-remis-intro-compresse.pdf",
-    image: "/photo-presentations/presentation-1.png",
+    file: "/presentations/1. Soiree-Dos-Remis intro-compressé.pdf",
+    image: "/photo-presentations/Presentation-1-lemaitre.png",
     description: (
       <>
         <strong>Dr. Lemaitre</strong> introduit la soirée par une belle analogie : le tissu conjonctif vient du latin{" "}
@@ -176,8 +176,8 @@ const presentations: Presentation[] = [
   },
   {
     title: "Première partie du parcours Dos-Remis",
-    file: "/presentations/2.parcours-dos-remis-etape-1.pdf",
-    image: "/photo-presentations/presentation-2.png",
+    file: "/presentations/2. Parcours Dos-Remis-etape-1-compressé.pdf",
+    image: "/photo-presentations/presentation-2-etape1-lemaitre.png",
     description: (
       <>
         <strong>Dr. Lemaitre</strong> présente la première partie du parcours : de la prise de RDV à l’infiltration.
@@ -186,8 +186,8 @@ const presentations: Presentation[] = [
   },
   {
     title: "Technique d’infiltration",
-    file: "/presentations/3.technique-infiltration-sos-lumbago-swisser-compressed.pdf",
-    image: "/photo-presentations/presentation-3.png",
+    file: "/presentations/3. Technique infiltration SOS lumbago-Swisser_compressed.pdf",
+    image: "/photo-presentations/presentation-3-swisser.png",
     description: (
       <>
         <strong>Dr. Swisser</strong> nous explique la technique d’infiltration, ses origines, ses résultats et les risques rarissimes et bénins.
@@ -196,8 +196,8 @@ const presentations: Presentation[] = [
   },
   {
     title: "Rôle du mouvement dans la prise en charge",
-    file: "/presentations/4.kine-sos.pdf",
-    image: "/photo-presentations/presentation-4.png",
+    file: "/presentations/4. KINE SOS LUMBAGO.pdf",
+    image: "/photo-presentations/presentation-4-kine-dilhan.png",
     description: (
       <>
         <strong>Jean-Christophe Dilhan</strong>, kinésithérapeute, explique la place centrale du mouvement et les options pour s’adapter à chaque patient.
@@ -206,8 +206,8 @@ const presentations: Presentation[] = [
   },
   {
     title: "Seconde partie du parcours Dos-Remis",
-    file: "/presentations/5.parcours-dos-remis-etape-2.pdf",
-    image: "/photo-presentations/presentation-5.png",
+    file: "/presentations/5. Parcours Dos-Remis-etape-2_compressed.pdf",
+    image: "/photo-presentations/presentation-5-etape2-lemaitre.png",
     description: (
       <>
         <strong>Dr. Lemaitre</strong> présente la seconde partie du parcours, qui comprend l’analyse pour orienter chaque patient vers les bons professionnels, de manière personnalisée et dans un respect total des recommandations de la HAS.
@@ -216,8 +216,8 @@ const presentations: Presentation[] = [
   },
   {
     title: "Activité physique adaptée",
-    file: "/presentations/6.apa-lumbago.pdf",
-    image: "/photo-presentations/presentation-6.png",
+    file: "/presentations/6. APA Lumbago_compressed.pdf",
+    image: "/photo-presentations/presentation-6-APA-lebeau.png",
     description: (
       <>
         <strong>Alizée Lebeau</strong>, enseignante en activité physique adaptée, nous présente son approche innovante pour que le patient retrouve son équilibre.
@@ -226,8 +226,8 @@ const presentations: Presentation[] = [
   },
   {
     title: "Importance de l’alimentation",
-    file: "/presentations/7.diet-sos-lumbago.pdf",
-    image: "/photo-presentations/presentation-7.png",
+    file: "/presentations/7. Diet SOS lumbago_compressed.pdf",
+    image: "/photo-presentations/presentation-7-diet-bonomo.png",
     description: (
       <>
         <strong>Virginie Bonomo</strong>, diététicienne, rappelle l’importance de bien manger pour lutter contre l’inflammation de bas grade et s’engager vers une perte de poids durable.
@@ -236,8 +236,8 @@ const presentations: Presentation[] = [
   },
   {
     title: "Lombalgie et obésité",
-    file: "/presentations/8.obesite-lombalgie-coste.pdf",
-    image: "/photo-presentations/presentation-8.png",
+    file: "/presentations/8. Obesité et lombalgie-Coste_compressed.pdf",
+    image: "/photo-presentations/presentation-8-coste-obesite.png",
     description: (
       <>
         <strong>Dr. Coste</strong>, spécialiste de l’obésité, démontre le lien clair entre lombalgie et obésité et nous présente les parcours de soins ainsi que les techniques non médicamenteuses, médicamenteuses et chirurgicales qu’il propose aux patients.
@@ -246,8 +246,8 @@ const presentations: Presentation[] = [
   },
   {
     title: "Les fascias",
-    file: "/presentations/9.fascias-daniele-ranoux.pdf",
-    image: "/photo-presentations/presentation-9.png",
+    file: "/presentations/9. Fascias Daniele Ranoux_compressed.pdf",
+    image: "/photo-presentations/presentation-9-ranoux.png",
     description: (
       <>
         <strong>Dr. Ranoux</strong> nous explique le rôle des fascias dans la prise en charge de la lombalgie.
