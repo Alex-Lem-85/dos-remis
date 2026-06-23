@@ -151,6 +151,12 @@ const soireePhotos = [
     width: 800,
     height: 600,
   },
+  {
+    src: "/photo-soiree/swisser-lemaitre-paula.jpg",
+    alt: "Dr Swisser, Dr Lemaître et Paula lors de la soirée",
+    width: 800,
+    height: 600,
+  },
 ];
 
 // Type pour les présentations PDF (avec miniature)
@@ -169,7 +175,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/Presentation-1-lemaitre.png",
     description: (
       <>
-        Le Dr. Lemaitre introduit la soirée par une belle analogie : le tissu conjonctif vient du latin <em>conjunctivus</em> (qui lie, qui rassemble) ... comme cette soirée
+        <strong>Le Dr. Lemaitre</strong> introduit la soirée par une belle analogie : le tissu conjonctif vient du latin <em>conjunctivus</em> (qui lie, qui rassemble) ... comme cette soirée
       </>
     ),
   },
@@ -179,7 +185,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-2-etape1-lemaitre.png",
     description: (
       <>
-        Le Dr. Lemaitre présente la première étape du parcours : de la prise de RDV à l&apos;infiltration
+        <strong>Le Dr. Lemaitre</strong> présente la première étape du parcours : de la prise de RDV à l&apos;infiltration
       </>
     ),
   },
@@ -189,7 +195,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-3-swisser.png",
     description: (
       <>
-        Le Dr. Swisser explique la technique d&apos;infiltration, ses origines, ses résultats et les risques (rarissimes et bénins). La balance bénéfice/risque penche largement du bon coté
+        <strong>Le Dr. Swisser</strong> explique la technique d&apos;infiltration, ses origines, ses résultats et les risques (rarissimes et bénins). La balance bénéfice/risque penche largement du bon coté
       </>
     ),
   },
@@ -209,7 +215,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-5-etape2-lemaitre.png",
     description: (
       <>
-        Le Dr. Lemaitre présente la seconde étape du parcours, qui comprend l&apos;analyse. Objectif : orienter chaque patient vers les bons professionnels, de manière personnalisée et dans un respect total des recommandations de la HAS
+        <strong>Le Dr. Lemaitre</strong> présente la seconde étape du parcours, qui comprend l&apos;analyse. Objectif : orienter chaque patient vers les bons professionnels, de manière personnalisée et dans un respect total des recommandations de la HAS
       </>
     ),
   },
@@ -239,7 +245,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-8-coste-obesite.png",
     description: (
       <>
-        Le Dr. Coste, spécialiste de l&apos;obésité, démontre le lien clair entre lombalgie et obésité et nous présente les parcours de soins en place ainsi que les solutions (non médicamenteuses, médicamenteuses et chirurgicales) qu&apos;il propose aux patients
+        <strong>Le Dr. Coste</strong>, spécialiste de l&apos;obésité, démontre le lien clair entre lombalgie et obésité et nous présente les parcours de soins en place ainsi que les solutions (non médicamenteuses, médicamenteuses et chirurgicales) qu&apos;il propose aux patients
       </>
     ),
   },
@@ -249,7 +255,7 @@ const presentations: Presentation[] = [
     image: "/photo-presentations/presentation-9-ranoux.png",
     description: (
       <>
-        Dr. Ranoux cloture ces présentations en nous transmettant sa passion pour cet organe oublié qu&apos;elle connait parfaitement
+        <strong>Dr. Ranoux</strong> cloture ces présentations en nous transmettant sa passion pour cet organe oublié qu&apos;elle connait parfaitement
       </>
     ),
   },
