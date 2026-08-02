@@ -116,6 +116,14 @@ const reviews = [
 
 const newsItems = [
   {
+    title: "Le lumbago n'épargne personne... pas même les journalistes !",
+    description:
+      "Touchant 9 personnes sur 10 entre 40 et 60 ans, cette douleur brutale peut surprendre n'importe qui. Après avoir vécu l'expérience, un journaliste Setois a consacré un très bel article à SOS Lumbago qui se développe partout en France et principalement sur notre île singulière. Des infiltrations échoguidées ciblant les fascias, ces tissus conjonctifs souvent oubliés mais pourtant centraux dans la douleur. Résultat ? Un soulagement immédiat et une reprise de la mobilité en un temps record. Merci de mettre en lumière cette solution pour qu'elle puisse beneficier au plus grand nombre.",
+    image: "/leve-toi-et-marche-dis-leur.png",
+    link: "https://dis-leur.fr/sete-montpellier-leve-toi-et-marche-cette-technique-anti-lumbagos-qui-fait-des-miracles/",
+    buttonLabel: "Lire l'article",
+  },
+  {
     title: "SOS Lumbago dans la presse",
     description:
       "Le journal La Montagne nous fait l’honneur d’une dédicace en ouverture d’article, mettant en lumière l’ouverture de SOS Lumbago à Beaumont et notre approche innovante de la prise en charge des lombalgies aiguës. Une belle reconnaissance pour notre équipe et pour cette nouvelle façon d’aborder le mal de dos : rapide, coordonnée et centrée sur le patient.",
