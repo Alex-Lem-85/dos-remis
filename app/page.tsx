@@ -116,7 +116,7 @@ const reviews = [
 
 const newsItems = [
   {
-    title: "On a infiltré les médias ;-)",
+    title: "On a infiltré ... les médias ;-)",
     description:
       "Touchant 9 personnes sur 10, cette douleur brutale peut surprendre n'importe qui ... même les journalistes. Après avoir vécu l'expérience, Dis-Leur! a rédigé un très bel article sur les filières SOS Lumbago qui se développent partout en France et principalement sur notre île singulière. Des infiltrations échoguidées ciblant les fascias, ces tissus conjonctifs souvent oubliés, mais pourtant centraux dans la douleur. Résultat ? Un soulagement immédiat et une reprise de la mobilité en un temps record. Merci de mettre en lumière cette solution pour qu'elle puisse bénéficier au plus grand nombre.",
     image: "/dis-leur-leve-toi-et-marche-dis-leur-dr-lemaitre.png",
