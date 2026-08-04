@@ -116,9 +116,9 @@ const reviews = [
 
 const newsItems = [
   {
-    title: "Le lumbago n'épargne personne... pas même les journalistes !",
+    title: "On a infiltré les médias ;-)",
     description:
-      "Touchant 9 personnes sur 10 entre 40 et 60 ans, cette douleur brutale peut surprendre n'importe qui. Après avoir vécu l'expérience, un journaliste Setois a consacré un très bel article à SOS Lumbago qui se développe partout en France et principalement sur notre île singulière. Des infiltrations échoguidées ciblant les fascias, ces tissus conjonctifs souvent oubliés mais pourtant centraux dans la douleur. Résultat ? Un soulagement immédiat et une reprise de la mobilité en un temps record. Merci de mettre en lumière cette solution pour qu'elle puisse beneficier au plus grand nombre.",
+      "Touchant 9 personnes sur 10 entre 40 et 60 ans, cette douleur brutale peut surprendre n'importe qui ... même les journalistes. Après avoir vécu l'expérience, Dis-leur rédigé un très bel article sur SOS Lumbago qui se développe partout en France et principalement sur notre île singulière. Des infiltrations échoguidées ciblant les fascias, ces tissus conjonctifs souvent oubliés, mais pourtant centraux dans la douleur. Résultat ? Un soulagement immédiat et une reprise de la mobilité en un temps record. Merci de mettre en lumière cette solution pour qu'elle puisse beneficier au plus grand nombre.",
     image: "/dis-leur-leve-toi-et-marche-dis-leur-dr-lemaitre.png",
     link: "https://dis-leur.fr/sete-montpellier-leve-toi-et-marche-cette-technique-anti-lumbagos-qui-fait-des-miracles/",
     buttonLabel: "Lire l'article",
